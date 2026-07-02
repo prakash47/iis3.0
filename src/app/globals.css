@@ -1,26 +1,366 @@
 @import "tailwindcss";
 
+/* Class-based dark mode (toggled on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * ┌───────────────────────────────────────────────────────────────────────┐
+ * │  DESIGN TOKENS - real brand colors: cyan #00a0e3 + indigo #393185.      │
+ * │  Semantic vars flip between light/dark; utilities read them via         │
+ * │  @theme inline, so every page adapts automatically.                     │
+ * └───────────────────────────────────────────────────────────────────────┘
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --bg: #fbfcfe;
+  --surface: #ffffff;
+  --surface-2: #f4f7fd;
+  --fg: #0a0f1e;
+  --muted-bg: #f2f5fb;
+  --muted-fg: #4d5a78;
+  --line: #e3e9f5;
+  --dot: rgba(10, 15, 30, 0.14);
+  --grad-from: #00a0e3;
+  --grad-to: #6d5df1;
+  --glow: rgba(0, 160, 227, 0.25);
+  --band: #0a1026; /* statement band stays deep in both modes */
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #060a14;
+  --surface: #0b1122;
+  --surface-2: #0f172e;
+  --fg: #e9edf8;
+  --muted-bg: #0a101f;
+  --muted-fg: #94a1c0;
+  --line: rgba(148, 163, 199, 0.16);
+  --dot: rgba(233, 237, 248, 0.14);
+  --grad-from: #22b8ff;
+  --grad-to: #8b7bff;
+  --glow: rgba(34, 184, 255, 0.28);
+  --band: #0a1026;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--fg);
+  --color-muted: var(--muted-bg);
+  --color-muted-foreground: var(--muted-fg);
+  --color-border: var(--line);
+  --color-band: var(--band);
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora Variable", "Inter Variable", ui-sans-serif, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  /* Brand cyan (from the IIS logo) */
+  --color-brand-50: #ecfaff;
+  --color-brand-100: #d5f3ff;
+  --color-brand-200: #aee8ff;
+  --color-brand-300: #75d7ff;
+  --color-brand-400: #2cbcf4;
+  --color-brand-500: #00a0e3;
+  --color-brand-600: #0084c7;
+  --color-brand-700: #026aa2;
+  --color-brand-800: #085583;
+  --color-brand-900: #0c476c;
+  --color-brand-950: #062c44;
+
+  /* Brand indigo/violet (secondary) */
+  --color-accent-50: #eeecfd;
+  --color-accent-100: #ddd9fb;
+  --color-accent-200: #c0baf6;
+  --color-accent-300: #a096ef;
+  --color-accent-400: #8172e4;
+  --color-accent-500: #6d5df1;
+  --color-accent-600: #5646c9;
+  --color-accent-700: #45389f;
+  --color-accent-800: #393185;
+  --color-accent-900: #2b2566;
+  --color-accent-950: #1c1843;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--grad-from) 30%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--grad-from);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Utilities ─────────────────────────────────────────────────────────── */
+
+.gradient-text {
+  background-image: linear-gradient(92deg, var(--grad-from), var(--grad-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in oklab, var(--grad-from) 45%, var(--line));
+  box-shadow: 0 18px 50px -20px var(--glow);
+}
+
+.glass {
+  background: color-mix(in oklab, var(--surface) 72%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+}
+
+/* Dotted engineering grid that fades out */
+.bg-dots {
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse 90% 65% at 50% 0%, #000 35%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 65% at 50% 0%, #000 35%, transparent 78%);
+}
+
+/* Aurora blobs (hero + CTA) - GPU-cheap transform drift */
+.aurora {
+  position: relative;
+  overflow: hidden;
+}
+.aurora::before,
+.aurora::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 42rem;
+  height: 42rem;
+  border-radius: 9999px;
+  filter: blur(64px);
+  opacity: 0.22;
+  pointer-events: none;
+  will-change: transform;
+}
+.dark .aurora::before,
+.dark .aurora::after {
+  opacity: 0.3;
+}
+.aurora::before {
+  background: radial-gradient(closest-side, var(--grad-from), transparent 70%);
+  top: -18rem;
+  left: -10rem;
+  animation: aurora-a 22s ease-in-out infinite;
+}
+.aurora::after {
+  background: radial-gradient(closest-side, var(--grad-to), transparent 70%);
+  top: -10rem;
+  right: -14rem;
+  animation: aurora-b 26s ease-in-out infinite;
+}
+@keyframes aurora-a {
+  0%, 100% { transform: translate(-4%, -4%) scale(1); }
+  50% { transform: translate(9%, 10%) scale(1.18); }
+}
+@keyframes aurora-b {
+  0%, 100% { transform: translate(4%, 2%) scale(1.1); }
+  50% { transform: translate(-8%, 12%) scale(0.95); }
+}
+
+/* Rotating conic gradient border for featured cards */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0%, transparent 60%,
+    var(--grad-from) 78%, var(--grad-to) 88%, transparent 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: spin-angle 7s linear infinite;
+  pointer-events: none;
+}
+@keyframes spin-angle {
+  to { --angle: 360deg; }
+}
+
+/* Marquee (tech strip) */
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: marquee 36s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* SVG ring draw-in (animates FROM hidden, so no-motion users still see it) */
+.ring-anim {
+  animation: draw-in 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes draw-in {
+  from { stroke-dashoffset: 100; }
+}
+
+/* Gentle float for hero chips */
+.float-y {
+  animation: float-y 6s ease-in-out infinite;
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(-4px); }
+  50% { transform: translateY(6px); }
+}
+
+/* ── Scroll reveals (progressively enhanced - no-JS users see everything) ── */
+.js .reveal,
+.js .reveal-group > * {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.js .reveal.is-visible,
+.js .reveal-group.is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+.js .reveal-group.is-visible > :nth-child(2) { transition-delay: 0.07s; }
+.js .reveal-group.is-visible > :nth-child(3) { transition-delay: 0.14s; }
+.js .reveal-group.is-visible > :nth-child(4) { transition-delay: 0.21s; }
+.js .reveal-group.is-visible > :nth-child(5) { transition-delay: 0.28s; }
+.js .reveal-group.is-visible > :nth-child(6) { transition-delay: 0.35s; }
+.js .reveal-group.is-visible > :nth-child(7) { transition-delay: 0.42s; }
+.js .reveal-group.is-visible > :nth-child(8) { transition-delay: 0.49s; }
+
+/* ── Contact CTA button ───────────────────────────────────────────────── */
+/* Animated conic-gradient border, matched to the live intentioninfoservice.com
+   menu button: navy fill + rotating blue->red border, pauses on hover. Same in
+   light + dark (the navy pill reads well on both header backgrounds). */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0turn;
+}
+.contact-btn {
+  --border-angle: 0turn;
+  /* Light mode: clean white pill with dark text; the animated border is the accent. */
+  --cb-a: #ffffff;
+  --cb-b: #eef3fb;
+  color: var(--fg);
+  border: solid 2px transparent;
+  border-radius: 0.6rem;
+  background:
+    conic-gradient(from var(--border-angle), var(--cb-a), var(--cb-b) 5%, var(--cb-b) 60%, var(--cb-a) 95%) padding-box,
+    conic-gradient(from var(--border-angle), transparent 25%, #0088ff, #ff0033 99%, transparent) border-box;
+  background-position: center center;
+  box-shadow: 0 6px 18px -10px rgb(2 8 23 / 0.28);
+  animation: cb-spin 3s linear infinite;
+}
+.dark .contact-btn {
+  /* Dark mode: deep navy pill matched to the site theme, light text. */
+  --cb-a: #172038;
+  --cb-b: #0f1830;
+  color: #fff;
+  box-shadow: none;
+}
+.contact-btn:hover {
+  animation-play-state: paused;
+  filter: brightness(1.03);
+}
+@keyframes cb-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+/* ── Header & navigation ──────────────────────────────────────────────── */
+
+/* Elevate the sticky header once the page scrolls - pure CSS scroll-driven
+   animation (zero JS scroll listeners); older browsers just keep the flat glass. */
+@supports (animation-timeline: scroll()) {
+  .header-scroll {
+    animation: header-elevate linear both;
+    animation-timeline: scroll();
+    animation-range: 0px 96px;
+  }
+  @keyframes header-elevate {
+    to {
+      box-shadow: 0 12px 32px -20px rgb(2 8 23 / 0.45);
+    }
+  }
+}
+
+/* Dropdown / mega-panel entrance */
+.nav-panel {
+  animation: nav-in 0.16s ease both;
+}
+@keyframes nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+/* Accessibility: honor reduced motion (kills all animation, content stays visible) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js .reveal, .js .reveal-group > * {
+    opacity: 1;
+    transform: none;
+  }
 }
