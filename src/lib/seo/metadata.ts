@@ -40,3 +40,50 @@ export function pageMetadata(path: string): Metadata {
   const seo = getStaticPageSeo(path);
   return seo ? metadataFrom(seo) : {};
 }
+
+/**
+ * Per-document metadata for Resources docs, sourced from the SANITY `seo` object
+ * (not config/seo.ts), falling back to the doc's own title/excerpt. Honors
+ * seo.noindex so a not-yet-substantial doc stays out of the index.
+ */
+export function metadataFromSanity(input: {
+  path: string;
+  title: string;
+  description?: string;
+  seo?: {
+    metaTitle?: string;
+    metaDescription?: string;
+    canonical?: string;
+    noindex?: boolean;
+    ogImageUrl?: string;
+  };
+}): Metadata {
+  const title = input.seo?.metaTitle || input.title;
+  const description =
+    input.seo?.metaDescription || input.description || seoConfig.defaultDescription;
+  const canonical = input.seo?.canonical || absoluteUrl(input.path);
+  const images = [input.seo?.ogImageUrl ?? absoluteUrl(seoConfig.defaultOgImage)];
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      type: "article",
+      url: canonical,
+      siteName: seoConfig.siteName,
+      title,
+      description,
+      images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: seoConfig.twitterHandle,
+      creator: seoConfig.twitterHandle,
+      title,
+      description,
+      images,
+    },
+    ...(input.seo?.noindex ? { robots: { index: false, follow: false } } : {}),
+  };
+}

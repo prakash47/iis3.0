@@ -194,36 +194,45 @@
   50% { transform: translate(-8%, 12%) scale(0.95); }
 }
 
-/* Rotating conic gradient border for featured cards */
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
+/* Rotating gradient border - GPU-composited. A static conic layer is spun with
+   `transform: rotate()` (compositor-only, NO per-frame repaint), and ::after
+   covers the centre so only a thin ring shows. Far cheaper than animating a
+   conic angle. The global reduced-motion rule freezes it. */
 .glow-border {
   position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
 .glow-border::before {
   content: "";
   position: absolute;
-  inset: -1px;
-  z-index: 0;
-  border-radius: inherit;
-  padding: 1px;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
   background: conic-gradient(
-    from var(--angle),
-    transparent 0%, transparent 60%,
-    var(--grad-from) 78%, var(--grad-to) 88%, transparent 100%
+    from 0deg,
+    transparent 0deg 158deg,
+    var(--grad-from) 212deg,
+    var(--grad-to) 308deg,
+    transparent 342deg 360deg
   );
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  animation: spin-angle 7s linear infinite;
+  animation: glow-spin 7s linear infinite;
   pointer-events: none;
 }
-@keyframes spin-angle {
-  to { --angle: 360deg; }
+.glow-border::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 2px;
+  border-radius: inherit;
+  background: var(--surface);
+  pointer-events: none;
+}
+@keyframes glow-spin {
+  to { transform: rotate(360deg); }
 }
 
 /* Marquee (tech strip) */
@@ -262,6 +271,28 @@
   50% { transform: translateY(6px); }
 }
 
+/* Slower drift for the hero visual (orb core / floating elements) */
+.float-soft {
+  animation: float-soft 9s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes float-soft {
+  0%, 100% { transform: translateY(-7px); }
+  50% { transform: translateY(9px); }
+}
+
+/* Aurora-orb hero: particle twinkle + orb breathing glow (reduced-motion safe) */
+.hv-twinkle { animation: hv-twinkle 4.5s ease-in-out infinite; }
+@keyframes hv-twinkle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.9; }
+}
+.hv-breathe { animation: hv-breathe 6s ease-in-out infinite; }
+@keyframes hv-breathe {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.78; }
+}
+
 /* ── Scroll reveals (progressively enhanced - no-JS users see everything) ── */
 .js .reveal,
 .js .reveal-group > * {
@@ -281,6 +312,23 @@
 .js .reveal-group.is-visible > :nth-child(6) { transition-delay: 0.35s; }
 .js .reveal-group.is-visible > :nth-child(7) { transition-delay: 0.42s; }
 .js .reveal-group.is-visible > :nth-child(8) { transition-delay: 0.49s; }
+
+/* Hero load-in - LCP-safe: applied only to supporting elements, never the
+   H1 / entity capsule (those paint immediately). Per-element delays come from
+   an [animation-delay:*] utility, so we set longhands (not the shorthand,
+   which would reset the delay). */
+.js .hero-in {
+  animation-name: hero-in;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+}
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
 
 /* ── Contact CTA button ───────────────────────────────────────────────── */
 /* Animated conic-gradient border, matched to the live intentioninfoservice.com
@@ -351,6 +399,24 @@
   }
 }
 
+/* Mobile sticky CTA - hidden until the hero scrolls away (CSS scroll-timeline);
+   always-visible fallback where scroll-timeline is unsupported. */
+.mobile-cta {
+  transform: translateY(0);
+  opacity: 1;
+}
+@supports (animation-timeline: scroll()) {
+  .mobile-cta {
+    animation: cta-reveal linear both;
+    animation-timeline: scroll();
+    animation-range: 300px 560px;
+  }
+  @keyframes cta-reveal {
+    from { transform: translateY(115%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
 /* Accessibility: honor reduced motion (kills all animation, content stays visible) */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -362,5 +428,15 @@
   .js .reveal, .js .reveal-group > * {
     opacity: 1;
     transform: none;
+  }
+  .js .hero-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .mobile-cta {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }

@@ -8,7 +8,9 @@ import { cn } from "@/lib/utils";
 import {
   IconCode,
   IconDevice,
+  IconLayers,
   IconMegaphone,
+  IconTrendingUp,
   IconPen,
   IconShield,
   IconSpark,
@@ -24,10 +26,12 @@ import {
 const serviceIcons: Record<string, React.ReactNode> = {
   "/services/web-design-development": <IconCode className="h-5 w-5" />,
   "/services/mobile-app-development": <IconDevice className="h-5 w-5" />,
+  "/services/custom-software-development": <IconLayers className="h-5 w-5" />,
   "/services/digital-marketing": <IconMegaphone className="h-5 w-5" />,
-  "/services/ui-ux-branding": <IconPen className="h-5 w-5" />,
-  "/services/website-maintenance": <IconShield className="h-5 w-5" />,
-  "/services/ai-solutions": <IconSpark className="h-5 w-5" />,
+  "/services/performance-marketing": <IconTrendingUp className="h-5 w-5" />,
+  "/services/ui-ux-design-services": <IconPen className="h-5 w-5" />,
+  "/services/website-maintenance-services": <IconShield className="h-5 w-5" />,
+  "/services/ai-development": <IconSpark className="h-5 w-5" />,
 };
 
 function isEntryActive(entry: NavEntry, pathname: string): boolean {
@@ -57,6 +61,7 @@ function ViewAllLink({ link, onNavigate }: { link: NavLink; onNavigate: () => vo
 export function DesktopNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState<number | null>(null);
+  const [prevPathname, setPrevPathname] = useState(pathname);
   const navRef = useRef<HTMLElement>(null);
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -84,8 +89,14 @@ export function DesktopNav() {
     return () => document.removeEventListener("pointerdown", onPointerDown);
   }, [open]);
 
-  // Route change closes any open panel.
-  useEffect(() => closeNow(), [pathname]);
+  // Route change closes any open panel. Handled during render (reset-on-change)
+  // instead of in an effect, so it commits before paint with no extra render.
+  // A pending close timer is harmless: it would only re-set `open` to null, and
+  // any re-open calls openMenu(), which clears it first.
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(null);
+  }
 
   return (
     <nav

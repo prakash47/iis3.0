@@ -1,6 +1,6 @@
 /** CSS-only infinite marquee (content duplicated once; second copy is aria-hidden). */
-export function Marquee({ items }: { items: string[] }) {
-  const Row = ({ hidden }: { hidden?: boolean }) => (
+function Row({ items, hidden }: { items: string[]; hidden?: boolean }) {
+  return (
     <div className="flex shrink-0 items-center gap-4 pr-4" aria-hidden={hidden}>
       {items.map((item) => (
         <span
@@ -12,12 +12,14 @@ export function Marquee({ items }: { items: string[] }) {
       ))}
     </div>
   );
+}
 
+export function Marquee({ items }: { items: string[] }) {
   return (
     <div className="marquee">
       <div className="marquee-track">
-        <Row />
-        <Row hidden />
+        <Row items={items} />
+        <Row items={items} hidden />
       </div>
     </div>
   );

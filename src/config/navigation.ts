@@ -40,10 +40,12 @@ export type NavEntry =
 const SERVICE_MENU_DESC: Record<string, string> = {
   "web-design-development": "Websites, web apps & SaaS",
   "mobile-app-development": "iOS, Android & cross-platform",
-  "digital-marketing": "SEO, social & performance",
-  "ui-ux-branding": "Product design & identity",
-  "website-maintenance": "Care plans & support",
-  "ai-solutions": "Chatbots & automation",
+  "custom-software-development": "SaaS, internal tools & APIs",
+  "digital-marketing": "SEO, AI-search, content & email",
+  "performance-marketing": "Paid search, social & ROAS",
+  "ui-ux-design-services": "UI/UX design & brand identity",
+  "website-maintenance-services": "Care plans, security & backups",
+  "ai-development": "Chatbots, RAG & automation",
 };
 
 export const navigation: NavEntry[] = [
@@ -94,6 +96,7 @@ export const navigation: NavEntry[] = [
       { label: "Guides", href: "/guides" },
       { label: "Glossary", href: "/glossary" },
     ],
+    viewAll: { label: "All resources", href: "/resources" },
   },
   { kind: "link", label: "Pricing", href: "/pricing" },
   { kind: "link", label: "About", href: "/about" },

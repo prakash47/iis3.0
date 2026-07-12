@@ -1,111 +1,154 @@
 /**
- * Hero visual: a "performance console" - three Lighthouse-style rings drawing
- * to 100 with floating metric chips. Pure CSS/SVG animation, server-rendered,
- * zero client JS. Labeled as our build standard (a target, not a fake claim).
+ * Hero visual: the "Aurora Orb" - a glowing cyan->violet brand sphere wrapped
+ * by orbiting rings, surrounded by glass chips for the full service range
+ * (Build / Mobile / AI / Growth). Pure inline SVG, server-rendered, zero client
+ * JS. Neutrals use theme tokens (fill-surface / -foreground / -muted-foreground,
+ * stroke-border) so it adapts to light + dark; brand gradients are fixed. All
+ * motion is CSS and reduced-motion safe. Decorative -> parent is aria-hidden.
  */
-
-function Ring({
-  label,
-  delay,
-}: {
-  label: string;
-  delay: string;
-}) {
-  return (
-    <div className="flex flex-col items-center gap-2">
-      <div className="relative h-20 w-20 sm:h-24 sm:w-24">
-        <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90">
-          <circle cx="50" cy="50" r="44" pathLength="100" fill="none" strokeWidth="7" className="stroke-border" />
-          <circle
-            cx="50" cy="50" r="44" pathLength="100" fill="none" strokeWidth="7"
-            strokeLinecap="round" strokeDasharray="100" strokeDashoffset="0"
-            stroke="url(#ring-grad)" className="ring-anim" style={{ animationDelay: delay }}
-          />
-          <defs>
-            <linearGradient id="ring-grad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="var(--grad-from)" />
-              <stop offset="100%" stopColor="var(--grad-to)" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <span className="absolute inset-0 flex items-center justify-center font-display text-xl font-bold text-foreground sm:text-2xl">
-          100
-        </span>
-      </div>
-      <span className="text-xs font-medium text-muted-foreground">{label}</span>
-    </div>
-  );
-}
-
-function Chip({
-  children,
-  className,
-  delay,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: string;
-}) {
-  return (
-    <div
-      className={`float-y absolute z-10 hidden items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-2 text-xs font-semibold text-foreground shadow-lg sm:flex ${className ?? ""}`}
-      style={{ animationDelay: delay }}
-    >
-      {children}
-    </div>
-  );
-}
-
 export function HeroVisual() {
   return (
     <div className="relative mx-auto w-full max-w-md lg:max-w-lg" aria-hidden="true">
-      {/* Floating metric chips */}
-      <Chip className="-left-6 top-6" delay="0s">
-        <span className="h-2 w-2 rounded-full bg-emerald-500" />
-        LCP&nbsp;&lt;&nbsp;1.0s
-      </Chip>
-      <Chip className="-right-6 -top-4" delay="1.4s">
-        <span className="h-2 w-2 rounded-full bg-brand-500" />
-        Next.js&nbsp;·&nbsp;React
-      </Chip>
-      <Chip className="-bottom-4 left-8" delay="2.6s">
-        <span className="h-2 w-2 rounded-full bg-accent-500" />
-        0.00&nbsp;CLS
-      </Chip>
+      <svg viewBox="0 0 600 480" className="h-auto w-full">
+        <defs>
+          <radialGradient id="hv_bgGlow" cx="50%" cy="46%" r="60%">
+            <stop offset="0%" stopColor="#2cbcf4" stopOpacity="0.16" />
+            <stop offset="42%" stopColor="#6d5df1" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#6d5df1" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="hv_orbBody" cx="38%" cy="32%" r="78%">
+            <stop offset="0%" stopColor="#7fe0ff" />
+            <stop offset="26%" stopColor="#2cbcf4" />
+            <stop offset="60%" stopColor="#00a0e3" />
+            <stop offset="82%" stopColor="#3a52c9" />
+            <stop offset="100%" stopColor="#393185" />
+          </radialGradient>
+          <radialGradient id="hv_orbInner" cx="40%" cy="34%" r="55%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.85" />
+            <stop offset="45%" stopColor="#ffffff" stopOpacity="0.14" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="hv_orbRim" cx="50%" cy="50%" r="50%">
+            <stop offset="82%" stopColor="#6d5df1" stopOpacity="0" />
+            <stop offset="97%" stopColor="#6d5df1" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#6d5df1" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="hv_specular" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
+            <stop offset="70%" stopColor="#ffffff" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+          </radialGradient>
+          <linearGradient id="hv_ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2cbcf4" />
+            <stop offset="55%" stopColor="#00a0e3" />
+            <stop offset="100%" stopColor="#6d5df1" />
+          </linearGradient>
+          <linearGradient id="hv_iconCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2cbcf4" />
+            <stop offset="100%" stopColor="#0084c7" />
+          </linearGradient>
+          <linearGradient id="hv_iconViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#6d5df1" />
+            <stop offset="100%" stopColor="#393185" />
+          </linearGradient>
+          <linearGradient id="hv_trendGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#00a0e3" />
+            <stop offset="100%" stopColor="#6d5df1" />
+          </linearGradient>
+          <linearGradient id="hv_trendFill" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#2cbcf4" stopOpacity="0.32" />
+            <stop offset="100%" stopColor="#2cbcf4" stopOpacity="0" />
+          </linearGradient>
+          <filter id="hv_softShadow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="6" stdDeviation="9" floodColor="#393185" floodOpacity="0.16" />
+          </filter>
+          <filter id="hv_chipShadow" x="-60%" y="-60%" width="220%" height="220%">
+            <feDropShadow dx="0" dy="5" stdDeviation="7" floodColor="#1a2a6b" floodOpacity="0.14" />
+          </filter>
+          <filter id="hv_orbGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="16" result="b" />
+            <feColorMatrix in="b" type="matrix" values="0 0 0 0 0.17  0 0 0 0 0.63  0 0 0 0 0.89  0 0 0 0.9 0" />
+          </filter>
+        </defs>
 
-      {/* Console card with rotating gradient border */}
-      <div className="glow-border card relative overflow-hidden rounded-3xl">
-        <div className="relative z-[1]">
-          {/* Title bar */}
-          <div className="flex items-center gap-2 border-b border-border px-5 py-3.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
-            <span className="ml-3 font-mono text-xs text-muted-foreground">
-              build - production ✓
-            </span>
-          </div>
+        {/* ambient glow */}
+        <rect x="0" y="0" width="600" height="480" fill="url(#hv_bgGlow)" />
 
-          {/* Rings */}
-          <div className="flex items-center justify-around px-6 py-8">
-            <Ring label="Performance" delay="0.2s" />
-            <Ring label="SEO" delay="0.5s" />
-            <Ring label="Accessibility" delay="0.8s" />
-          </div>
+        {/* drifting particles */}
+        <g className="hv-twinkle" fill="#00a0e3">
+          <circle cx="92" cy="96" r="3" opacity="0.5" />
+          <circle cx="520" cy="120" r="2.5" opacity="0.45" />
+          <circle cx="70" cy="300" r="2" opacity="0.4" />
+          <circle cx="540" cy="330" r="3" opacity="0.4" />
+          <circle cx="150" cy="420" r="2.5" opacity="0.35" />
+          <circle cx="470" cy="430" r="2" opacity="0.4" />
+          <circle cx="300" cy="52" r="2.5" opacity="0.4" />
+        </g>
+        <g className="hv-twinkle" style={{ animationDelay: "1.6s" }} fill="#6d5df1">
+          <circle cx="128" cy="150" r="2" opacity="0.4" />
+          <circle cx="500" cy="70" r="2.5" opacity="0.4" />
+          <circle cx="560" cy="240" r="2" opacity="0.35" />
+          <circle cx="60" cy="220" r="2.5" opacity="0.35" />
+          <circle cx="360" cy="440" r="2" opacity="0.4" />
+        </g>
 
-          {/* Deploy log */}
-          <div className="space-y-2 border-t border-border px-6 py-5 font-mono text-xs text-muted-foreground">
-            <p><span className="text-emerald-500">✓</span> 43 static pages generated</p>
-            <p><span className="text-emerald-500">✓</span> structured data valid</p>
-            <p><span className="text-emerald-500">✓</span> deployed to edge · Mumbai PoP</p>
-          </div>
+        {/* orb + rings (gently float together) */}
+        <g className="float-soft">
+          <ellipse cx="300" cy="238" rx="196" ry="70" fill="none" stroke="url(#hv_ringGrad)" strokeWidth="2" opacity="0.28" transform="rotate(-24 300 238)" />
+          <circle className="hv-breathe" cx="300" cy="238" r="118" fill="url(#hv_orbBody)" filter="url(#hv_orbGlow)" />
+          <g filter="url(#hv_softShadow)">
+            <circle cx="300" cy="238" r="100" fill="url(#hv_orbBody)" />
+            <circle cx="300" cy="238" r="100" fill="url(#hv_orbInner)" />
+            <circle cx="300" cy="238" r="100" fill="url(#hv_orbRim)" />
+            <ellipse cx="266" cy="200" rx="34" ry="24" fill="url(#hv_specular)" transform="rotate(-28 266 200)" />
+            <circle cx="336" cy="286" r="30" fill="#393185" opacity="0.14" />
+          </g>
+          <ellipse cx="300" cy="238" rx="176" ry="62" fill="none" stroke="url(#hv_ringGrad)" strokeWidth="2.4" transform="rotate(18 300 238)" />
+          <ellipse cx="300" cy="238" rx="176" ry="62" fill="none" stroke="#ffffff" strokeWidth="0.8" opacity="0.35" transform="rotate(18 300 238)" />
+          <circle cx="459" cy="205" r="9" fill="#6d5df1" opacity="0.22" />
+          <circle cx="459" cy="205" r="5" fill="#6d5df1" />
+          <circle cx="141" cy="271" r="4" fill="#2cbcf4" />
+        </g>
 
-          {/* Honest framing */}
-          <div className="border-t border-border bg-muted/60 px-6 py-3 text-center text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
-            The bar every build ships at
-          </div>
-        </div>
-      </div>
+        {/* Build chip */}
+        <g className="float-y">
+          <rect x="86" y="92" width="132" height="52" rx="16" className="fill-surface stroke-border" strokeWidth="1" filter="url(#hv_chipShadow)" />
+          <rect x="98" y="102" width="32" height="32" rx="10" fill="url(#hv_iconCyan)" />
+          <path d="M110 112 l-5 6 l5 6 M118 112 l5 6 l-5 6" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <text x="142" y="114" fontSize="14" fontWeight="600" className="fill-foreground">Build</text>
+          <text x="142" y="130" fontSize="11" className="fill-muted-foreground">Web &amp; apps</text>
+        </g>
+
+        {/* Mobile chip */}
+        <g className="float-y" style={{ animationDelay: "0.9s" }}>
+          <rect x="400" y="70" width="128" height="52" rx="16" className="fill-surface stroke-border" strokeWidth="1" filter="url(#hv_chipShadow)" />
+          <rect x="412" y="80" width="32" height="32" rx="10" fill="url(#hv_iconViolet)" />
+          <rect x="422" y="86" width="12" height="20" rx="3" fill="none" stroke="#ffffff" strokeWidth="2" />
+          <line x1="426" y1="102" x2="430" y2="102" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" />
+          <text x="456" y="92" fontSize="14" fontWeight="600" className="fill-foreground">Mobile</text>
+          <text x="456" y="108" fontSize="11" className="fill-muted-foreground">iOS &amp; Android</text>
+        </g>
+
+        {/* AI chip */}
+        <g className="float-y" style={{ animationDelay: "1.7s" }}>
+          <rect x="78" y="332" width="118" height="52" rx="16" className="fill-surface stroke-border" strokeWidth="1" filter="url(#hv_chipShadow)" />
+          <rect x="90" y="342" width="32" height="32" rx="10" fill="url(#hv_iconViolet)" />
+          <path d="M106 346 l3.4 7.6 l7.6 3.4 l-7.6 3.4 l-3.4 7.6 l-3.4 -7.6 l-7.6 -3.4 l7.6 -3.4 Z" fill="#ffffff" />
+          <text x="134" y="354" fontSize="14" fontWeight="600" className="fill-foreground">AI</text>
+          <text x="134" y="370" fontSize="11" className="fill-muted-foreground">Smart tools</text>
+        </g>
+
+        {/* Growth chip */}
+        <g className="float-y" style={{ animationDelay: "1.2s" }}>
+          <rect x="392" y="336" width="150" height="80" rx="18" className="fill-surface stroke-border" strokeWidth="1" filter="url(#hv_chipShadow)" />
+          <text x="410" y="360" fontSize="13" fontWeight="600" className="fill-foreground">Growth</text>
+          <path d="M410 400 L410 384 L438 388 L466 372 L494 362 L522 348 L522 400 Z" fill="url(#hv_trendFill)" />
+          <path d="M410 384 L438 388 L466 372 L494 362 L522 348" fill="none" stroke="url(#hv_trendGrad)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="522" cy="348" r="7" fill="#6d5df1" opacity="0.22" />
+          <circle cx="522" cy="348" r="4" fill="#6d5df1" />
+          <path d="M508 350 l14 -2 l-2 12" fill="none" stroke="#6d5df1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      </svg>
     </div>
   );
 }

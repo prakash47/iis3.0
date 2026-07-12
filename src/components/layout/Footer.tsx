@@ -75,7 +75,7 @@ export function Footer() {
           </p>
           <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold text-muted-foreground">
             <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-brand-500" />
-            Incorporated 2016 · Founder-led
+            Incorporated 2016 · Serving worldwide
           </p>
 
           {/* NAP - keep identical to Google Business Profile + Organization schema */}

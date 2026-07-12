@@ -8,7 +8,7 @@ interface CtaLink {
 
 export function CtaBand({
   title = "Have a project in mind?",
-  subtitle = "Talk to the founder - not a sales rep. Fixed pricing, a clear timeline, and no obligation.",
+  subtitle = "Talk to the people who'll build it, not a sales rep. Fixed pricing, a clear timeline, and no obligation.",
   primary = { label: "Start a Project", href: "/contact" },
   secondary,
 }: {
@@ -20,7 +20,7 @@ export function CtaBand({
   return (
     <section className="aurora bg-band">
       <div aria-hidden="true" className="bg-dots absolute inset-0" />
-      <Container className="relative z-[1] flex flex-col items-start gap-8 py-20 sm:flex-row sm:items-center sm:justify-between">
+      <Container className="relative z-[1] flex flex-col items-start gap-8 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">{title}</h2>
           <p className="mt-3 max-w-xl text-lg text-slate-300">{subtitle}</p>

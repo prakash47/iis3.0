@@ -3,12 +3,8 @@ import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/sora";
 import "./globals.css";
-import { siteConfig, absoluteUrl } from "@/config/site";
+import { siteConfig, absoluteUrl, isIndexable } from "@/config/site";
 import { seoConfig } from "@/config/seo";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { JsonLd } from "@/components/seo/JsonLd";
-import { organizationSchema, websiteSchema } from "@/lib/seo/jsonLd";
 
 const ogImage = absoluteUrl("/og-default.png");
 
@@ -47,17 +43,22 @@ export const metadata: Metadata = {
     description: seoConfig.defaultDescription,
     images: [ogImage],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
+  // Site-wide default. Indexable pages inherit this (metadataFrom only sets its
+  // own robots for explicitly-noindexed pages), so gating it here flips the WHOLE
+  // site to noindex on any non-production deployment - see isIndexable in site.ts.
+  robots: isIndexable
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
+      }
+    : { index: false, follow: false, googleBot: { index: false, follow: false } },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -73,21 +74,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
-      <body className="flex min-h-full flex-col">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-sm focus:text-white"
-        >
-          Skip to content
-        </a>
-        <JsonLd data={organizationSchema()} />
-        <JsonLd data={websiteSchema()} />
-        <Header />
-        <main id="main" className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </body>
+      {/* True shell only. The marketing chrome (Header/Footer/MobileCtaBar + skip
+          link + sitewide Org/WebSite JSON-LD) lives in (marketing)/layout.tsx so
+          the full-screen /studio route can render outside it. */}
+      <body className="h-full">{children}</body>
     </html>
   );
 }

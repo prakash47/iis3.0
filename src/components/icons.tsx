@@ -61,9 +61,106 @@ export const IconArrow = ({ className }: { className?: string }) => (
   </Svg>
 );
 
+export const IconBolt = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M13 3 5 13h6l-1 8 8-10h-6l1-8z" />
+  </Svg>
+);
+
+export const IconTag = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M4 4h6.5L20 13.5 13.5 20 4 10.5V4z" />
+    <circle cx="8.2" cy="8.2" r="1.4" />
+  </Svg>
+);
+
+export const IconClock = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M12 7.5V12l3 2" />
+  </Svg>
+);
+
+export const IconTrendingUp = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M3 17 9 11l4 4 7-7" />
+    <path d="M15 7h6v6" />
+  </Svg>
+);
+
+export const IconSearch = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <circle cx="11" cy="11" r="7.5" />
+    <path d="m21 21-4.35-4.35" />
+  </Svg>
+);
+
+export const IconRocket = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.79-.87.78-2.2-.02-3a2.13 2.13 0 0 0-2.98 0z" />
+    <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.9 12.9 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.3 22.3 0 0 1-4 2z" />
+    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+    <path d="M15 12v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+  </Svg>
+);
+
+export const IconGradCap = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M3 9.2 12 5l9 4.2-9 4.2-9-4.2z" />
+    <path d="M7 11.3v4.4c0 1.1 2.2 2 5 2s5-.9 5-2v-4.4" />
+    <path d="M21 9.4V14" />
+  </Svg>
+);
+
+export const IconHeartPulse = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M12 20.3C8.5 18 3.5 14.4 3.5 9.7 3.5 7.1 5.6 5.1 8.1 5.1c1.6 0 3.1.9 3.9 2.2.8-1.3 2.3-2.2 3.9-2.2 2.5 0 4.6 2 4.6 4.6 0 4.7-5 8.3-8.4 10.6z" />
+    <path d="M7.5 11.8h2.3l1.1-1.9 1.9 3.6 1-1.7h2.7" />
+  </Svg>
+);
+
+export const IconCreditCard = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <rect x="2.5" y="5.5" width="19" height="13" rx="2.5" />
+    <path d="M2.5 9.8h19" />
+    <path d="M6 14.5h3.5" />
+  </Svg>
+);
+
+export const IconBuilding = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M3.5 21V5.5a1 1 0 0 1 1-1H13a1 1 0 0 1 1 1V21" />
+    <path d="M14 9.5h5.5a1 1 0 0 1 1 1V21" />
+    <path d="M2.5 21h19" />
+    <path d="M6.5 8h3M6.5 11.5h3M6.5 15h3" />
+  </Svg>
+);
+
+export const IconPlane = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M21.4 3.6 2.9 10.8a.5.5 0 0 0 0 .9l6.5 2.3 2.4 6.7a.5.5 0 0 0 .9.1l3-5.5 6.3-11a.4.4 0 0 0-.6-.7z" />
+    <path d="M9.4 14 21.4 3.6" />
+  </Svg>
+);
+
+export const IconPlay = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M10.2 8.6 15.5 12l-5.3 3.4z" />
+  </Svg>
+);
+
 export const IconCheck = ({ className }: { className?: string }) => (
   <Svg className={className}>
     <path d="m4.5 12.5 5 5 10-11" />
+  </Svg>
+);
+
+export const IconLayers = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M12 3 2.5 8 12 13l9.5-5L12 3z" />
+    <path d="m2.5 12 9.5 5 9.5-5" />
+    <path d="m2.5 16 9.5 5 9.5-5" />
   </Svg>
 );
 
@@ -90,6 +187,108 @@ export const IconMail = ({ className }: { className?: string }) => (
   <Svg className={className}>
     <rect x="3" y="5" width="18" height="14" rx="2" />
     <path d="m3 7 9 6 9-6" />
+  </Svg>
+);
+
+export const IconPalette = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M12 3.5c-4.7 0-8.5 3.6-8.5 8s3.8 8 8.5 8c1.2 0 1.9-1 1.6-2.1-.3-1.1.5-2 1.6-2H17a3.5 3.5 0 0 0 3.5-3.5c0-4-3.8-8.4-8.5-8.4z" />
+    <circle cx="7.5" cy="12" r="1" fill="currentColor" stroke="none" />
+    <circle cx="10.5" cy="8" r="1" fill="currentColor" stroke="none" />
+    <circle cx="14.5" cy="8" r="1" fill="currentColor" stroke="none" />
+    <circle cx="16.8" cy="12" r="1" fill="currentColor" stroke="none" />
+  </Svg>
+);
+
+export const IconLayout = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <rect x="3" y="4" width="18" height="16" rx="2" />
+    <path d="M3 9h18M9 9v11" />
+  </Svg>
+);
+
+export const IconGrid = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <rect x="3.5" y="3.5" width="7" height="7" rx="1.2" />
+    <rect x="13.5" y="3.5" width="7" height="7" rx="1.2" />
+    <rect x="3.5" y="13.5" width="7" height="7" rx="1.2" />
+    <rect x="13.5" y="13.5" width="7" height="7" rx="1.2" />
+  </Svg>
+);
+
+export const IconType = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M4 7V5h16v2M12 5v14M9 19h6" />
+  </Svg>
+);
+
+export const IconEye = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" />
+    <circle cx="12" cy="12" r="3" />
+  </Svg>
+);
+
+export const IconRefresh = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M3.5 12a8.5 8.5 0 0 1 14.4-6.1L21 8.5" />
+    <path d="M20.5 12a8.5 8.5 0 0 1-14.4 6.1L3 15.5" />
+    <path d="M21 4v4.5h-4.5M3 20v-4.5h4.5" />
+  </Svg>
+);
+
+export const IconDatabase = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <ellipse cx="12" cy="5.5" rx="7.5" ry="3" />
+    <path d="M4.5 5.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6" />
+    <path d="M4.5 11.5v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6" />
+  </Svg>
+);
+
+export const IconServer = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <rect x="3" y="4" width="18" height="7" rx="2" />
+    <rect x="3" y="13" width="18" height="7" rx="2" />
+    <path d="M7 7.5h.01M7 16.5h.01" />
+  </Svg>
+);
+
+export const IconGauge = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M4.2 17a9 9 0 1 1 15.6 0" />
+    <path d="M12 13l3.6-3.2" />
+    <circle cx="12" cy="13" r="1.3" fill="currentColor" stroke="none" />
+  </Svg>
+);
+
+export const IconFileText = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M13.5 2.5H7A1.5 1.5 0 0 0 5.5 4v16A1.5 1.5 0 0 0 7 21.5h10a1.5 1.5 0 0 0 1.5-1.5V7.5z" />
+    <path d="M13.5 2.5V7.5H18.5" />
+    <path d="M8.5 12.5h7M8.5 16h7M8.5 9h3" />
+  </Svg>
+);
+
+export const IconChat = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H9l-4 3.5V16H5.5A1.5 1.5 0 0 1 4 14.5z" />
+    <path d="M8 8.5h8M8 11.5h5" />
+  </Svg>
+);
+
+export const IconCpu = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <rect x="6" y="6" width="12" height="12" rx="2" />
+    <rect x="9.5" y="9.5" width="5" height="5" rx="1" />
+    <path d="M9 3v2M12 3v2M15 3v2M9 19v2M12 19v2M15 19v2M3 9h2M3 12h2M3 15h2M19 9h2M19 12h2M19 15h2" />
+  </Svg>
+);
+
+export const IconLock = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <rect x="4.5" y="10.5" width="15" height="10" rx="2" />
+    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" />
+    <circle cx="12" cy="15.3" r="1.3" fill="currentColor" stroke="none" />
   </Svg>
 );
 
