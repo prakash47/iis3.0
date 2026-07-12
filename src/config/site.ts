@@ -18,7 +18,13 @@
 // images and JSON-LD @id/url all stay internally consistent and never point at
 // the separate live site. Unset (local dev) falls back to the production URL.
 const PRODUCTION_URL = "https://www.intentioninfoservice.com";
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || PRODUCTION_URL).replace(/\/$/, "");
+// Tolerate a bare host in the env var (e.g. "staging.intentioninfoservice.com"
+// with no scheme, as copied from Vercel's Domains field): trim whitespace, strip
+// trailing slashes, and prepend https:// when a scheme is missing - so
+// `new URL(siteConfig.url)` (metadataBase) never crashes the build on a value
+// that is merely missing its protocol.
+const RAW_SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || PRODUCTION_URL).trim().replace(/\/+$/, "");
+const SITE_URL = /^https?:\/\//i.test(RAW_SITE_URL) ? RAW_SITE_URL : `https://${RAW_SITE_URL}`;
 
 // Indexing is an EXPLICIT opt-in that ONLY the real production deployment gets:
 // set NEXT_PUBLIC_SITE_INDEXABLE="true" there. Every other environment (local,
