@@ -101,7 +101,7 @@ export function FlutterWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use Flutter
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Flutter earns the job when the interface is the whole product. It is not our reflex, and
               we won&apos;t pretend it is. On our{" "}
               <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">

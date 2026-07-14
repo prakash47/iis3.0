@@ -69,7 +69,7 @@ export function AngularWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When Angular isn&apos;t the right choice
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Angular is overkill for a small marketing site, a simple content page, or a team that
               wants maximum flexibility and a minimal footprint - its structure is overhead you
               don&apos;t need at that size. If that&apos;s you,{" "}

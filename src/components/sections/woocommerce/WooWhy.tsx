@@ -95,7 +95,7 @@ export function WooWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use WooCommerce
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               WooCommerce is the right tool for a lot of stores and the wrong one for some, and
               we&apos;d rather say so up front. For a serious, product-first store,{" "}
               <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">

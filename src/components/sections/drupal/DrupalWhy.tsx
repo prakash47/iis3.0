@@ -85,7 +85,7 @@ export function DrupalWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When Drupal is more CMS than you need
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Drupal rewards investment in modelling and governance up front, and that is exactly the wrong
               trade for a simple site. If your content is a handful of straightforward page types that one
               team maintains, that native power is capability you would pay to carry and never use, and the

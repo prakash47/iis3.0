@@ -73,7 +73,7 @@ export function NextjsCompare() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;ll tell you not to use Next.js
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               A simple content site or blog with little interactivity? A tuned WordPress or Astro
               build can be lighter and easier for your team to edit. A tiny brochure site on a tight
               budget? Our{" "}

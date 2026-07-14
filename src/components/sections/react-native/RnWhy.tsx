@@ -98,7 +98,7 @@ export function RnWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use React Native
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Cross-platform is the smart default for most teams, and React Native is the natural pick
               when you already live in the JavaScript and React world. It is not always the right
               call. When the product truly demands deep performance, hardware access or

@@ -57,7 +57,7 @@ export function WebDevScope() {
             <h3 className="font-display text-base font-semibold text-foreground">
               Where we&apos;re not the right fit
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               We deliberately take on a limited number of projects at a time, so each gets senior
               attention. If you need a rushed 50-page content dump by next week, or a logo-only
               rebrand with no build, we&apos;ll tell you honestly and point you somewhere better.

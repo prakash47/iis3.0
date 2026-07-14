@@ -75,7 +75,7 @@ export function DjangoWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use Django
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Django is our pick when the job is a real web application with an admin, an ORM and auth
               wanted from day one - content and admin-heavy platforms, SaaS, portals, internal tools.
               It is the wrong tool - and we&apos;ll say so - when the whole product is an API-first,

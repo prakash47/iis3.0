@@ -74,7 +74,7 @@ export function StrapiWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When a self-hosted CMS is the wrong call
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Owning the software is the upside; running it is the trade. If your team does not want to
               patch a server, manage deploys and keep a self-hosted app current, that is a real reason to
               rent instead - a managed, hosted CMS like{" "}

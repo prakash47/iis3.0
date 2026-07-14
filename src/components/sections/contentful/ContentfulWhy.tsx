@@ -82,7 +82,7 @@ export function ContentfulWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When Contentful is more CMS than you need
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Contentful is a lot of platform, and that is a reason to walk away as often as a reason to
               buy. If your content is one small team writing for one site, the governance and the
               enterprise plan are weight without payoff, and a leaner, developer-first structured backend

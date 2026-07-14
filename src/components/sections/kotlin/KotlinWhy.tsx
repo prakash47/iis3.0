@@ -94,7 +94,7 @@ export function KotlinWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to build native Android with Kotlin
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Fully native on Android is a real cost, and it earns its keep only when the product
               genuinely demands it - deep performance, direct hardware access, or platform-specific
               behaviour. Most products do not, and for them going native is the expensive answer. The

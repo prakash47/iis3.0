@@ -80,7 +80,7 @@ export function JavaWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When Java isn&apos;t the right call
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Java and Spring Boot earn their keep on large, transaction-heavy, long-lived systems.
               Plenty of projects aren&apos;t that, and forcing them onto Java is cost you don&apos;t
               need. For a small CRUD app, MVP or content-and-admin platform you want live fast, a

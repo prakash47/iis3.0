@@ -48,7 +48,7 @@ export function NodejsWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use Node
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Node.js is our default for I/O-bound backends - APIs, real-time and streaming. It is
               the wrong tool when the work is CPU-bound: heavy number-crunching, video or image
               processing, or large in-process computation can block Node&apos;s single-threaded event

@@ -47,7 +47,7 @@ export function ReactWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When React alone isn&apos;t the right tool
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               A plain React app renders in the browser, so by itself it&apos;s a weak choice for
               pages that must rank in Google - it ships a near-empty HTML shell. If SEO and server
               rendering matter, you want a React framework, which is{" "}

@@ -115,7 +115,7 @@ export function PhpWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When raw PHP is the wrong choice
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Plain PHP earns its place on small, tightly-scoped work and on modernizing what already
               exists. It is the wrong starting point - and we will say so - when you are building a new
               application with real scope, where hand-rolling routing, auth and a data layer just

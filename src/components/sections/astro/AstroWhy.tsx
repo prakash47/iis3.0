@@ -76,7 +76,7 @@ export function AstroWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When Astro is the wrong choice
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Astro earns its place on content sites. It is the wrong starting point - and we will say
               so - when the project needs to behave like an application: authenticated areas, heavy
               client state, dashboards, data-driven views that change constantly. Past a handful of

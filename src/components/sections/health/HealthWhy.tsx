@@ -96,7 +96,7 @@ export function HealthWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to build, and when we&apos;d turn the work down
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               If the record system you already pay for ships a patient portal that does most of this,
               configure it, or put a small app on top of it through SMART on FHIR, and keep your
               money. That is the answer most often, and it is the column we highlight in the table

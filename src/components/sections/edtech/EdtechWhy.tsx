@@ -87,7 +87,7 @@ export function EdtechWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to build
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               If you are a training company whose real job is to sell and deliver courses, a
               configured platform will beat a custom build on cost and on time, and we will point you
               at Moodle, Canvas or Open edX rather than take the engagement. If your differentiator

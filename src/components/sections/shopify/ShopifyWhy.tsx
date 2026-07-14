@@ -88,7 +88,7 @@ export function ShopifyWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use Shopify
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Shopify is the right tool for a lot of stores and the wrong one for some, and we&apos;d
               rather say so up front. When the store is content-led - a blog or brand site with a shop
               attached, where you want full control and ownership -{" "}

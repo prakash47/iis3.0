@@ -65,7 +65,7 @@ export function MobileProof() {
             <h3 className="font-display text-base font-semibold text-foreground">
               The engine behind an app, we&apos;ve already shipped
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               The backend, APIs, authentication and real-time features a serious app needs are the
               same ones we build for the web - and we&apos;ve shipped those in production.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">

@@ -93,7 +93,7 @@ export function SwiftuiWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to go native with SwiftUI
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Fully native on iOS is a real cost, and it earns its keep only when the product genuinely
               demands it - deep performance, direct hardware access, or platform-specific behaviour from
               the first screen. Most products do not, and for them going native is the expensive answer.

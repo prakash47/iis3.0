@@ -84,7 +84,7 @@ export function TravelWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to build, and when we&apos;d turn the work down
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               If an off-the-shelf booking engine, an Online Travel Agency connection or a channel
               manager already does what you need, configure it and keep your money - that is a column
               in the table below, and it is the answer more often than a bespoke build. We will not

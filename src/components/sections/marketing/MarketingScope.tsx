@@ -58,7 +58,7 @@ export function MarketingScope() {
             <h3 className="font-display text-base font-semibold text-foreground">
               Foundation vs growth
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Every site we build ships with an SEO and schema baseline - the one-time technical
               foundation that makes a site findable from day one (that&apos;s part of{" "}
               <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
@@ -67,7 +67,7 @@ export function MarketingScope() {
               ). This is the ongoing growth on top of it. If we built your site, we start growing
               on day one instead of fixing foundations. If we didn&apos;t, we start with an audit.
             </p>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-justify">
               Looking for the paid half - Google Ads and paid social?{" "}
               <Link href="/services/performance-marketing" className="font-medium text-brand-500 hover:text-brand-600">
                 See performance marketing

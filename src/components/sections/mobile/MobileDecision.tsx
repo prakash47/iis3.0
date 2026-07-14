@@ -84,7 +84,7 @@ export function MobileDecision() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you NOT to build native
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               If your app is mostly content, forms or standard flows, going fully native is usually
               just the expensive way to get there - and a PWA might do the job for a fraction of the
               cost. We make that call with you in discovery, in writing, before you spend on a build

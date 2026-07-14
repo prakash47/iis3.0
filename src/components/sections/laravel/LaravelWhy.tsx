@@ -69,7 +69,7 @@ export function LaravelWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use Laravel
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Laravel is our pick for conventional server-rendered and CRUD-heavy web apps with a
               fast, batteries-included workflow. It is the wrong tool - and we&apos;ll say so - when
               the whole product is hard real-time at scale: for tens of thousands of persistent live

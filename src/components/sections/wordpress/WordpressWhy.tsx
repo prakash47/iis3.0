@@ -77,7 +77,7 @@ export function WordpressWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use WordPress
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               WordPress is the right tool for a lot of sites and the wrong one for some. When raw
               speed is the product or the experience is genuinely bespoke, a custom{" "}
               <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">

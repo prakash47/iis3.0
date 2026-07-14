@@ -75,7 +75,7 @@ export function SanityWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               Is Sanity too developer-heavy for my editors? Only at the start - and that is the point.
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Honest yes-and-no. Standing Sanity up is a developer job - someone has to model your content
               as schemas in code before anyone can edit a word - and that upfront modelling is exactly what
               you are paying for. Once the schemas exist, editors never touch code: day-to-day editing is a

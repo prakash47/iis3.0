@@ -48,7 +48,7 @@ export function PythonWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to use Python
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Python is our pick when the core of the job is AI or ML, data, automation, or a clean
               typed API. It is the wrong tool - and we&apos;ll say so - when the work is raw CPU-bound,
               latency-critical compute: Python is comparatively slow in hot loops, so if the whole

@@ -88,7 +88,7 @@ export function FintechWhy() {
             <h3 className="font-display text-base font-semibold text-foreground">
               When we&apos;d tell you not to build, and when we&apos;d turn the work down
             </h3>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               If a processor plus a sponsor bank or a BaaS provider already does what you need,
               integrate onto them and keep your money - that is the column we highlight in the table
               below, and it is the answer most often. If a brief may turn on a money-transmitter
