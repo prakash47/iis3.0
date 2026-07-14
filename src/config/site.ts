@@ -94,10 +94,10 @@ export const siteConfig = {
   // ── Social / entity profiles (sameAs) ─────────────────────────────────────
   // Every one is a `sameAs` entity node (AEO/GEO). "" = omitted until it exists.
   social: {
-    linkedin: "https://in.linkedin.com/company/intentioninfoservice",
+    linkedin: "https://www.linkedin.com/company/iinfoservice/",
     x: "https://x.com/IInfoservice",
-    instagram: "https://www.instagram.com/intention_infoservice/",
-    facebook: "https://www.facebook.com/intentioninfoservice/",
+    instagram: "https://www.instagram.com/iinfoservice/",
+    facebook: "https://www.facebook.com/iinfoservice",
     youtube: "",
     github: "",
     clutch: "", // https://clutch.co/profile/... (add once claimed)
