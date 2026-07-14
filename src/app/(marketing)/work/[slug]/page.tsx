@@ -130,6 +130,17 @@ export default async function CaseStudyPage({
               </ul>
             </section>
 
+            {cs.whyItWorked && cs.whyItWorked.length > 0 && (
+              <section>
+                <h2 className="font-display text-xl font-semibold text-foreground">Why it worked</h2>
+                {cs.whyItWorked.map((p, i) => (
+                  <p key={i} className="mt-3 leading-relaxed text-muted-foreground">
+                    {p}
+                  </p>
+                ))}
+              </section>
+            )}
+
             <section>
               <h2 className="font-display text-xl font-semibold text-foreground">The outcome</h2>
               {cs.outcome.map((p, i) => (
