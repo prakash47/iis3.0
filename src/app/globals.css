@@ -373,6 +373,16 @@
 
 /* ── Header & navigation ──────────────────────────────────────────────── */
 
+/* Solid (opaque) sticky header. The header still uses .glass for its bordered
+   bar, but the nav should not be see-through, so make the background fully
+   opaque and drop the blur for the header ONLY (via its header-specific
+   .header-scroll class). Every other .glass surface keeps its translucency. */
+.header-scroll {
+  background: var(--surface);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 /* Elevate the sticky header once the page scrolls - pure CSS scroll-driven
    animation (zero JS scroll listeners); older browsers just keep the flat glass. */
 @supports (animation-timeline: scroll()) {
