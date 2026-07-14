@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
+import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -63,99 +64,130 @@ export default async function CaseStudyPage({
       />
       <Section>
         <Container>
-          <Breadcrumbs items={crumbs} />
+          <div className="mx-auto max-w-5xl">
+            <Breadcrumbs items={crumbs} />
 
-          <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-medium text-muted-foreground">
-            <span>{cs.type}</span>
-            <span aria-hidden="true">·</span>
-            <span>{cs.sector}</span>
-            {cs.confidential && (
-              <>
-                <span aria-hidden="true">·</span>
-                <span>Client confidential</span>
-              </>
-            )}
-          </div>
+            {/* hero */}
+            <h1 className="mt-6 max-w-3xl font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              {cs.title}
+            </h1>
+            <p className="mt-4 max-w-2xl text-lg text-muted-foreground">{cs.summary}</p>
 
-          <h1 className="mt-3 max-w-3xl font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {cs.title}
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-muted-foreground">{cs.summary}</p>
-
-          {/* real, measured metrics */}
-          <div className="mt-8 flex flex-wrap gap-x-10 gap-y-6">
-            {cs.metrics.map((m) => (
-              <div key={m.label}>
-                <div className="font-display text-3xl font-extrabold text-brand-600">{m.value}</div>
-                <div className="text-sm text-muted-foreground">{m.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* stack */}
-          <div className="mt-6 flex flex-wrap gap-2">
-            {cs.stack.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border border-border bg-surface-2 px-2.5 py-1 text-xs font-medium text-muted-foreground"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-
-          {/* body */}
-          <div className="mt-12 max-w-2xl space-y-10">
-            <section>
-              <h2 className="font-display text-xl font-semibold text-foreground">The challenge</h2>
-              {cs.challenge.map((p, i) => (
-                <p key={i} className="mt-3 leading-relaxed text-muted-foreground">
-                  {p}
-                </p>
+            <div className="mt-8 flex flex-wrap gap-x-10 gap-y-6">
+              {cs.metrics.map((m) => (
+                <div key={m.label}>
+                  <div className="font-display text-3xl font-extrabold text-brand-600">{m.value}</div>
+                  <div className="text-sm text-muted-foreground">{m.label}</div>
+                </div>
               ))}
-            </section>
+            </div>
 
-            <section>
-              <h2 className="font-display text-xl font-semibold text-foreground">What we built</h2>
-              <ul className="mt-3 space-y-2.5">
-                {cs.approach.map((a, i) => (
-                  <li key={i} className="flex gap-3 leading-relaxed text-muted-foreground">
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-500"
-                    />
-                    <span>{a}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+            {/* two-column: narrative + sticky sidebar */}
+            <div className="mt-12 grid gap-x-12 gap-y-10 lg:grid-cols-[minmax(0,1fr)_16rem]">
+              {/* narrative */}
+              <div className="space-y-10">
+                <section>
+                  <h2 className="font-display text-xl font-semibold text-foreground">The challenge</h2>
+                  {cs.challenge.map((p, i) => (
+                    <p key={i} className="mt-3 leading-relaxed text-muted-foreground">
+                      {p}
+                    </p>
+                  ))}
+                </section>
 
-            {cs.whyItWorked && cs.whyItWorked.length > 0 && (
-              <section>
-                <h2 className="font-display text-xl font-semibold text-foreground">Why it worked</h2>
-                {cs.whyItWorked.map((p, i) => (
-                  <p key={i} className="mt-3 leading-relaxed text-muted-foreground">
-                    {p}
+                <section>
+                  <h2 className="font-display text-xl font-semibold text-foreground">What we built</h2>
+                  <ul className="mt-3 space-y-2.5">
+                    {cs.approach.map((a, i) => (
+                      <li key={i} className="flex gap-3 leading-relaxed text-muted-foreground">
+                        <span
+                          aria-hidden="true"
+                          className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-500"
+                        />
+                        <span>{a}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+
+                {cs.whyItWorked && cs.whyItWorked.length > 0 && (
+                  <section>
+                    <h2 className="font-display text-xl font-semibold text-foreground">Why it worked</h2>
+                    {cs.whyItWorked.map((p, i) => (
+                      <p key={i} className="mt-3 leading-relaxed text-muted-foreground">
+                        {p}
+                      </p>
+                    ))}
+                  </section>
+                )}
+
+                <section>
+                  <h2 className="font-display text-xl font-semibold text-foreground">The outcome</h2>
+                  {cs.outcome.map((p, i) => (
+                    <p key={i} className="mt-3 leading-relaxed text-muted-foreground">
+                      {p}
+                    </p>
+                  ))}
+                </section>
+
+                {cs.confidential && (
+                  <p className="text-sm italic text-muted-foreground">
+                    Client name withheld at the client&apos;s request. We&apos;re happy to walk
+                    through the details, or arrange a reference, on a call.
                   </p>
-                ))}
-              </section>
-            )}
+                )}
+              </div>
 
-            <section>
-              <h2 className="font-display text-xl font-semibold text-foreground">The outcome</h2>
-              {cs.outcome.map((p, i) => (
-                <p key={i} className="mt-3 leading-relaxed text-muted-foreground">
-                  {p}
-                </p>
-              ))}
-            </section>
+              {/* sticky sidebar */}
+              <aside className="h-fit space-y-6 lg:sticky lg:top-24">
+                <div className="card p-6">
+                  <h2 className="font-display text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    At a glance
+                  </h2>
+                  <dl className="mt-4 space-y-4">
+                    <div>
+                      <dt className="text-xs font-medium text-muted-foreground">Sector</dt>
+                      <dd className="mt-0.5 text-sm text-foreground">{cs.sector}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-medium text-muted-foreground">Project</dt>
+                      <dd className="mt-0.5 text-sm text-foreground">{cs.type}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs font-medium text-muted-foreground">Stack</dt>
+                      <dd className="mt-1.5 flex flex-wrap gap-1.5">
+                        {cs.stack.map((t) => (
+                          <span
+                            key={t}
+                            className="rounded-full border border-border bg-surface-2 px-2 py-0.5 text-xs font-medium text-muted-foreground"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </dd>
+                    </div>
+                    {cs.confidential && (
+                      <div>
+                        <dt className="text-xs font-medium text-muted-foreground">Client</dt>
+                        <dd className="mt-0.5 text-sm text-foreground">Confidential (under NDA)</dd>
+                      </div>
+                    )}
+                  </dl>
+                </div>
 
-            {cs.confidential && (
-              <p className="text-sm italic text-muted-foreground">
-                Client name withheld at the client&apos;s request. We&apos;re happy to walk
-                through the details, or arrange a reference, on a call.
-              </p>
-            )}
+                <div className="card hidden p-6 lg:block">
+                  <h2 className="font-display text-base font-semibold text-foreground">
+                    Have a similar project?
+                  </h2>
+                  <p className="mt-1.5 text-sm text-muted-foreground">
+                    Talk to the people who&apos;ll build it - fixed pricing and a clear timeline.
+                  </p>
+                  <Button href="/contact" className="mt-4 w-full justify-center">
+                    Start a project
+                  </Button>
+                </div>
+              </aside>
+            </div>
           </div>
         </Container>
       </Section>
