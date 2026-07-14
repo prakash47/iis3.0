@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { IconArrow } from "@/components/icons";
 import { breadcrumbSchema } from "@/lib/seo/jsonLd";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { caseStudies } from "@/content/case-studies";
@@ -27,19 +29,24 @@ export default function WorkPage() {
             Our Work
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            Instead of a wall of logos, we go deep on a few real projects - with the stack,
-            the timeline, and the measurable results.
+            Instead of a wall of logos, we go deep on the work itself - the stack, the
+            timeline and the real results behind each build. Some of our work is under
+            NDA, so client names are withheld; the details and references are available on a call.
           </p>
 
           {caseStudies.length > 0 ? (
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {caseStudies.map((cs) => (
-                <article key={cs.slug} className="rounded-2xl border border-border p-6">
+                <Link
+                  key={cs.slug}
+                  href={`/work/${cs.slug}`}
+                  className="group block rounded-2xl border border-border p-6 transition-colors hover:border-brand-400"
+                >
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-medium text-muted-foreground">{cs.type} · {cs.client}</span>
-                    {cs.placeholder && (
+                    <span className="text-xs font-medium text-muted-foreground">{cs.type} · {cs.sector}</span>
+                    {cs.confidential && (
                       <span className="rounded-full bg-muted px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-                        Sample
+                        Confidential
                       </span>
                     )}
                   </div>
@@ -53,7 +60,11 @@ export default function WorkPage() {
                       </div>
                     ))}
                   </div>
-                </article>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                    Read the case study
+                    <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </Link>
               ))}
             </div>
           ) : (

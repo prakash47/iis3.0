@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/config/site";
 import { services, industries, technologies } from "@/content/catalog";
+import { caseStudies } from "@/content/case-studies";
 import {
   staticPages,
   servicePageSeo,
@@ -55,5 +56,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-  return [...staticEntries, ...resourceEntries];
+  const caseStudyEntries = caseStudies.map((cs) => ({
+    url: absoluteUrl(`/work/${cs.slug}`),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...caseStudyEntries, ...resourceEntries];
 }

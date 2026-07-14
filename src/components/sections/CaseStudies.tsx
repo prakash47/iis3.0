@@ -8,9 +8,9 @@ import { caseStudies } from "@/content/case-studies";
 
 /**
  * Selected work - depth over breadth (the Ramotion model). Leads each card with
- * a real, quantified metric. NOTE: the underlying data is currently PLACEHOLDER
- * (see content/case-studies.ts) and renders a "Sample" badge until real projects
- * replace it. Server-rendered.
+ * a real, quantified metric. Data is REAL, anonymized work (client names withheld
+ * under NDA; see content/case-studies.ts). Each card links to its case-study
+ * detail page. Server-rendered.
  */
 export function CaseStudies() {
   const featured = caseStudies.slice(0, 2);
@@ -42,9 +42,9 @@ export function CaseStudies() {
                   <div aria-hidden="true" className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_85%_12%,rgba(255,255,255,0.45),transparent_45%)]" />
                   <div className="relative z-[1] flex items-center justify-between">
                     <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold backdrop-blur">{cs.type}</span>
-                    {cs.placeholder && (
+                    {cs.confidential && (
                       <span className="rounded-full bg-black/25 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-white/90">
-                        Sample
+                        Confidential
                       </span>
                     )}
                   </div>
@@ -58,7 +58,7 @@ export function CaseStudies() {
 
                 {/* body */}
                 <div className="flex flex-1 flex-col p-6 sm:p-7">
-                  <div className="text-xs font-medium text-muted-foreground">{cs.client}</div>
+                  <div className="text-xs font-medium text-muted-foreground">{cs.sector}</div>
                   <h3 className="mt-2 font-display text-xl font-bold text-foreground">{cs.title}</h3>
                   <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted-foreground">{cs.summary}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -69,11 +69,11 @@ export function CaseStudies() {
                     ))}
                   </div>
                   <Link
-                    href="/work"
-                    aria-label={`View case study: ${cs.title}`}
+                    href={`/work/${cs.slug}`}
+                    aria-label={`Read the case study: ${cs.title}`}
                     className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600"
                   >
-                    View case study
+                    Read the case study
                     <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </div>
