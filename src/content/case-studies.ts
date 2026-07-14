@@ -72,4 +72,36 @@ export const caseStudies: CaseStudy[] = [
       "Just as important, the result is durable and owned by the client. Their own team can extend the site - new courses, new cities, new posts - on an architecture built to scale, instead of going back to a developer for every change. And because it is a clean, standard Next.js and headless-CMS build, nothing about it is locked to us: the code and the content are theirs.",
     ],
   },
+  {
+    slug: "loan-comparison-website",
+    title: "A fast loan-comparison and enquiry site, built fresh in 2 weeks",
+    sector: "Financial services / lending",
+    type: "New website",
+    summary:
+      "Designed and built a fast, statically-generated Next.js site for a loan advisory - an interactive EMI calculator, clear per-product pages and enquiry funnels - shipped in two weeks.",
+    metrics: [
+      { label: "Delivered in", value: "2 weeks" },
+      { label: "Loan categories", value: "10" },
+    ],
+    stack: ["Next.js", "React", "SSG", "SEO"],
+    confidential: true,
+    challenge: [
+      "A loan advisory that connects borrowers with banks and NBFCs needed a website that does two jobs at once: explain a wide range of loan products clearly, and turn interest into enquiries quickly. On a finance site, speed and clarity are the whole game - a borrower comparing options will not wait on a slow page, and a confusing one loses them to the next tab.",
+      "The brief was a fresh build: a fast, modern site that could carry ten loan categories, an affordability tool and enquiry funnels, without the bloat that makes so many finance sites slow.",
+    ],
+    approach: [
+      "Built the site fresh on Next.js and statically generated it, so pages render as fast, pre-built HTML - the foundation for a genuinely quick site rather than one patched for speed later.",
+      "Built an interactive EMI calculator that computes the monthly figure in real time, so a borrower can check affordability instantly, before they ever fill in a form.",
+      "Gave each loan category - home, business, personal, MSME, education, auto, machinery, working capital, loan-against-property and credit card - a clear, structured page with eligibility, rate ranges and document checklists.",
+      "Placed 'Apply Now' enquiry funnels where borrower intent is highest, so a fast, clear page actually turns into leads.",
+      "Optimised images and kept the front end lean, so speed is a property of the architecture, not an afterthought.",
+    ],
+    whyItWorked: [
+      "On a comparison site, speed is not a nice-to-have - it is the conversion. A borrower weighing loan options is one slow page away from leaving, so a statically-generated, image-optimised build removes the friction between interest and enquiry. The real-time calculator does the same job for trust: it answers the borrower's first question - 'can I afford this?' - on the spot, before asking anything in return.",
+    ],
+    outcome: [
+      "The site shipped fresh in two weeks: a fast, clear loan-comparison experience built for enquiries, with an affordability tool and structured product pages the advisory can point every prospect to.",
+      "Built on a clean, standard Next.js foundation, it is fast by construction and straightforward to extend as new loan products and lenders come on board.",
+    ],
+  },
 ];
