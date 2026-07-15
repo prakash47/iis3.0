@@ -30,6 +30,13 @@ export const IconDevice = ({ className }: { className?: string }) => (
   </Svg>
 );
 
+export const IconUser = ({ className }: { className?: string }) => (
+  <Svg className={className}>
+    <circle cx="12" cy="8" r="3.5" />
+    <path d="M5.5 20a6.5 6.5 0 0 1 13 0" />
+  </Svg>
+);
+
 export const IconMegaphone = ({ className }: { className?: string }) => (
   <Svg className={className}>
     <path d="M3 10v4a1 1 0 0 0 1 1h2l4 4V5L6 9H4a1 1 0 0 0-1 1zM14 8.5a4 4 0 0 1 0 7M17 6a8 8 0 0 1 0 12" />

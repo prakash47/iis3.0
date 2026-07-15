@@ -6,7 +6,7 @@ import Link from "next/link";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import flags from "react-phone-number-input/flags";
 import { siteConfig } from "@/config/site";
-import { IconArrow, IconCheck } from "@/components/icons";
+import { IconArrow, IconCheck, IconUser, IconMail, IconBuilding, IconLayers, IconTag, IconClock, IconChat } from "@/components/icons";
 
 /**
  * The /contact lead form. POSTs to /api/contact (SMTP via Gmail). Best-practice UX:
@@ -38,17 +38,6 @@ const projectTypes = [
 ];
 const budgets = ["Not sure yet", "Under $1,000", "$1,000 - $5,000", "$5,000 - $15,000", "More than $15,000", "Ongoing monthly plan"];
 const timelines = ["Not sure yet", "As soon as possible", "In the next month", "1 to 3 months", "Just exploring"];
-
-const helper: Record<string, string> = {
-  name: "How should we address you?",
-  email: "We only use this to reply to your enquiry.",
-  phone: "Optional. Choose your country, then enter your number.",
-  company: "Optional.",
-  project_type: "Not sure? Choose “help me choose”.",
-  budget: "Optional. A rough range helps us scope faster.",
-  timeline: "Optional.",
-  message: "What are you building, and what would success look like?",
-};
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const COMMON_DOMAINS = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "aol.com", "live.com", "proton.me", "protonmail.com"];
@@ -228,11 +217,11 @@ export function ContactForm() {
         {errors[name]}
       </p>
     ) : null;
-  const describedBy = (name: keyof Values) => `${name}-help${touched[name] && errors[name] ? ` ${name}-error` : ""}`;
-  const fieldCls = (name: keyof Values) =>
-    `mt-1.5 h-11 w-full rounded-xl border bg-background px-3.5 text-sm text-foreground transition-colors focus:outline-none focus:ring-2 ${touched[name] && errors[name] ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : "border-border focus:border-brand-500 focus:ring-brand-500/30"}`;
-  const helpP = (name: keyof Values) => (
-    <p id={`${name}-help`} className="mt-1.5 text-xs text-muted-foreground">{helper[name]}</p>
+  const describedBy = (name: keyof Values) => (touched[name] && errors[name] ? `${name}-error` : undefined);
+  const inputCls = (name: keyof Values) =>
+    `h-11 w-full rounded-xl border bg-background pl-11 pr-3.5 text-sm text-foreground transition-colors focus:outline-none focus:ring-2 ${touched[name] && errors[name] ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : "border-border focus:border-brand-500 focus:ring-brand-500/30"}`;
+  const leftIcon = (node: React.ReactNode) => (
+    <span aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 z-[1] -translate-y-1/2 text-muted-foreground">{node}</span>
   );
 
   return (
@@ -259,91 +248,106 @@ export function ContactForm() {
       )}
 
       <fieldset disabled={status === "submitting"} className="space-y-4 border-0 p-0 disabled:opacity-70">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label htmlFor="name" className={labelCls}>Name{reqMark}</label>
-            <input id="name" name="name" autoComplete="name" value={values.name}
+        <div>
+          <label htmlFor="name" className={labelCls}>Name{reqMark}</label>
+          <div className="relative mt-1.5">
+            {leftIcon(<IconUser className="h-5 w-5" />)}
+            <input id="name" name="name" autoComplete="name" placeholder="Your full name" value={values.name}
               onChange={(e) => setField("name", e.target.value)} onBlur={(e) => blurField("name", e.target.value)}
-              aria-required="true" aria-invalid={!!(touched.name && errors.name)} aria-describedby={describedBy("name")} className={fieldCls("name")} />
-            {errText("name") ?? helpP("name")}
+              aria-required="true" aria-invalid={!!(touched.name && errors.name)} aria-describedby={describedBy("name")} className={inputCls("name")} />
           </div>
-          <div>
-            <label htmlFor="email" className={labelCls}>Email{reqMark}</label>
-            <input id="email" name="email" type="email" inputMode="email" autoComplete="email" value={values.email}
+          {errText("name")}
+        </div>
+
+        <div>
+          <label htmlFor="email" className={labelCls}>Email{reqMark}</label>
+          <div className="relative mt-1.5">
+            {leftIcon(<IconMail className="h-5 w-5" />)}
+            <input id="email" name="email" type="email" inputMode="email" autoComplete="email" placeholder="you@company.com" value={values.email}
               onChange={(e) => setField("email", e.target.value)} onBlur={(e) => blurField("email", e.target.value)}
-              aria-required="true" aria-invalid={!!(touched.email && errors.email)} aria-describedby={describedBy("email")} className={fieldCls("email")} />
-            {errText("email") ?? helpP("email")}
-            {emailHint && !errors.email && (
-              <p className="mt-1.5 text-xs text-muted-foreground">
-                Did you mean{" "}
-                <button type="button" onClick={() => { setField("email", emailHint); setEmailHint(""); }} className="font-semibold text-brand-600 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">{emailHint}</button>?
-              </p>
-            )}
+              aria-required="true" aria-invalid={!!(touched.email && errors.email)} aria-describedby={describedBy("email")} className={inputCls("email")} />
+          </div>
+          {errText("email")}
+          {emailHint && !errors.email && (
+            <p className="mt-1.5 text-xs text-muted-foreground">
+              Did you mean{" "}
+              <button type="button" onClick={() => { setField("email", emailHint); setEmailHint(""); }} className="font-semibold text-brand-600 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">{emailHint}</button>?
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="phone-input" className={labelCls}>Phone or WhatsApp{optMark}</label>
+          <PhoneInput
+            id="phone-input"
+            name="phone"
+            defaultCountry="US"
+            flags={flags}
+            placeholder="Enter phone number"
+            value={values.phone}
+            onChange={(v) => setField("phone", v || "")}
+            onBlur={() => blurField("phone", values.phone)}
+            inputComponent={PhoneTextInput}
+            aria-describedby={describedBy("phone")}
+            aria-invalid={!!(touched.phone && errors.phone)}
+            className={`mt-1.5 flex h-11 items-center gap-2 rounded-xl border bg-background px-3.5 transition-colors focus-within:ring-2 ${touched.phone && errors.phone ? "border-red-500 focus-within:ring-red-500/30" : "border-border focus-within:border-brand-500 focus-within:ring-brand-500/30"}`}
+          />
+          {errText("phone")}
+        </div>
+
+        <div>
+          <label htmlFor="company" className={labelCls}>Company{optMark}</label>
+          <div className="relative mt-1.5">
+            {leftIcon(<IconBuilding className="h-5 w-5" />)}
+            <input id="company" name="company" autoComplete="organization" placeholder="Your company name" value={values.company}
+              onChange={(e) => setField("company", e.target.value)} className={inputCls("company")} />
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label htmlFor="phone-input" className={labelCls}>Phone or WhatsApp{optMark}</label>
-            <PhoneInput
-              id="phone-input"
-              name="phone"
-              international
-              defaultCountry="US"
-              flags={flags}
-              value={values.phone}
-              onChange={(v) => setField("phone", v || "")}
-              onBlur={() => blurField("phone", values.phone)}
-              inputComponent={PhoneTextInput}
-              aria-describedby={describedBy("phone")}
-              aria-invalid={!!(touched.phone && errors.phone)}
-              className={`mt-1.5 flex h-11 items-center gap-2 rounded-xl border bg-background px-3.5 transition-colors focus-within:ring-2 ${touched.phone && errors.phone ? "border-red-500 focus-within:ring-red-500/30" : "border-border focus-within:border-brand-500 focus-within:ring-brand-500/30"}`}
-            />
-            {errText("phone") ?? helpP("phone")}
-          </div>
-          <div>
-            <label htmlFor="company" className={labelCls}>Company{optMark}</label>
-            <input id="company" name="company" autoComplete="organization" value={values.company}
-              onChange={(e) => setField("company", e.target.value)} aria-describedby="company-help" className={fieldCls("company")} />
-            {helpP("company")}
-          </div>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label htmlFor="project_type" className={labelCls}>What can we help with?{reqMark}</label>
+        <div>
+          <label htmlFor="project_type" className={labelCls}>What can we help with?{reqMark}</label>
+          <div className="relative mt-1.5">
+            {leftIcon(<IconLayers className="h-5 w-5" />)}
             <select id="project_type" name="project_type" value={values.project_type}
               onChange={(e) => setField("project_type", e.target.value)} onBlur={(e) => blurField("project_type", e.target.value)}
-              aria-required="true" aria-invalid={!!(touched.project_type && errors.project_type)} aria-describedby={describedBy("project_type")} className={fieldCls("project_type")}>
-              <option value="" disabled>Select one</option>
+              aria-required="true" aria-invalid={!!(touched.project_type && errors.project_type)} aria-describedby={describedBy("project_type")} className={inputCls("project_type")}>
+              <option value="" disabled>Select a project type</option>
               {projectTypes.map((t) => <option key={t}>{t}</option>)}
             </select>
-            {errText("project_type") ?? helpP("project_type")}
           </div>
-          <div>
-            <label htmlFor="budget" className={labelCls}>Budget{optMark}</label>
-            <select id="budget" name="budget" value={values.budget} onChange={(e) => setField("budget", e.target.value)} aria-describedby="budget-help" className={fieldCls("budget")}>
+          {errText("project_type")}
+        </div>
+
+        <div>
+          <label htmlFor="budget" className={labelCls}>Budget{optMark}</label>
+          <div className="relative mt-1.5">
+            {leftIcon(<IconTag className="h-5 w-5" />)}
+            <select id="budget" name="budget" value={values.budget} onChange={(e) => setField("budget", e.target.value)} className={inputCls("budget")}>
               {budgets.map((b) => <option key={b}>{b}</option>)}
             </select>
-            {helpP("budget")}
           </div>
         </div>
 
         <div>
           <label htmlFor="timeline" className={labelCls}>Timeline{optMark}</label>
-          <select id="timeline" name="timeline" value={values.timeline} onChange={(e) => setField("timeline", e.target.value)} aria-describedby="timeline-help" className={fieldCls("timeline")}>
-            {timelines.map((t) => <option key={t}>{t}</option>)}
-          </select>
-          {helpP("timeline")}
+          <div className="relative mt-1.5">
+            {leftIcon(<IconClock className="h-5 w-5" />)}
+            <select id="timeline" name="timeline" value={values.timeline} onChange={(e) => setField("timeline", e.target.value)} className={inputCls("timeline")}>
+              {timelines.map((t) => <option key={t}>{t}</option>)}
+            </select>
+          </div>
         </div>
 
         <div>
           <label htmlFor="message" className={labelCls}>What are you building?{reqMark}</label>
-          <textarea id="message" name="message" rows={5} value={values.message}
-            onChange={(e) => setField("message", e.target.value)} onBlur={(e) => blurField("message", e.target.value)}
-            aria-required="true" aria-invalid={!!(touched.message && errors.message)} aria-describedby={describedBy("message")}
-            className={`mt-1.5 w-full rounded-xl border bg-background px-3.5 py-2.5 text-sm text-foreground transition-colors focus:outline-none focus:ring-2 ${touched.message && errors.message ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : "border-border focus:border-brand-500 focus:ring-brand-500/30"}`} />
-          {errText("message") ?? helpP("message")}
+          <div className="relative mt-1.5">
+            <span aria-hidden="true" className="pointer-events-none absolute left-3.5 top-3 z-[1] text-muted-foreground"><IconChat className="h-5 w-5" /></span>
+            <textarea id="message" name="message" rows={5} placeholder="Tell us what you're building, and what success looks like." value={values.message}
+              onChange={(e) => setField("message", e.target.value)} onBlur={(e) => blurField("message", e.target.value)}
+              aria-required="true" aria-invalid={!!(touched.message && errors.message)} aria-describedby={describedBy("message")}
+              className={`w-full rounded-xl border bg-background pl-11 pr-3.5 py-2.5 text-sm text-foreground transition-colors focus:outline-none focus:ring-2 ${touched.message && errors.message ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : "border-border focus:border-brand-500 focus:ring-brand-500/30"}`} />
+          </div>
+          {errText("message")}
         </div>
 
         {/* Honeypot - hidden from humans and assistive tech; a bot that fills it is dropped server-side. */}
