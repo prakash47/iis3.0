@@ -1,19 +1,28 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, forwardRef } from "react";
+import type { InputHTMLAttributes } from "react";
 import Link from "next/link";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import flags from "react-phone-number-input/flags";
 import { siteConfig } from "@/config/site";
 import { IconArrow, IconCheck } from "@/components/icons";
 
 /**
- * The /contact lead form. It POSTs to our own /api/contact route, which sends the enquiry
- * over SMTP (Google Workspace Gmail). Honesty locks (kept from the prior build): a real
- * async state machine (never a faked "sent"); a hidden honeypot handled server-side (no
- * client-side silent-drop that could bury a real lead); honest, non-inflated reply
- * commitment; the selects default to an honest "Not sure yet" (never a fabricated pick);
- * on failure (including SMTP not yet configured -> 503) the error state routes the visitor
- * to email/WhatsApp so nothing is lost. Every field has a `name` so the POST captures it.
+ * The /contact lead form. POSTs to /api/contact (SMTP via Gmail). Best-practice UX:
+ *  - International phone field with a country-code dropdown + flags (react-phone-number-input),
+ *    validated per selected country with libphonenumber-js (E.164 value on the wire).
+ *  - Email + required-field validation on blur, then live once a field has errored.
+ *  - Accessible errors (aria-invalid, aria-describedby -> helper + error, role=alert,
+ *    focus-first-error on submit) with icon + colour + text (never colour alone) and helper
+ *    text under every field.
+ *  - Invisible Google reCAPTCHA v3 (executed on submit) when a site key is configured; the
+ *    server verifies the token. Everything degrades gracefully when keys/SMTP are unset.
+ *  - A hidden honeypot handled server-side; no client-side silent-drop of real leads.
  */
+const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+const RECAPTCHA_ACTION = "contact_submit";
+
 const projectTypes = [
   "Website (marketing or business site)",
   "E-commerce store",
@@ -27,60 +36,159 @@ const projectTypes = [
   "AI chatbot or automation",
   "Not sure yet, help me choose",
 ];
+const budgets = ["Not sure yet", "Under $1,000", "$1,000 - $5,000", "$5,000 - $15,000", "More than $15,000", "Ongoing monthly plan"];
+const timelines = ["Not sure yet", "As soon as possible", "In the next month", "1 to 3 months", "Just exploring"];
 
-// Aligned to our published pricing (from $300 sites, $500 apps, $100/mo care plans) so the
-// real low end is never scared off and no fantasy ceiling is invented. Budget is OPTIONAL.
-const budgets = [
-  "Not sure yet",
-  "Under $1,000",
-  "$1,000 - $5,000",
-  "$5,000 - $15,000",
-  "More than $15,000",
-  "Ongoing monthly plan",
-];
+const helper: Record<string, string> = {
+  name: "How should we address you?",
+  email: "We only use this to reply to your enquiry.",
+  phone: "Optional. Choose your country, then enter your number.",
+  company: "Optional.",
+  project_type: "Not sure? Choose “help me choose”.",
+  budget: "Optional. A rough range helps us scope faster.",
+  timeline: "Optional.",
+  message: "What are you building, and what would success look like?",
+};
 
-const timelines = [
-  "Not sure yet",
-  "As soon as possible",
-  "In the next month",
-  "1 to 3 months",
-  "Just exploring",
-];
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const COMMON_DOMAINS = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "aol.com", "live.com", "proton.me", "protonmail.com"];
 
-const inputCls =
-  "mt-1.5 h-11 w-full rounded-xl border border-border bg-background px-3.5 text-sm text-foreground transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
-const textareaCls =
-  "mt-1.5 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm text-foreground transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
-const labelCls = "text-sm font-medium text-foreground";
-const req = (
+function lev(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  const d = Array.from({ length: m + 1 }, (_, i) => [i, ...Array(n).fill(0)]);
+  for (let j = 1; j <= n; j++) d[0][j] = j;
+  for (let i = 1; i <= m; i++)
+    for (let j = 1; j <= n; j++)
+      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return d[m][n];
+}
+
+/** Non-blocking "did you mean" suggestion for a mistyped common email domain. */
+function suggestEmail(email: string): string {
+  const at = email.lastIndexOf("@");
+  if (at < 1) return "";
+  const domain = email.slice(at + 1).toLowerCase();
+  if (!domain.includes(".") || COMMON_DOMAINS.includes(domain)) return "";
+  let best = "", bestD = 3;
+  for (const d of COMMON_DOMAINS) {
+    const dist = lev(domain, d);
+    if (dist > 0 && dist < bestD) { bestD = dist; best = d; }
+  }
+  return best ? email.slice(0, at + 1) + best : "";
+}
+
+type Values = { name: string; email: string; phone: string; company: string; project_type: string; budget: string; timeline: string; message: string };
+type Status = "idle" | "submitting" | "success" | "error";
+
+function validateField(name: keyof Values, v: string): string {
+  switch (name) {
+    case "name": return v.trim() ? "" : "Please enter your name.";
+    case "email":
+      if (!v.trim()) return "Please enter your email.";
+      return EMAIL_RE.test(v.trim()) ? "" : "Enter a valid email, e.g. name@company.com.";
+    case "phone": return !v ? "" : isValidPhoneNumber(v) ? "" : "Enter a valid phone number for the country you selected.";
+    case "project_type": return v ? "" : "Please choose what we can help with.";
+    case "message": return v.trim().length >= 10 ? "" : "Tell us a little about your project - a sentence is plenty.";
+    default: return "";
+  }
+}
+const REQUIRED: (keyof Values)[] = ["name", "email", "project_type", "message"];
+
+/** Borderless input for the phone field (module-level so it never remounts / loses focus). */
+const PhoneTextInput = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>((props, ref) => (
+  <input ref={ref} {...props} className="min-w-0 flex-1 border-0 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
+));
+PhoneTextInput.displayName = "PhoneTextInput";
+
+const labelCls = "block text-sm font-medium text-foreground";
+const reqMark = (
   <>
     {" "}
     <span aria-hidden="true" className="text-brand-500">*</span>
     <span className="sr-only">(required)</span>
   </>
 );
-const opt = <span className="font-normal text-muted-foreground"> (optional)</span>;
+const optMark = <span className="font-normal text-muted-foreground"> (optional)</span>;
 
-type Status = "idle" | "submitting" | "success" | "error";
+function AlertIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 20 20" className="mt-0.5 h-3.5 w-3.5 shrink-0 fill-current">
+      <path d="M10 1.5a8.5 8.5 0 100 17 8.5 8.5 0 000-17zM9 6h2v6H9V6zm0 7h2v2H9v-2z" />
+    </svg>
+  );
+}
+
+declare global {
+  interface Window {
+    grecaptcha?: { ready: (cb: () => void) => void; execute: (key: string, opts: { action: string }) => Promise<string> };
+  }
+}
 
 export function ContactForm() {
+  const [values, setValues] = useState<Values>({ name: "", email: "", phone: "", company: "", project_type: "", budget: "Not sure yet", timeline: "Not sure yet", message: "" });
+  const [errors, setErrors] = useState<Partial<Record<keyof Values, string>>>({});
+  const [touched, setTouched] = useState<Partial<Record<keyof Values, boolean>>>({});
+  const [emailHint, setEmailHint] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const successRef = useRef<HTMLHeadingElement>(null);
+  const honeypot = useRef<HTMLInputElement>(null);
   const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, "")}`;
+
+  // Load reCAPTCHA v3 only on this page; tear the badge + script down on unmount.
+  useEffect(() => {
+    if (!SITE_KEY || document.getElementById("recaptcha-v3")) return;
+    const s = document.createElement("script");
+    s.id = "recaptcha-v3";
+    s.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+    s.async = true;
+    document.head.appendChild(s);
+    return () => {
+      s.remove();
+      document.querySelectorAll(".grecaptcha-badge").forEach((n) => n.parentElement?.remove());
+    };
+  }, []);
 
   useEffect(() => {
     if (status === "success") successRef.current?.focus();
   }, [status]);
 
+  function setField(name: keyof Values, v: string) {
+    setValues((p) => ({ ...p, [name]: v }));
+    if (touched[name]) setErrors((p) => ({ ...p, [name]: validateField(name, v) }));
+    if (name === "email") setEmailHint("");
+  }
+  function blurField(name: keyof Values, v: string) {
+    setTouched((p) => ({ ...p, [name]: true }));
+    setErrors((p) => ({ ...p, [name]: validateField(name, v) }));
+    if (name === "email") setEmailHint(suggestEmail(v.trim()));
+  }
+
+  async function getToken(): Promise<string | null> {
+    if (!SITE_KEY || !window.grecaptcha) return null;
+    await new Promise<void>((r) => window.grecaptcha!.ready(r));
+    try { return await window.grecaptcha.execute(SITE_KEY, { action: RECAPTCHA_ACTION }); } catch { return null; }
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    // Validate everything; mark all touched so errors show.
+    const next: Partial<Record<keyof Values, string>> = {};
+    (Object.keys(values) as (keyof Values)[]).forEach((k) => { const msg = validateField(k, values[k]); if (msg) next[k] = msg; });
+    setTouched({ name: true, email: true, phone: true, project_type: true, message: true });
+    setErrors(next);
+    const firstError = (["name", "email", "phone", "project_type", "message"] as (keyof Values)[]).find((k) => next[k]);
+    if (firstError) {
+      document.getElementById(firstError === "phone" ? "phone-input" : firstError)?.focus();
+      return;
+    }
+
     setStatus("submitting");
     try {
+      const token = await getToken();
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(fd)),
+        body: JSON.stringify({ ...values, company_website: honeypot.current?.value ?? "", token }),
       });
       const json = await res.json().catch(() => ({}));
       if (res.ok && json.ok) setStatus("success");
@@ -104,11 +212,8 @@ export function ContactForm() {
           back within one business day, usually with a couple of questions and a clear next step
           toward a fixed-price scope. Your details are only used to reply to you.
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Link
-            href="/pricing"
-            className="inline-flex h-10 items-center rounded-full border border-border bg-surface px-4 text-sm font-semibold text-foreground transition-colors hover:border-brand-400/50 hover:text-brand-500"
-          >
+        <div className="mt-6 flex justify-center">
+          <Link href="/pricing" className="inline-flex h-10 items-center rounded-full border border-border bg-surface px-4 text-sm font-semibold text-foreground transition-colors hover:border-brand-400/50 hover:text-brand-500">
             See published prices
           </Link>
         </div>
@@ -116,8 +221,22 @@ export function ContactForm() {
     );
   }
 
+  const errText = (name: keyof Values) =>
+    touched[name] && errors[name] ? (
+      <p id={`${name}-error`} role="alert" className="mt-1.5 flex items-start gap-1.5 text-xs font-medium text-red-600 dark:text-red-400">
+        <AlertIcon />
+        {errors[name]}
+      </p>
+    ) : null;
+  const describedBy = (name: keyof Values) => `${name}-help${touched[name] && errors[name] ? ` ${name}-error` : ""}`;
+  const fieldCls = (name: keyof Values) =>
+    `mt-1.5 h-11 w-full rounded-xl border bg-background px-3.5 text-sm text-foreground transition-colors focus:outline-none focus:ring-2 ${touched[name] && errors[name] ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : "border-border focus:border-brand-500 focus:ring-brand-500/30"}`;
+  const helpP = (name: keyof Values) => (
+    <p id={`${name}-help`} className="mt-1.5 text-xs text-muted-foreground">{helper[name]}</p>
+  );
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} noValidate className="space-y-4">
       <div>
         <h2 className="font-display text-lg font-bold text-foreground">Tell us about your project</h2>
         <p className="mt-1 text-sm text-muted-foreground">
@@ -131,13 +250,9 @@ export function ContactForm() {
           <p className="font-semibold">That did not send.</p>
           <p className="mt-1 text-muted-foreground">
             We could not confirm your message reached us. Please email it to us at{" "}
-            <a href={`mailto:${siteConfig.contact.email}`} className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400">
-              {siteConfig.contact.email}
-            </a>{" "}
+            <a href={`mailto:${siteConfig.contact.email}`} className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400">{siteConfig.contact.email}</a>{" "}
             or send it on{" "}
-            <a href={whatsappHref} className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400">
-              WhatsApp
-            </a>{" "}
+            <a href={whatsappHref} className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400">WhatsApp</a>{" "}
             so nothing is lost. It reaches the same people.
           </p>
         </div>
@@ -146,91 +261,101 @@ export function ContactForm() {
       <fieldset disabled={status === "submitting"} className="space-y-4 border-0 p-0 disabled:opacity-70">
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="name" className={labelCls}>Name{req}</label>
-            <input id="name" name="name" required aria-required="true" autoComplete="name" className={inputCls} />
+            <label htmlFor="name" className={labelCls}>Name{reqMark}</label>
+            <input id="name" name="name" autoComplete="name" value={values.name}
+              onChange={(e) => setField("name", e.target.value)} onBlur={(e) => blurField("name", e.target.value)}
+              aria-required="true" aria-invalid={!!(touched.name && errors.name)} aria-describedby={describedBy("name")} className={fieldCls("name")} />
+            {errText("name") ?? helpP("name")}
           </div>
           <div>
-            <label htmlFor="email" className={labelCls}>Email{req}</label>
-            <input id="email" name="email" type="email" required aria-required="true" autoComplete="email" inputMode="email" className={inputCls} />
+            <label htmlFor="email" className={labelCls}>Email{reqMark}</label>
+            <input id="email" name="email" type="email" inputMode="email" autoComplete="email" value={values.email}
+              onChange={(e) => setField("email", e.target.value)} onBlur={(e) => blurField("email", e.target.value)}
+              aria-required="true" aria-invalid={!!(touched.email && errors.email)} aria-describedby={describedBy("email")} className={fieldCls("email")} />
+            {errText("email") ?? helpP("email")}
+            {emailHint && !errors.email && (
+              <p className="mt-1.5 text-xs text-muted-foreground">
+                Did you mean{" "}
+                <button type="button" onClick={() => { setField("email", emailHint); setEmailHint(""); }} className="font-semibold text-brand-600 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">{emailHint}</button>?
+              </p>
+            )}
           </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="phone" className={labelCls}>Phone or WhatsApp{opt}</label>
-            <input id="phone" name="phone" type="tel" autoComplete="tel" inputMode="tel" className={inputCls} />
+            <label htmlFor="phone-input" className={labelCls}>Phone or WhatsApp{optMark}</label>
+            <PhoneInput
+              id="phone-input"
+              name="phone"
+              international
+              defaultCountry="US"
+              flags={flags}
+              value={values.phone}
+              onChange={(v) => setField("phone", v || "")}
+              onBlur={() => blurField("phone", values.phone)}
+              inputComponent={PhoneTextInput}
+              aria-describedby={describedBy("phone")}
+              aria-invalid={!!(touched.phone && errors.phone)}
+              className={`mt-1.5 flex h-11 items-center gap-2 rounded-xl border bg-background px-3.5 transition-colors focus-within:ring-2 ${touched.phone && errors.phone ? "border-red-500 focus-within:ring-red-500/30" : "border-border focus-within:border-brand-500 focus-within:ring-brand-500/30"}`}
+            />
+            {errText("phone") ?? helpP("phone")}
           </div>
           <div>
-            <label htmlFor="company" className={labelCls}>Company{opt}</label>
-            <input id="company" name="company" autoComplete="organization" className={inputCls} />
+            <label htmlFor="company" className={labelCls}>Company{optMark}</label>
+            <input id="company" name="company" autoComplete="organization" value={values.company}
+              onChange={(e) => setField("company", e.target.value)} aria-describedby="company-help" className={fieldCls("company")} />
+            {helpP("company")}
           </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="project_type" className={labelCls}>What can we help with?{req}</label>
-            <select id="project_type" name="project_type" required aria-required="true" defaultValue="" className={inputCls}>
+            <label htmlFor="project_type" className={labelCls}>What can we help with?{reqMark}</label>
+            <select id="project_type" name="project_type" value={values.project_type}
+              onChange={(e) => setField("project_type", e.target.value)} onBlur={(e) => blurField("project_type", e.target.value)}
+              aria-required="true" aria-invalid={!!(touched.project_type && errors.project_type)} aria-describedby={describedBy("project_type")} className={fieldCls("project_type")}>
               <option value="" disabled>Select one</option>
-              {projectTypes.map((t) => (
-                <option key={t}>{t}</option>
-              ))}
+              {projectTypes.map((t) => <option key={t}>{t}</option>)}
             </select>
+            {errText("project_type") ?? helpP("project_type")}
           </div>
           <div>
-            <label htmlFor="budget" className={labelCls}>Budget{opt}</label>
-            <select id="budget" name="budget" defaultValue="Not sure yet" className={inputCls}>
-              {budgets.map((b) => (
-                <option key={b}>{b}</option>
-              ))}
+            <label htmlFor="budget" className={labelCls}>Budget{optMark}</label>
+            <select id="budget" name="budget" value={values.budget} onChange={(e) => setField("budget", e.target.value)} aria-describedby="budget-help" className={fieldCls("budget")}>
+              {budgets.map((b) => <option key={b}>{b}</option>)}
             </select>
+            {helpP("budget")}
           </div>
         </div>
 
         <div>
-          <label htmlFor="timeline" className={labelCls}>Timeline{opt}</label>
-          <select id="timeline" name="timeline" defaultValue="Not sure yet" className={inputCls}>
-            {timelines.map((t) => (
-              <option key={t}>{t}</option>
-            ))}
+          <label htmlFor="timeline" className={labelCls}>Timeline{optMark}</label>
+          <select id="timeline" name="timeline" value={values.timeline} onChange={(e) => setField("timeline", e.target.value)} aria-describedby="timeline-help" className={fieldCls("timeline")}>
+            {timelines.map((t) => <option key={t}>{t}</option>)}
           </select>
+          {helpP("timeline")}
         </div>
 
         <div>
-          <label htmlFor="message" className={labelCls}>What are you building?{req}</label>
-          <textarea id="message" name="message" rows={5} required aria-required="true" className={textareaCls} />
+          <label htmlFor="message" className={labelCls}>What are you building?{reqMark}</label>
+          <textarea id="message" name="message" rows={5} value={values.message}
+            onChange={(e) => setField("message", e.target.value)} onBlur={(e) => blurField("message", e.target.value)}
+            aria-required="true" aria-invalid={!!(touched.message && errors.message)} aria-describedby={describedBy("message")}
+            className={`mt-1.5 w-full rounded-xl border bg-background px-3.5 py-2.5 text-sm text-foreground transition-colors focus:outline-none focus:ring-2 ${touched.message && errors.message ? "border-red-500 focus:border-red-500 focus:ring-red-500/30" : "border-border focus:border-brand-500 focus:ring-brand-500/30"}`} />
+          {errText("message") ?? helpP("message")}
         </div>
 
-        {/* Honeypot - hidden from humans and assistive tech; if a bot fills it, /api/contact
-            accepts silently and sends nothing (never a client-side silent-drop of a real lead). */}
-        <input
-          type="text"
-          name="company_website"
-          tabIndex={-1}
-          autoComplete="off"
-          aria-hidden="true"
-          className="hidden"
-          style={{ display: "none" }}
-        />
+        {/* Honeypot - hidden from humans and assistive tech; a bot that fills it is dropped server-side. */}
+        <input ref={honeypot} type="text" name="company_website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" style={{ display: "none" }} />
       </fieldset>
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        aria-busy={status === "submitting"}
-        className="group/btn inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--grad-from),var(--grad-to))] px-6 text-sm font-semibold text-white transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-70"
-      >
+      <button type="submit" disabled={status === "submitting"} aria-busy={status === "submitting"}
+        className="group/btn inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--grad-from),var(--grad-to))] px-6 text-sm font-semibold text-white transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-70">
         {status === "submitting" ? (
-          <>
-            <span aria-hidden="true" className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />
-            Sending...
-          </>
-        ) : status === "error" ? (
-          <>Try again</>
-        ) : (
-          <>
-            Send enquiry
-            <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-          </>
+          <><span aria-hidden="true" className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />Sending...</>
+        ) : status === "error" ? (<>Try again</>) : (
+          <>Send enquiry<IconArrow className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" /></>
         )}
       </button>
 
@@ -240,10 +365,14 @@ export function ContactForm() {
 
       <p className="text-xs leading-relaxed text-muted-foreground">
         We reply within one business day. Your details are only used to respond to your enquiry -{" "}
-        <Link href="/privacy-policy" className="underline decoration-border underline-offset-2 hover:text-foreground">
-          see our privacy policy
-        </Link>
-        .
+        <Link href="/privacy-policy" className="underline decoration-border underline-offset-2 hover:text-foreground">see our privacy policy</Link>.
+        {SITE_KEY && (
+          <>
+            {" "}This site is protected by reCAPTCHA and the Google{" "}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" className="underline decoration-border underline-offset-2 hover:text-foreground">Privacy Policy</a>{" "}and{" "}
+            <a href="https://policies.google.com/terms" target="_blank" rel="noopener" className="underline decoration-border underline-offset-2 hover:text-foreground">Terms of Service</a>{" "}apply.
+          </>
+        )}
       </p>
     </form>
   );

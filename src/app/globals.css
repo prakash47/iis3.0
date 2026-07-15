@@ -462,3 +462,56 @@
     opacity: 1 !important;
   }
 }
+
+/* ── react-phone-number-input: themed to match the site's inputs (style.css NOT imported).
+   The .PhoneInput wrapper and text input are styled with Tailwind classes in ContactForm;
+   these rules cover the country dropdown parts (flag, transparent native select, arrow). ── */
+.PhoneInputCountry {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-right: 0.1rem;
+}
+.PhoneInputCountrySelect {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.PhoneInputCountrySelect:focus-visible + .PhoneInputCountryIcon {
+  outline: 2px solid var(--grad-from);
+  outline-offset: 2px;
+}
+.PhoneInputCountryIcon {
+  width: 1.5rem;
+  height: 1.05rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.PhoneInputCountryIcon svg,
+.PhoneInputCountryIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.PhoneInputCountrySelectArrow {
+  width: 0.34rem;
+  height: 0.34rem;
+  border-style: solid;
+  border-color: currentColor;
+  border-width: 0 1.4px 1.4px 0;
+  transform: rotate(45deg);
+  opacity: 0.45;
+}
+
+/* reCAPTCHA v3 badge hidden (the form shows the required text disclosure instead, which
+   Google permits) so it never overlaps the mobile sticky CTA. */
+.grecaptcha-badge {
+  visibility: hidden;
+}

@@ -13,6 +13,9 @@ export const dynamic = "force-dynamic";
  *   (a Google App Password), CONTACT_TO (inbox), CONTACT_FROM (defaults to SMTP_USER).
  * When SMTP is not configured the route returns 503 so the client shows its honest
  * "email or WhatsApp us" fallback rather than faking a send.
+ *
+ * Spam is gated by an invisible Google reCAPTCHA v3 score (RECAPTCHA_SECRET_KEY) plus a
+ * honeypot. reCAPTCHA is only enforced when the secret is set (graceful otherwise).
  */
 const SMTP_HOST = process.env.SMTP_HOST || "smtp.gmail.com";
 const SMTP_PORT = Number(process.env.SMTP_PORT || 465);
@@ -21,8 +24,30 @@ const SMTP_PASS = process.env.SMTP_PASS;
 const CONTACT_TO = process.env.CONTACT_TO || SMTP_USER;
 const CONTACT_FROM = process.env.CONTACT_FROM || SMTP_USER;
 
+const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET_KEY;
+const RECAPTCHA_MIN_SCORE = 0.5;
+const RECAPTCHA_ACTION = "contact_submit";
+
 const isEmail = (v: string) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
 const clip = (v: unknown, max = 5000) => String(v ?? "").trim().slice(0, max);
+
+// Verify a reCAPTCHA v3 token via Google's siteverify (form-urlencoded, per the API).
+// Skipped when no secret is configured so local/preview still works. Never logs the secret.
+async function recaptchaOk(token: unknown): Promise<boolean> {
+  if (!RECAPTCHA_SECRET) return true;
+  if (typeof token !== "string" || !token) return false;
+  try {
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ secret: RECAPTCHA_SECRET, response: token }),
+    });
+    const r = (await res.json()) as { success?: boolean; score?: number; action?: string };
+    return r.success === true && (r.score ?? 0) >= RECAPTCHA_MIN_SCORE && r.action === RECAPTCHA_ACTION;
+  } catch {
+    return false;
+  }
+}
 
 export async function POST(req: Request) {
   if (!SMTP_USER || !SMTP_PASS) {
@@ -40,6 +65,11 @@ export async function POST(req: Request) {
   // but send nothing - never a client-side silent-drop that could bury a real lead.
   if (clip(data.company_website)) {
     return NextResponse.json({ ok: true });
+  }
+
+  // Invisible reCAPTCHA v3 score gate (only enforced when a secret is configured).
+  if (!(await recaptchaOk(data.token))) {
+    return NextResponse.json({ ok: false, error: "captcha_failed" }, { status: 400 });
   }
 
   const name = clip(data.name, 200);
