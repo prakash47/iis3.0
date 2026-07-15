@@ -466,7 +466,6 @@ export default function AboutPage() {
         title="Ready to start, or want to check us first?"
         subtitle="Tell us what you're building and you'll get an honest, fixed price from the senior people who'll do the work. Prefer to look before you talk? You can see our starting prices before you ever contact us, and the real projects we go deep on."
         primary={{ label: "Start a project", href: "/contact" }}
-        secondary={{ label: "See our work", href: "/work" }}
       />
     </>
   );

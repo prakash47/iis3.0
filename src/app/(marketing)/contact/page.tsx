@@ -271,16 +271,13 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-display text-lg font-bold text-foreground">Prefer to look before you talk?</h3>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    See exactly what things cost, or the real projects we go deep on.
+                    See exactly what things cost before you send a single message.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Button href="/pricing">
                     See published prices
                     <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                  </Button>
-                  <Button href="/work" variant="outline">
-                    See our work
                   </Button>
                 </div>
               </div>

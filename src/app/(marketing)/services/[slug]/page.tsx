@@ -84,9 +84,6 @@ export default async function ServiceDetailPage({
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/contact">Get a fixed-price quote</Button>
-            <Button href="/work" variant="outline">
-              See our work
-            </Button>
           </div>
         </Container>
       </Section>

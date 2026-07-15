@@ -51,7 +51,7 @@ export default function Home() {
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
       <FAQ />
 
-      <CtaBand secondary={{ label: "See our work", href: "/work" }} />
+      <CtaBand />
     </>
   );
 }

@@ -275,9 +275,6 @@ export default function PricingPage() {
                   Start a project
                   <IconArrow className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </Button>
-                <Button href="/work" variant="ghost" size="lg">
-                  See our work
-                </Button>
               </div>
               <ul className="mt-8 flex flex-wrap gap-2.5">
                 {heroChips.map((c) => (
@@ -602,7 +599,6 @@ export default function PricingPage() {
         title="See a fixed price for what you're building"
         subtitle="Tell us what you're building and the budget you have, and we'll point you to the right starting price - no quote wall, no sales pitch."
         primary={{ label: "Start a project", href: "/contact" }}
-        secondary={{ label: "See our work", href: "/work" }}
       />
     </>
   );

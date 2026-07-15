@@ -135,7 +135,6 @@ const hubs = [
   { t: "Services", d: "What we'll actually do - design, build, market and maintain, across eight focused practices.", href: "/services", cta: "See what we'll build" },
   { t: "Pricing", d: "Published starting prices for websites, apps and more. The stack doesn't set the price, the scope does.", href: "/pricing", cta: "See published pricing" },
   { t: "Industries", d: "How we build for EdTech, healthcare, fintech, real estate, travel and media.", href: "/industries", cta: "Browse industries" },
-  { t: "Our work", d: "The projects we've actually shipped, described honestly and never dressed up as something else.", href: "/work", cta: "See our work" },
 ];
 
 // Six HUB questions. Deliberately not re-answering "what stacks do you build with?" (owned by the

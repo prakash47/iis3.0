@@ -51,9 +51,6 @@ export function Hero() {
                   Start a Project
                   <IconArrow className="h-5 w-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
                 </Button>
-                <Button href="/work" variant="ghost" size="lg">
-                  See our work
-                </Button>
               </div>
 
               <p className="hero-in mt-3 text-sm text-muted-foreground [animation-delay:200ms]">

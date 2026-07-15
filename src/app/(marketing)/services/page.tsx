@@ -85,7 +85,6 @@ const hubs = [
   // job rather than just pointing at a list.
   { t: "Technologies", d: "The stacks we build with, and how we choose one - every in-depth guide says when not to use it.", href: "/technologies", cta: "See how we choose your stack" },
   { t: "Pricing", d: "Published starting prices for websites, apps and more - no quote walls.", href: "/pricing", cta: "See pricing" },
-  { t: "Our work", d: "How we build fast, accessible sites and apps, with the stack and results behind each.", href: "/work", cta: "See our work" },
 ];
 
 const faqs = [
