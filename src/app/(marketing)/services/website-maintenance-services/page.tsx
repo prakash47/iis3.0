@@ -45,6 +45,7 @@ export default function WebsiteMaintenanceServicesPage() {
               priceValue: t.fromValue,
               priceCurrency,
               description: `${t.for} - per month`,
+              unitCode: "MON",
             })),
             {
               name: websiteAuditTier.name,

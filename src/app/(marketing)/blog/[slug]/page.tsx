@@ -48,7 +48,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     tags: [`post:${slug}`, "post"],
     fallback: null,
   });
-  if (!post) notFound();
+  // An unpublished (undated) post never renders: POST_SLUGS already requires publishedAt,
+  // but dynamicParams=true would otherwise let a direct hit to an undated post 200.
+  if (!post || !post.publishedAt) notFound();
 
   const related = post.category?.slug
     ? await loadQuery<ResourceListItem[]>({

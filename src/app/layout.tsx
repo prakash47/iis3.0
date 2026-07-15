@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     template: seoConfig.titleTemplate,
   },
   description: seoConfig.defaultDescription,
-  alternates: { canonical: "/" },
+  // No default canonical here: every real page sets its own via metadataFrom/pageMetadata,
+  // and a root "/" fallback silently canonicalized any alternates-less route to the homepage.
   openGraph: {
     type: "website",
     url: siteConfig.url,

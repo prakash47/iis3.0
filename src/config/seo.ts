@@ -390,6 +390,9 @@ export function industryPageSeo(slug: string): PageSeo | undefined {
     path: `/industries/${slug}`,
     title: `${i.name} Development`,
     description: clip(`Web and app development for ${i.name}. ${i.tagline}`),
+    // Structural: a vertical without a bespoke (deep) page is noindexed by default, so a
+    // future thin stub can never ship indexed. Overridden per-slug once it goes deep.
+    noindex: !i.deep,
     priority: 0.7,
     changeFrequency: "monthly",
   };
@@ -541,8 +544,8 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   //
   // NOTE (2026-07-12): with drupal bespoke, EVERY technology now has a full override here and the shared
   // [slug] template renders nothing (templateTechnologies === []). There is no thin-noindex block left -
-  // the "never ship thin pages" tier split is fully resolved. A NEW technology added to the catalog with
-  // deep:false would render on that template and should get a `{ noindex: true }` entry here until written.
+  // the "never ship thin pages" tier split is fully resolved. A NEW technology added with deep:false is
+  // now noindexed AUTOMATICALLY (technologyPageSeo sets `noindex: !t.deep`), so no manual entry is needed.
   drupal: {
     description:
       "Drupal development services - structured content, taxonomy, workflows and multilingual native in core, on Drupal 11. You own the code, site and data.",
@@ -583,6 +586,9 @@ export function technologyPageSeo(slug: string): PageSeo | undefined {
     path: `/technologies/${slug}`,
     title: `${t.name} Development Services`,
     description: clip(`Custom ${t.name} development. ${t.tagline} Transparent fixed pricing, verifiable proof, shipped in weeks.`),
+    // Structural: a tech without a bespoke (deep) page is noindexed by default, so a
+    // future thin stub can never ship indexed. Overridden per-slug once it goes deep.
+    noindex: !t.deep,
     priority: 0.6,
     changeFrequency: "monthly",
   };

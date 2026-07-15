@@ -3,7 +3,11 @@ import { isSanityConfigured } from "@/sanity/env";
 import { StudioClient } from "./StudioClient";
 
 export const dynamic = "force-static";
-export const metadata: Metadata = { robots: { index: false, follow: false } };
+export const metadata: Metadata = {
+  title: { absolute: "Studio" },
+  robots: { index: false, follow: false },
+  alternates: { canonical: null },
+};
 
 /**
  * Embedded Sanity Studio. This SERVER component imports no `sanity` code - only the

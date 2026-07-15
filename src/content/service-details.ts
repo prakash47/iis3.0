@@ -13,7 +13,7 @@ export interface ServiceDetail {
 export const serviceDetails: Record<string, ServiceDetail> = {
   "web-design-development": {
     intro:
-      "We design and build fast, accessible, SEO-ready websites and web apps on a modern Next.js/React stack. From a conversion-focused marketing site to a full SaaS product, every build ships with real Core Web Vitals scores and complete structured data.",
+      "We design and build fast, accessible, SEO-ready websites and web apps on the right stack for the job. From a conversion-focused marketing site to a full SaaS product, every build ships with real Core Web Vitals scores and complete structured data.",
     highlights: [
       "Custom websites, business/corporate sites and portfolios",
       "Web apps & SaaS platforms with authentication and dashboards",
@@ -26,7 +26,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       {
         question: "Which framework do you build on?",
         answer:
-          "We default to Next.js with React for the best balance of performance, SEO and maintainability, and use headless CMS where content velocity matters. We also build on WordPress, Laravel, Django and Astro when they fit the project better.",
+          "We're stack-agnostic and choose the right tool for the job - Next.js, React or Astro on the front end; WordPress, Laravel, Django or Node on the back end; Shopify or custom for commerce - and a headless CMS where content velocity matters. We recommend the stack that fits your goals, not the one we happen to prefer.",
       },
       {
         question: "Will my site pass Core Web Vitals?",

@@ -14,7 +14,7 @@ export interface CatalogEntry {
   tagline: string;
 }
 
-// ── SERVICES (6 core offerings) ─────────────────────────────────────────────
+// ── SERVICES (8 offerings) ─────────────────────────────────────────────
 export const services: readonly CatalogEntry[] = [
   {
     slug: "web-design-development",

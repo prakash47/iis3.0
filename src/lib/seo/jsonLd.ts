@@ -13,7 +13,7 @@ import type {
   WithContext,
 } from "schema-dts";
 import { siteConfig, absoluteUrl, sameAs } from "@/config/site";
-import { technologies } from "@/content/catalog";
+import { technologies, services } from "@/content/catalog";
 
 const ORG_ID = `${siteConfig.url}/#organization`;
 const SITE_ID = `${siteConfig.url}/#website`;
@@ -33,7 +33,7 @@ export function organizationSchema(): WithContext<Organization> {
     logo: absoluteUrl("/intention-infoservice-logo.png"),
     foundingDate: String(siteConfig.foundingYear),
     description: siteConfig.entityDescription,
-    knowsAbout: technologies.map((t) => t.name),
+    knowsAbout: [...technologies.map((t) => t.name), ...services.map((s) => s.name)],
     areaServed: [...siteConfig.areaServed],
   };
 
@@ -73,6 +73,8 @@ export function websiteSchema(): WithContext<WebSite> {
     "@id": SITE_ID,
     url: siteConfig.url,
     name: siteConfig.name,
+    alternateName: siteConfig.shortName,
+    inLanguage: "en",
     publisher: { "@id": ORG_ID },
   };
 }
@@ -88,6 +90,8 @@ export interface ServiceOffer {
   priceValue: number;
   priceCurrency: string;
   description?: string;
+  /** UN/CEFACT unit code for a RECURRING price, e.g. "MON" for a per-month rate. Omit for one-time prices. */
+  unitCode?: string;
 }
 
 /** Per-service page schema. Provider is referenced by @id into the site graph. */
@@ -114,11 +118,18 @@ export function serviceSchema(input: {
       "@type": "Offer",
       name: o.name,
       ...(o.description ? { description: o.description } : {}),
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: o.priceCurrency,
-        minPrice: o.priceValue,
-      },
+      priceSpecification: o.unitCode
+        ? {
+            "@type": "UnitPriceSpecification" as const,
+            priceCurrency: o.priceCurrency,
+            minPrice: o.priceValue,
+            unitCode: o.unitCode,
+          }
+        : {
+            "@type": "PriceSpecification" as const,
+            priceCurrency: o.priceCurrency,
+            minPrice: o.priceValue,
+          },
     }));
   }
 
@@ -246,7 +257,9 @@ export function articleSchema(input: {
     publisher: { "@id": ORG_ID },
     ...(input.datePublished ? { datePublished: input.datePublished } : {}),
     ...(input.dateModified ? { dateModified: input.dateModified } : {}),
-    ...(input.imageUrl ? { image: input.imageUrl } : {}),
+    // Always emit an image (Article rich-result requirement); fall back to the site OG
+    // default when a doc has no cover, so the Article node never fails the image check.
+    image: input.imageUrl ?? absoluteUrl("/og-default.png"),
   };
 }
 
