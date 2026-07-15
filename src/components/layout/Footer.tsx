@@ -54,11 +54,13 @@ export function Footer() {
   const { contact, social } = siteConfig;
   const addr = contact.address;
 
+  // Each brand's official colour on hover (icons use currentColor). X is black on light,
+  // white on dark; Instagram uses its recognised brand magenta.
   const socials = [
-    { label: "LinkedIn", href: social.linkedin, icon: <IconLinkedIn className="h-4.5 w-4.5" /> },
-    { label: "X (Twitter)", href: social.x, icon: <IconX className="h-4.5 w-4.5" /> },
-    { label: "Instagram", href: social.instagram, icon: <IconInstagram className="h-4.5 w-4.5" /> },
-    { label: "Facebook", href: social.facebook, icon: <IconFacebook className="h-4.5 w-4.5" /> },
+    { label: "LinkedIn", href: social.linkedin, icon: <IconLinkedIn className="h-4.5 w-4.5" />, hover: "hover:text-[#0A66C2] hover:border-[#0A66C2]" },
+    { label: "X (Twitter)", href: social.x, icon: <IconX className="h-4.5 w-4.5" />, hover: "hover:text-black hover:border-black dark:hover:text-white dark:hover:border-white" },
+    { label: "Instagram", href: social.instagram, icon: <IconInstagram className="h-4.5 w-4.5" />, hover: "hover:text-[#E4405F] hover:border-[#E4405F]" },
+    { label: "Facebook", href: social.facebook, icon: <IconFacebook className="h-4.5 w-4.5" />, hover: "hover:text-[#1877F2] hover:border-[#1877F2]" },
   ].filter((s) => s.href);
 
   return (
@@ -125,7 +127,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener"
                   aria-label={s.label}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface text-muted-foreground transition-colors hover:border-brand-400/60 hover:text-brand-500"
+                  className={`inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface text-muted-foreground transition-colors ${s.hover}`}
                 >
                   {s.icon}
                 </a>
