@@ -64,17 +64,19 @@ export function LaravelProof() {
               We ship web applications built from the same parts - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is real web projects - an e-commerce store and a corporate site -
-              built from the exact primitives a Laravel application is made of: relational data
-              models, an authenticated accounts and roles layer, a checkout and payments flow, content
-              and catalog APIs, an admin surface, and third-party integrations that have to not break.{" "}
+              Our production work is real, custom web builds - a professional-training platform
+              rebuild and a financial-services site - built from the exact primitives a Laravel
+              application is made of: relational data models, a large searchable and filterable
+              catalog, enquiry and enrolment funnels, a real-time affordability calculator, an admin
+              surface a non-technical team runs itself, and third-party integrations that have to not
+              break.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
                 See our work
               </Link>
               , described honestly - and never relabelled as Laravel or PHP projects, because they
               weren&apos;t, and we won&apos;t dress a web build up as something it wasn&apos;t. What they
-              prove is one true thing: this team ships working software that models real data, handles
-              auth and payments, and holds up in production. The Laravel-specific proof isn&apos;t a
+              prove is one true thing: this team ships working software that models real data, runs
+              filterable catalogs and enquiry funnels, and holds up in production. The Laravel-specific proof isn&apos;t a
               borrowed case study - it&apos;s the depth on this page and the standard-Laravel code,
               migrations and database you&apos;ll own outright.
             </p>

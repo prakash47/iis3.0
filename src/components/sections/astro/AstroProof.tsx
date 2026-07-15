@@ -70,11 +70,13 @@ export function AstroProof() {
               We ship the exact kind of site Astro is built for - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is two real web builds - a mostly-static corporate site and a custom
-              Next.js store - and the first is the exact shape Astro is made for: content, pages, fast
-              static delivery, an editing path. You can{" "}
+              Our production work is real, custom web builds - a professional-training platform rebuild
+              and a financial-services site - and the first is the exact shape Astro is made for: a
+              large course catalog turned into a fast, filterable experience, templated per-city landing
+              pages, fast static delivery, and a headless-CMS editing path a non-technical marketing
+              team runs itself. You can{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                see the mostly-static site and the store we actually built
+                see the training platform and the financial-services site we actually built
               </Link>
               , described for what they are and never relabelled as Astro projects, because they
               weren&apos;t. What they prove is one true thing: this team ships fast, content-driven web

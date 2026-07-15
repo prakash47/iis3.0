@@ -66,20 +66,22 @@ export function DjangoProof() {
               We ship web applications built from the same parts a Django app is - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is real web projects - an e-commerce store and a corporate site -
-              built from the exact primitives a Django application is made of: relational data models,
-              an authenticated accounts and roles layer, a catalog-and-orders admin surface, a checkout
-              and payments flow, content and product APIs, and third-party integrations that have to
-              not break.{" "}
+              Our production work is real, custom web builds - a professional-training platform
+              rebuild and a financial-services site - built from the exact primitives a Django
+              application is made of: structured, relational data models, an authenticated admin a
+              non-technical marketing team runs itself, a large catalog turned into a fast filterable
+              experience, enquiry and demo-class funnels, a real-time affordability calculator, and
+              third-party integrations that have to not break.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                See our work
+                See our real builds
               </Link>
               , described honestly - and never relabelled as Django or Python projects, because they
               weren&apos;t, and we won&apos;t dress a web build up as something it wasn&apos;t. What they
               prove is one true thing: this team ships working software that models real data, handles
-              auth, payments and an admin, and holds up in production. The Django-specific proof
-              isn&apos;t a borrowed case study or a famous logo - it&apos;s the depth on this page and the
-              standard-Django code, migrations, admin and database you&apos;ll own outright.
+              a filterable catalog, enquiry funnels and an admin, and holds up in production. The
+              Django-specific proof isn&apos;t a borrowed case study or a famous logo - it&apos;s the
+              depth on this page and the standard-Django code, migrations, admin and database
+              you&apos;ll own outright.
             </p>
           </div>
         </Reveal>

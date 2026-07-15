@@ -66,18 +66,20 @@ export function PhpProof() {
               We ship web software built from the same parts - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is real web projects - an e-commerce store and a corporate site -
-              built from the exact primitives a PHP application is made of: relational data models, an
-              authenticated accounts and roles layer, a checkout and payments flow, catalog and content
-              APIs, an admin surface, and third-party integrations that have to not break. You can{" "}
+              Our production work is real, custom web builds - a professional-training platform rebuild
+              and a financial-services site - built from the exact primitives a PHP application is made
+              of: relational data models, an authenticated accounts and roles layer, a searchable,
+              filterable catalog, enquiry and enrolment funnels, a real-time affordability calculator,
+              certificate validation, an admin surface a non-technical team runs itself, and third-party
+              integrations that have to not break. You can{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                see the two web builds, labelled for exactly what they are
+                see the two builds, labelled for exactly what they are
               </Link>
               , and never dressed up as PHP projects, because they weren&apos;t. What they prove is one
               true thing: this team ships working software that models real data, handles auth and
-              payments, and holds up in production. The PHP-specific proof is not a borrowed case study -
-              it is the depth on this page and the standard, open PHP and Composer code you would own
-              outright.
+              structured enquiry flows, and holds up in production. The PHP-specific proof is not a
+              borrowed case study - it is the depth on this page and the standard, open PHP and Composer
+              code you would own outright.
             </p>
           </div>
         </Reveal>

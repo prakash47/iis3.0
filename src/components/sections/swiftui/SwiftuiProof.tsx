@@ -139,9 +139,14 @@ export function SwiftuiProof() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               A SwiftUI app is a state-driven native interface over a real backend, so the fair question
               is whether we have built products of that shape. Honestly: on the web, yes. Our production
-              work is real - a custom, full-stack online store on its own back end, with a searchable,
-              filterable catalog, checkout through a payment processor, accounts and an admin a
-              non-technical team runs, plus a corporate site. That is a real interface re-rendering from
+              work is real, custom web builds - a professional-training platform rebuild and a
+              financial-services site, both on our work page. The training platform is a
+              WordPress-to-Next.js rebuild whose large course catalog became a fast, filterable
+              experience, with per-city course landing pages, demo-class and enquiry funnels,
+              certificate validation, and a headless-CMS editorial layer the marketing team runs itself.
+              The financial-services site is a Next.js loan-comparison build with structured pages for
+              ten loan categories, a real-time EMI and affordability calculator, and apply-and-enquiry
+              funnels - lead generation, not moving money. Each is a real interface re-rendering from
               real state over a real server, and that shape is what travels. What does not travel is the
               code, and we won&apos;t blur it: every screen of that work is React drawing to the
               browser&apos;s DOM, not Swift drawing native views, and this page is a DOM interface too.

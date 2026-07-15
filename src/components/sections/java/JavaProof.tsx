@@ -102,19 +102,20 @@ export function JavaProof() {
               We ship software built from the same parts a Spring Boot system is - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is real web projects - an e-commerce store and a corporate site -
-              built from the same primitives a Spring Boot system is made of: relational data models,
-              an authenticated accounts and roles layer, a checkout and payments flow, content and
-              catalog APIs, an admin surface, and third-party integrations that have to not break.{" "}
+              Our production work is real, custom web builds - a professional-training platform rebuild
+              and a financial-services site - built from the same primitives a Spring Boot system is
+              made of: structured, related data models, a searchable and filterable catalog, enquiry and
+              enrolment funnels, a real-time affordability calculator, certificate validation, and an
+              admin a non-technical team runs itself. One of them is a WordPress-to-Next.js rebuild.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                See our work
+                See both on our work page
               </Link>
               , described honestly - and never relabelled as Java or Spring Boot projects, because they
               weren&apos;t, and we won&apos;t dress a web build up as something it wasn&apos;t. What they
-              prove is one true thing: this team ships working software that models real data, handles
-              auth and payments, and holds up in production. The Java-specific proof isn&apos;t a
-              borrowed case study or a bank&apos;s logo - it&apos;s the depth on this page and the
-              standard Spring Boot code, schema and data you&apos;ll own outright.
+              prove is one true thing: this team ships working software that models real data, runs real
+              enquiry and enrolment funnels, and holds up in production. The Java-specific proof
+              isn&apos;t a borrowed case study or a bank&apos;s logo - it&apos;s the depth on this page
+              and the standard Spring Boot code, schema and data you&apos;ll own outright.
             </p>
           </div>
         </Reveal>

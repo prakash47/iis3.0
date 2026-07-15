@@ -68,12 +68,13 @@ export function StrapiProof() {
               The real work behind this honesty
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is two real web builds - a custom, full-stack Next.js store on its own
-              back end, and a corporate site. Neither is a Strapi project, and we won&apos;t relabel them
-              as one. What they honestly prove is the problem-shape a Strapi buyer cares about: the store
-              models a product catalog once and serves it to a storefront, a cart, a checkout and an admin
-              a non-technical team runs day to day, which is the same model-once, serve-many job a headless
-              CMS exists to do. You can{" "}
+              Our production work is two real, custom web builds - a professional-training platform
+              rebuild and a financial-services site, both on our work page. Neither is a Strapi project,
+              and we won&apos;t relabel them as one. What they honestly prove is the problem-shape a Strapi
+              buyer cares about: the training platform models a large course catalog once and serves it to
+              a fast filterable listing, templated per-city landing pages, enquiry and demo-class funnels
+              and an admin a non-technical marketing team runs day to day, which is the same model-once,
+              serve-many job a headless CMS exists to do. You can{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
                 see the two production builds whose code the client owns outright
               </Link>{" "}

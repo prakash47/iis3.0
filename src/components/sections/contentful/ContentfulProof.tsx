@@ -71,9 +71,14 @@ export function ContentfulProof() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               We have not shipped a Contentful build, so we will not dress one up. What we can show you is
               the problem shape Contentful is built for, already solved in production on our own stack.
-              Our custom, full-stack Next.js store models a catalog once - products, categories,
-              attributes, relationships - and then serves that single model to many surfaces at once: a
-              searchable listing, faceted filtering, and checkout through a processor. Model the content
+              Our production work is real, custom full-stack Next.js builds - a professional-training
+              platform rebuild and a financial-services site. The training platform is a
+              WordPress-to-Next.js rebuild that models a large course catalog once - courses, cities,
+              categories, relationships - then serves that single model to many surfaces at once: a fast
+              filterable catalog, templated per-city course landing pages, demo-class and enquiry funnels,
+              and a headless CMS the marketing team runs itself. The financial-services site does the same
+              with structured pages for ten loan categories, a real-time EMI calculator, and apply enquiry
+              funnels. Model the content
               once, serve it to many surfaces, keep it coherent as it changes: that is the coordination
               job Contentful scales up across teams, brands and channels. The tool would differ; the
               discipline is the one we already practise. You can{" "}

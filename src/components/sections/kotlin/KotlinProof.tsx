@@ -118,7 +118,7 @@ export function KotlinProof() {
         </Reveal>
 
         {/* THE BRIDGE. Claims the CLIENT-OVER-A-BACKEND-WE'VE-BUILT shape (distinct from swiftui's
-            "state-driven product over a backend" framing): the real store is the API-shaped side a
+            "state-driven product over a backend" framing): the real backend is the API-shaped side a
             native app also needs. Fences the native Android SDKs, the device landscape and the Play
             pipeline by name. Anchor is the modest "See our work" - /work carries 2 real but WEB
             case studies, so do not over-promise a mobile portfolio. */}
@@ -130,16 +130,21 @@ export function KotlinProof() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               A native Android app is a client over a real backend, so the fair question is whether we
               have built the server side of that shape. Honestly: on the web, yes. Our production work is
-              real - a custom, full-stack online store on its own back end, with a searchable, filterable
-              catalog, a checkout that hands payment to an established processor, accounts and an admin a
-              non-technical team runs, plus a corporate site. Strip the web front end away and what
-              remains is exactly what a native app also needs and what is genuinely our strength: a data
-              model, a real backend you own, search and filtering over a catalog, and a transaction wired
-              to a third-party payment processor rather than reinvented. That server-and-product-thinking
-              is what travels. What does not travel is the native client itself - not one line of Kotlin,
-              Jetpack Compose or the Android SDKs, none of the device-landscape engineering, and nothing
-              of the Play Store submission and review pipeline - and we won&apos;t blur that line, or hand
-              you our own website as Android proof, because none of it is a native app.{" "}
+              real, custom web builds - a professional-training platform rebuild and a financial-services
+              site, both on our work page. The training platform is a WordPress-to-Next.js rebuild: a
+              large course catalog turned into a fast, filterable experience, per-city course landing
+              pages, demo-class and enquiry funnels, certificate validation, and a headless-CMS editorial
+              layer the marketing team runs itself. The financial-services site is a loan-comparison and
+              enquiry build - structured pages for ten loan categories, a real-time EMI and affordability
+              calculator, and apply-enquiry funnels; it is lead-generation and moves no money. Strip the
+              web front end away and what remains is exactly what a native app also needs and what is
+              genuinely our strength: a data model, a real backend you own, search and filtering over a
+              catalog, enquiry funnels, an admin a non-technical team runs, and a real-time calculator
+              built into the product rather than bolted on. That server-and-product-thinking is what
+              travels. What does not travel is the native client itself - not one line of Kotlin, Jetpack
+              Compose or the Android SDKs, none of the device-landscape engineering, and nothing of the
+              Play Store submission and review pipeline - and we won&apos;t blur that line, or hand you
+              our own website as Android proof, because none of it is a native app.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
                 See our work
               </Link>

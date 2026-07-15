@@ -138,18 +138,18 @@ export function WooProof() {
               The problem WooCommerce solves, and the ownership - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is real web projects: an online store and a corporate site. The
-              store is a custom, full-stack Next.js build on its own back end - a product catalog, a
-              cart, a checkout and payments flow, and an admin a non-technical team runs day to day -
-              and, like a WooCommerce store, it is software the client owns outright rather than rents
-              from a platform. It is not built on WooCommerce, though: WooCommerce is PHP on
-              WordPress, and this isn&apos;t, so we won&apos;t relabel it as one.{" "}
+              Our production work includes a custom, full-stack Next.js online store on its own back
+              end - a product catalog, a cart, a checkout and payments flow, and an admin a
+              non-technical team runs day to day - and, like a WooCommerce store, it is software the
+              client owns outright rather than rents from a platform. It is not built on WooCommerce,
+              though: WooCommerce is PHP on WordPress, and this isn&apos;t, so we won&apos;t relabel it
+              as one. What it proves is two true things a WooCommerce buyer actually cares about: this
+              team ships a working catalog, cart and checkout that holds up in production, and we build
+              a store you own rather than one you rent. Our{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                See our work
-              </Link>
-              , described honestly. What it proves is two true things a WooCommerce buyer actually
-              cares about: this team ships a working catalog, cart and checkout that holds up in
-              production, and we build a store you own rather than one you rent. The
+                work page
+              </Link>{" "}
+              features two other real builds, described honestly. The
               WooCommerce-specific proof isn&apos;t a borrowed case study or a partner badge we
               didn&apos;t earn - it&apos;s the current-standard depth on this page, and the standard,
               self-hosted store, code and database you&apos;ll own outright.

@@ -158,9 +158,10 @@ export function FlutterProof() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               Flutter earns its keep when the interface is the whole product, so the fair question is
               whether we can build interfaces. Here is the honest version of that proof. Our production
-              work is real: a custom, full-stack online store and a corporate site, where the visual
-              polish, the responsive layout, the motion and the accessibility all had to hold up in
-              front of real users rather than in a mockup. That is the same discipline an
+              work is real, custom web builds - a professional-training platform rebuild and a
+              financial-services site, both on our work page - where the visual polish, the responsive
+              layout, the motion and the accessibility all had to hold up in front of real users rather
+              than in a mockup. That is the same discipline an
               interface-led Flutter build lives or dies on, and it is a skill that travels across
               renderers. What does not travel is the code, and we won&apos;t blur that line: every
               pixel of that work was drawn by the browser&apos;s DOM, not by Flutter&apos;s engine, and

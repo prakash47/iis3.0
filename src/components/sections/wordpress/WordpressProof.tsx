@@ -70,19 +70,21 @@ export function WordpressProof() {
               We ship exactly the kinds of sites WordPress is built for - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is real web projects: a corporate site and an ecommerce store. Those
-              are the two things WordPress and WooCommerce exist to build - editable content and pages,
-              a product catalog, a checkout and payments flow, and an admin a non-technical team can
-              actually run day to day.{" "}
+              Our production work is real, custom web builds: a professional-training platform rebuild
+              and a financial-services site, both on our work page. Both are exactly the kind of
+              content-driven, lead-generation sites WordPress is built for - editable content and pages,
+              a searchable, filterable catalog, enquiry and enrolment funnels, and an admin a
+              non-technical team can actually run day to day - and the training platform was itself a
+              slow WordPress site we rebuilt on Next.js.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
                 See our work
               </Link>
               , described honestly, and never relabelled as WordPress or WooCommerce projects unless
               they were. What they prove is one true thing: this team ships editable, content-driven
-              sites and working stores that hold up in production. The WordPress-specific proof
-              isn&apos;t a borrowed case study or a stock badge - it&apos;s the current-standard depth
-              on this page and the standard, self-hosted WordPress site, content and database
-              you&apos;ll own outright.
+              sites with searchable catalogs and working enquiry funnels that hold up in production.
+              The WordPress-specific proof isn&apos;t a borrowed case study or a stock badge -
+              it&apos;s the current-standard depth on this page and the standard, self-hosted WordPress
+              site, content and database you&apos;ll own outright.
             </p>
           </div>
         </Reveal>

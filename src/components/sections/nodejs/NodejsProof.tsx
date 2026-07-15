@@ -68,10 +68,14 @@ export function NodejsProof() {
               We ship software with real backends - honestly labelled
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work has involved the parts a backend is made of: product and order
-              data, payments, authentication, content APIs and integrations.{" "}
+              Our production work is real, custom web builds - a professional-training platform
+              rebuild and a financial-services site, both on our work page - and both are made of
+              the parts a real backend needs: a large searchable course catalog and structured
+              loan-category pages, enquiry and enrolment funnels, certificate validation, and a
+              real-time affordability calculator, with a headless CMS the marketing team runs
+              itself.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                See our work
+                See both builds
               </Link>
               , described honestly and never dressed up as Node case studies with invented metrics.
               That proves one true thing - this team ships working software that handles real data
