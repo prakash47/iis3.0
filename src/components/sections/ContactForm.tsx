@@ -6,20 +6,14 @@ import { siteConfig } from "@/config/site";
 import { IconArrow, IconCheck } from "@/components/icons";
 
 /**
- * The /contact lead form. It POSTs to Web3Forms when a public access key is configured
- * (siteConfig.contact.web3formsKey), and gracefully FALLS BACK to a prefilled mailto when it
- * is not - so the form is never dead and never fakes a "sent" confirmation it cannot verify.
- *
- * HONESTY LOCKS (both red-teams): no time-trap and no client-side silent-drop that could bury a
- * real lead behind a fake success (spam is handled server-side by Web3Forms via the hidden
- * `botcheck` field); the selects default to an honest empty/"Not sure yet" (never a fabricated
- * "Website"/"Under $2,000"); the error copy never asserts where the data did or did not go; the
- * reply commitment stays "one business day", never inflated. EVERY field has a `name` so a real
- * POST captures it. Submit is a native <button> (the shared Button component is href-only).
+ * The /contact lead form. It POSTs to our own /api/contact route, which sends the enquiry
+ * over SMTP (Google Workspace Gmail). Honesty locks (kept from the prior build): a real
+ * async state machine (never a faked "sent"); a hidden honeypot handled server-side (no
+ * client-side silent-drop that could bury a real lead); honest, non-inflated reply
+ * commitment; the selects default to an honest "Not sure yet" (never a fabricated pick);
+ * on failure (including SMTP not yet configured -> 503) the error state routes the visitor
+ * to email/WhatsApp so nothing is lost. Every field has a `name` so the POST captures it.
  */
-const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-const ACCESS_KEY = siteConfig.contact.web3formsKey; // "" -> honest mailto fallback
-
 const projectTypes = [
   "Website (marketing or business site)",
   "E-commerce store",
@@ -34,8 +28,8 @@ const projectTypes = [
   "Not sure yet, help me choose",
 ];
 
-// Retuned HONESTLY to our published pricing (from $300 sites, $500 apps, $100/mo care plans),
-// so the real low end is never scared off and no fantasy ceiling is invented. Budget is OPTIONAL.
+// Aligned to our published pricing (from $300 sites, $500 apps, $100/mo care plans) so the
+// real low end is never scared off and no fantasy ceiling is invented. Budget is OPTIONAL.
 const budgets = [
   "Not sure yet",
   "Under $1,000",
@@ -54,9 +48,9 @@ const timelines = [
 ];
 
 const inputCls =
-  "mt-1.5 h-11 w-full rounded-lg border border-border bg-background px-3 text-sm text-foreground focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
+  "mt-1.5 h-11 w-full rounded-xl border border-border bg-background px-3.5 text-sm text-foreground transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
 const textareaCls =
-  "mt-1.5 w-full rounded-lg border border-border bg-background px-3 py-2.5 text-sm text-foreground focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
+  "mt-1.5 w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm text-foreground transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
 const labelCls = "text-sm font-medium text-foreground";
 const req = (
   <>
@@ -68,22 +62,6 @@ const req = (
 const opt = <span className="font-normal text-muted-foreground"> (optional)</span>;
 
 type Status = "idle" | "submitting" | "success" | "error";
-
-function composeMailto(fd: FormData): string {
-  const body = [
-    `Name: ${fd.get("name") ?? ""}`,
-    `Email: ${fd.get("email") ?? ""}`,
-    `Phone: ${fd.get("phone") ?? ""}`,
-    `Company: ${fd.get("company") ?? ""}`,
-    `Project type: ${fd.get("project_type") ?? ""}`,
-    `Budget: ${fd.get("budget") ?? ""}`,
-    `Timeline: ${fd.get("timeline") ?? ""}`,
-    "",
-    `${fd.get("message") ?? ""}`,
-  ].join("\n");
-  const subject = `New project enquiry - ${fd.get("project_type") || "General"}`;
-  return `mailto:${siteConfig.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -97,27 +75,15 @@ export function ContactForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
-
-    // No backend configured yet: open the visitor's email client with the message prefilled.
-    // Do NOT run the async "submitting -> success" states here - that would fake a send.
-    if (!ACCESS_KEY) {
-      window.location.href = composeMailto(fd);
-      return;
-    }
-
     setStatus("submitting");
     try {
-      const payload = Object.fromEntries(fd) as Record<string, unknown>;
-      payload.access_key = ACCESS_KEY;
-      payload.subject = `New project enquiry - ${fd.get("project_type") || "General"}`;
-      payload.from_name = "Intention InfoService website";
-      const res = await fetch(WEB3FORMS_ENDPOINT, {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(fd)),
       });
       const json = await res.json().catch(() => ({}));
-      if (res.ok && json.success) setStatus("success");
+      if (res.ok && json.ok) setStatus("success");
       else throw new Error("send-failed");
     } catch {
       setStatus("error");
@@ -157,7 +123,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4" noValidate={false}>
+    <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <h2 className="font-display text-lg font-bold text-foreground">Tell us about your project</h2>
         <p className="mt-1 text-sm text-muted-foreground">
@@ -167,7 +133,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" && (
-        <div role="alert" className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-4 text-sm leading-relaxed text-foreground">
+        <div role="alert" className="rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 text-sm leading-relaxed text-foreground">
           <p className="font-semibold">That did not send.</p>
           <p className="mt-1 text-muted-foreground">
             We could not confirm your message reached us. Please email it to us at{" "}
@@ -240,11 +206,11 @@ export function ContactForm() {
           <textarea id="message" name="message" rows={5} required aria-required="true" className={textareaCls} />
         </div>
 
-        {/* Web3Forms honeypot - hidden from humans and assistive tech; if a bot checks it, Web3Forms
-            rejects the submission server-side. No client-side silent-drop (which could bury a real lead). */}
+        {/* Honeypot - hidden from humans and assistive tech; if a bot fills it, /api/contact
+            accepts silently and sends nothing (never a client-side silent-drop of a real lead). */}
         <input
-          type="checkbox"
-          name="botcheck"
+          type="text"
+          name="company_website"
           tabIndex={-1}
           autoComplete="off"
           aria-hidden="true"
@@ -257,7 +223,7 @@ export function ContactForm() {
         type="submit"
         disabled={status === "submitting"}
         aria-busy={status === "submitting"}
-        className="group/btn inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--grad-from),var(--grad-to))] px-6 text-sm font-semibold text-white transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="group/btn inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--grad-from),var(--grad-to))] px-6 text-sm font-semibold text-white transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "submitting" ? (
           <>
@@ -284,7 +250,6 @@ export function ContactForm() {
           see our privacy policy
         </Link>
         .
-        {!ACCESS_KEY && " This opens your email app with your message ready to send."}
       </p>
     </form>
   );

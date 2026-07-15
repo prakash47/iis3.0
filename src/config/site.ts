@@ -74,14 +74,13 @@ export const siteConfig = {
       postalCode: "401208",
       addressCountry: "IN",
     },
-    // ── Contact form backend (Web3Forms) ──────────────────────────────────
-    // The /contact form POSTs to Web3Forms (https://api.web3forms.com/submit) when this
-    // access key is set. It is a PUBLIC, client-side key by design (tied to the destination
-    // inbox; Web3Forms does the spam filtering), so it is safe to commit. Get a free key in
-    // ~2 min at https://web3forms.com (enter contact@intentioninfoservice.com, no account).
-    // UNTIL it is set, the form gracefully falls back to a prefilled mailto - no dead form,
-    // and no fake "sent" confirmation. Empty string = fallback, mirroring the `social` convention.
-    web3formsKey: "",
+    // ── Contact form backend ──────────────────────────────────────────────
+    // The /contact form POSTs to our own /api/contact route, which sends the enquiry over SMTP
+    // (Google Workspace Gmail). Credentials are SERVER-ONLY env vars, never in this committed
+    // config: SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS (a Google App Password), CONTACT_TO,
+    // CONTACT_FROM. Until they are set the API returns 503 and the form shows its honest
+    // email/WhatsApp fallback. See .env.local.example.
+    //
     // A real Calendly / Cal.com booking URL, when one exists. "" = the "Book a call" channel
     // is omitted entirely (no fabricated booking link ever renders).
     bookingUrl: "",

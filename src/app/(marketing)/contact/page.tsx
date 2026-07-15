@@ -4,7 +4,6 @@ import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Pill } from "@/components/ui/Pill";
-import { TrustChip } from "@/components/ui/TrustChip";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -35,22 +34,23 @@ const crumbs = [
 
 /**
  * THE /contact PAGE - the primary conversion destination (every CTA across the site routes here).
- * Server component; the form is an isolated "use client" island (ContactForm).
+ * Server component; the form is an isolated "use client" island (ContactForm) that POSTs to the
+ * /api/contact SMTP route (Google Workspace Gmail). Redesigned 2026-07-15 for conversion + polish.
  *
- * HARD LOCKS (both red-teams): purge the "talk to the founder" framing (senior-people MECHANISM
- * instead); zero fabricated proof anywhere near the form (no testimonials, logos, "trusted by",
- * ratings, counts, fake urgency); the only reply commitment is the honest "one business day", never
- * inflated; all NAP reads from siteConfig, byte-identical to the Organization schema; schema is
- * breadcrumb + ContactPage(about -> Org @id) - NO faqSchema (the FAQ ships as plain <details> to
- * avoid diluting the earning FAQPage nodes), NO duplicated contactPoint/PostalAddress, NEVER
- * Person/Review/Rating/AggregateRating; the booking channel renders only if a real bookingUrl exists.
+ * HARD LOCKS: senior-people MECHANISM (never "talk to the founder"); zero fabricated proof near the
+ * form (no testimonials/logos/"trusted by"/ratings/counts/fake urgency); the only reply commitment
+ * is the honest "one business day"; all NAP reads from siteConfig, byte-identical to the Organization
+ * schema; schema is breadcrumb + ContactPage(about -> Org @id) - NO faqSchema (the FAQ is plain
+ * <details>), NO duplicated contactPoint/PostalAddress, NEVER Person/Review/Rating; the booking
+ * channel renders only if a real bookingUrl exists.
  */
 
-const heroChips = [
-  { icon: <IconTag className="h-4 w-4" />, label: "Published fixed prices, no quote wall" },
-  { icon: <IconShield className="h-4 w-4" />, label: "Senior people, not a sales rep" },
-  { icon: <IconLock className="h-4 w-4" />, label: "You own the code, IP and data" },
-  { icon: <IconClock className="h-4 w-4" />, label: "Reply within one business day" },
+// Scannable, convincing trust points shown beside the form (a checklist, not decoration).
+const trust = [
+  { icon: <IconTag className="h-4 w-4" />, t: "Published fixed prices", d: "See what a build costs before you send this - no quote wall." },
+  { icon: <IconShield className="h-4 w-4" />, t: "Senior people, not a sales rep", d: "You talk to the people who would actually do the work." },
+  { icon: <IconLock className="h-4 w-4" />, t: "You own the code, IP and data", d: "No lock-in, no hostage handoff - it is yours." },
+  { icon: <IconClock className="h-4 w-4" />, t: "A reply within one business day", d: "A real person reads every message. No sales funnel." },
 ];
 
 const afterSend = [
@@ -115,34 +115,47 @@ export default function ContactPage() {
         <Section className="relative z-[1] pt-6 sm:pt-8">
           <Container>
             <Breadcrumbs items={crumbs} />
-            <div className="mt-8 grid items-start gap-12 lg:grid-cols-2">
-              <div>
+            <div className="mt-8 grid items-start gap-10 lg:grid-cols-[1fr_minmax(0,30rem)] lg:gap-14">
+              {/* Left rail: value prop + trust checklist */}
+              <div className="lg:pt-4">
                 <Pill dot>Contact Intention InfoService</Pill>
                 <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-5xl">
                   Start a project,{" "}
                   <span className="gradient-text">with the people who build it.</span>
                 </h1>
-                <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-                  Tell us what you&apos;re building. You talk to the senior people who would do the
-                  work, not a sales rep, and you get a clear, fixed-price scope. You can see our
-                  published prices before you send this form, so there is no quote wall and no sales
-                  call required just to get a number.
-                </p>
-                <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground">
-                  Prefer another channel? Email, phone and WhatsApp all reach the same people.
+                <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
+                  Tell us what you&apos;re building and you&apos;ll get a clear, fixed-price scope from
+                  the senior people who would do the work - not a sales rep, and no quote wall to get a
+                  number.
                 </p>
 
-                <ul className="mt-8 flex flex-wrap gap-2.5">
-                  {heroChips.map((c) => (
-                    <li key={c.label}>
-                      <TrustChip icon={c.icon}>{c.label}</TrustChip>
+                <ul className="mt-8 space-y-3.5">
+                  {trust.map((t) => (
+                    <li key={t.t} className="flex items-start gap-3.5">
+                      <span aria-hidden="true" className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-brand-500/25 bg-brand-500/10 text-brand-500">
+                        {t.icon}
+                      </span>
+                      <span>
+                        <span className="block text-sm font-semibold text-foreground">{t.t}</span>
+                        <span className="block text-sm leading-relaxed text-muted-foreground">{t.d}</span>
+                      </span>
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-8 flex items-center gap-2 text-sm text-muted-foreground">
+                  <span aria-hidden="true" className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/60" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  </span>
+                  Prefer another channel? Email, phone and WhatsApp all reach the same people.
+                </div>
               </div>
 
-              <div className="glow-border relative rounded-3xl border border-border bg-surface p-6 sm:p-8">
-                <div className="relative z-[1]">
+              {/* Right: the form (the focal point) */}
+              <div className="glow-border relative rounded-3xl border border-border bg-surface shadow-xl shadow-black/5 dark:shadow-black/30">
+                <div aria-hidden="true" className="h-1.5 rounded-t-3xl bg-[linear-gradient(90deg,var(--grad-from),var(--grad-to))]" />
+                <div className="relative z-[1] p-6 sm:p-8">
                   <ContactForm />
                 </div>
               </div>
@@ -162,8 +175,11 @@ export default function ContactPage() {
             />
           </Reveal>
           <Reveal group className="mt-10 grid gap-4 sm:grid-cols-3">
-            {afterSend.map((s) => (
-              <div key={s.t} className="card flex flex-col p-5">
+            {afterSend.map((s, i) => (
+              <div key={s.t} className="card relative flex flex-col p-5">
+                <span aria-hidden="true" className="absolute right-5 top-5 font-display text-4xl font-extrabold text-border/70">
+                  {i + 1}
+                </span>
                 <span aria-hidden="true" className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface-2 text-brand-500">
                   {s.icon}
                 </span>
@@ -189,7 +205,7 @@ export default function ContactPage() {
             {channels.map((c) => {
               const inner = (
                 <>
-                  <span aria-hidden="true" className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-surface-2 text-brand-500">
+                  <span aria-hidden="true" className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-surface-2 text-brand-500 transition-colors group-hover:border-brand-400/50 group-hover:text-brand-600">
                     {c.icon}
                   </span>
                   <div className="min-w-0">
