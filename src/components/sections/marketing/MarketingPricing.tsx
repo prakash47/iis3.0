@@ -26,8 +26,8 @@ export function MarketingPricing() {
         <Reveal>
           <SectionHeading
             eyebrow="How we price"
-            title="Start with an audit, not a contract"
-            sub="Every site and market is different, so we don't quote a monthly number before we understand yours - and we don't hide behind a quote wall either. Here's how it works."
+            title="How much does digital marketing cost?"
+            sub="Start with an audit, not a contract. Every site and market is different, so we don't quote a monthly number before we understand yours - and we don't hide behind a quote wall either. Here's how it works."
           />
         </Reveal>
 

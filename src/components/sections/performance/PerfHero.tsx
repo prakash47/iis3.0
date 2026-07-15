@@ -38,13 +38,13 @@ export function PerfHero({ crumbs }: { crumbs: { name: string; path: string }[] 
               <Pill dot>Performance marketing</Pill>
 
               <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-5xl">
-                Paid media{" "}
+                Performance marketing{" "}
                 <span className="gradient-text">without the agency games.</span>
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                Intention InfoService runs paid media - Google Ads, paid social, display and
-                retargeting - for startups, SMBs and enterprises across the US, UK, UAE, Europe and
+                Intention InfoService runs performance marketing and PPC - Google Ads, paid social,
+                display and retargeting - for startups, SMBs and enterprises across the US, UK, UAE, Europe and
                 India. The difference is the model: you own every ad account and all the data, you
                 pay the platforms directly so we never mark up your spend, we charge one flat
                 monthly fee (not a cut of your budget), and we report revenue - not impressions.

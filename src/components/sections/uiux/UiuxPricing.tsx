@@ -24,8 +24,8 @@ export function UiuxPricing() {
         <Reveal>
           <SectionHeading
             eyebrow="How we price"
-            title="Design is scoped, not guessed"
-            sub="A quick UX audit and a full design system are not tiers of one thing, so we don't pretend to a single price - and we don't hide behind a quote wall either. You start with a low, fixed-price door, see the work, then we scope the rest to a fixed number."
+            title="How much does UI/UX design cost?"
+            sub="Design is scoped, not guessed. A quick UX audit and a full design system are not tiers of one thing, so we don't pretend to a single price - and we don't hide behind a quote wall either. You start with a low, fixed-price door, see the work, then we scope the rest to a fixed number."
           />
         </Reveal>
 

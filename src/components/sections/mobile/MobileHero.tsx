@@ -38,7 +38,7 @@ export function MobileHero({ crumbs }: { crumbs: { name: string; path: string }[
               <Pill dot>Mobile app development</Pill>
 
               <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-5xl">
-                iOS and Android apps, native or cross-platform - with the right call made{" "}
+                iOS and Android app development, native or cross-platform - the right call made{" "}
                 <span className="gradient-text">before you commit.</span>
               </h1>
 

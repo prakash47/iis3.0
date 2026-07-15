@@ -37,7 +37,7 @@ export function MarketingHero({ crumbs }: { crumbs: { name: string; path: string
               <Pill dot>Digital marketing</Pill>
 
               <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-5xl">
-                Organic growth from an SEO and AI-search team that{" "}
+                Organic digital marketing from an SEO and AI-search team that{" "}
                 <span className="gradient-text">also builds the site.</span>
               </h1>
 

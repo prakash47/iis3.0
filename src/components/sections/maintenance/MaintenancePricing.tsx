@@ -18,8 +18,8 @@ export function MaintenancePricing() {
         <Reveal>
           <SectionHeading
             eyebrow="Care plans"
-            title="Published plans, month-to-month"
-            sub="No quote wall and no lock-in. Pick a plan for a site we look after every month, or start with a one-time health audit if you're not ready to commit. Prices in USD."
+            title="How much does website maintenance cost?"
+            sub="Published plans, month-to-month, no quote wall and no lock-in. Pick a plan for a site we look after every month, or start with a one-time health audit if you're not ready to commit. Prices in USD."
           />
         </Reveal>
 

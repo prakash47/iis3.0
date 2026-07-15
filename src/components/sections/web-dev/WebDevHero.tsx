@@ -38,7 +38,7 @@ export function WebDevHero({ crumbs }: { crumbs: { name: string; path: string }[
               <Pill dot>Web design &amp; development</Pill>
 
               <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-5xl">
-                Custom websites and web apps, built on the right stack - at a{" "}
+                Custom web design and development, built on the right stack - at a{" "}
                 <span className="gradient-text">fixed price you can see.</span>
               </h1>
 

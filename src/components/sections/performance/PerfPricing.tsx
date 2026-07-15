@@ -25,8 +25,8 @@ export function PerfPricing() {
         <Reveal>
           <SectionHeading
             eyebrow="How we price"
-            title="Flat fee, zero markup, month-to-month"
-            sub="You pay the ad platforms directly - your spend never passes through us. Our flat monthly fee covers strategy, build, management, optimization and reporting. That's the whole bill."
+            title="How much does PPC management cost?"
+            sub="Flat fee, zero markup, month-to-month. You pay the ad platforms directly - your spend never passes through us. Our flat monthly fee covers strategy, build, management, optimization and reporting. That's the whole bill."
           />
         </Reveal>
 

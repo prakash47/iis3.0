@@ -26,8 +26,8 @@ export function CustomPricing() {
         <Reveal>
           <SectionHeading
             eyebrow="How we price"
-            title="Custom software is scoped, not guessed"
-            sub="Every system is different, so we don't pretend to a fixed price before we understand it - and we don't hide behind a quote wall either. Here's exactly how it works."
+            title="How much does custom software cost?"
+            sub="Custom software is scoped, not guessed. Every system is different, so we don't pretend to a fixed price before we understand it - and we don't hide behind a quote wall either. Here's exactly how it works."
           />
         </Reveal>
 

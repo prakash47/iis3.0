@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How much does a website cost?",
     answer:
-      "Intention InfoService publishes transparent, fixed 'starting-at' prices instead of hiding behind a quote form. Prices start from a few hundred dollars for a single-page site and in the low four figures for a full multi-page build, with larger web apps and e-commerce priced by scope - and you always see a fixed price before any work begins.",
+      "Intention InfoService publishes transparent, fixed 'starting-at' prices instead of hiding behind a quote form. A single-page site starts at $300, a full multi-page website from $1,500, a larger marketing site from $4,000 and an e-commerce store from $7,000, with web-app MVPs from $12,000 - and you always see a fixed price before any work begins.",
   },
   {
     question: "How long does a project take?",
