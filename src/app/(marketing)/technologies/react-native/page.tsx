@@ -5,6 +5,7 @@ import { metadataFrom } from "@/lib/seo/metadata";
 import { technologyPageSeo } from "@/config/seo";
 import { mobileAppDevTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { RnHero } from "@/components/sections/react-native/RnHero";
 import { RnScope } from "@/components/sections/react-native/RnScope";
 import { RnWhy } from "@/components/sections/react-native/RnWhy";
@@ -66,6 +67,13 @@ export default function ReactNativePage() {
       <RnCompare />
       <RnPricing />
       <RnFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/guides/react-native-vs-flutter", label: "Guide: React Native vs Flutter - how to decide" },
+          { href: "/guides/native-vs-cross-platform-vs-pwa", label: "Guide: native vs cross-platform vs PWA" },
+        ]}
+      />
 
       {/* First spoke whose hub is the mobile money page. Every commitment this page inherits -
           store submission, code and IP ownership, milestone billing, care plans - is defined

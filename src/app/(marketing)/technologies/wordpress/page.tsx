@@ -5,6 +5,7 @@ import { metadataFrom } from "@/lib/seo/metadata";
 import { technologyPageSeo } from "@/config/seo";
 import { webDesignDevTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { WordpressHero } from "@/components/sections/wordpress/WordpressHero";
 import { WordpressScope } from "@/components/sections/wordpress/WordpressScope";
 import { WordpressWhy } from "@/components/sections/wordpress/WordpressWhy";
@@ -61,6 +62,13 @@ export default function WordpressPage() {
       <WordpressCompare />
       <WordpressPricing />
       <WordpressFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/guides/nextjs-vs-wordpress-for-seo", label: "Guide: Next.js vs WordPress for SEO" },
+          { href: "/guides/how-to-choose-a-headless-cms", label: "Guide: how to choose a headless CMS" },
+        ]}
+      />
 
       <CtaBand
         title="Ready to build with WordPress?"

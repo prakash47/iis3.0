@@ -5,6 +5,7 @@ import { metadataFrom } from "@/lib/seo/metadata";
 import { technologyPageSeo } from "@/config/seo";
 import { webDesignDevTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { SanityHero } from "@/components/sections/sanity/SanityHero";
 import { SanityScope } from "@/components/sections/sanity/SanityScope";
 import { SanityWhy } from "@/components/sections/sanity/SanityWhy";
@@ -65,6 +66,13 @@ export default function SanityPage() {
       <SanityCompare />
       <SanityPricing />
       <SanityFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/guides/how-to-choose-a-headless-cms", label: "Guide: how to choose a headless CMS - Sanity, Strapi, Contentful or Drupal" },
+          { href: "/blog/why-we-put-our-blog-on-sanity", label: "Blog: why we put our own blog on Sanity, and how we wired it" },
+        ]}
+      />
 
       <CtaBand
         title="Ready to model your content on Sanity?"

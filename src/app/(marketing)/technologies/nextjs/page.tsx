@@ -5,6 +5,7 @@ import { metadataFrom } from "@/lib/seo/metadata";
 import { technologyPageSeo } from "@/config/seo";
 import { webDesignDevTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { NextjsHero } from "@/components/sections/nextjs/NextjsHero";
 import { NextjsWhy } from "@/components/sections/nextjs/NextjsWhy";
 import { NextjsScope } from "@/components/sections/nextjs/NextjsScope";
@@ -61,6 +62,13 @@ export default function NextjsPage() {
       <NextjsPricing />
       <NextjsCompare />
       <NextjsFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/guides/nextjs-vs-wordpress-for-seo", label: "Guide: Next.js vs WordPress for SEO" },
+          { href: "/guides/core-web-vitals-playbook", label: "Guide: the Core Web Vitals playbook for business websites" },
+        ]}
+      />
 
       <CtaBand
         title="Ready to build with Next.js?"

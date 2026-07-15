@@ -6,6 +6,7 @@ import { servicePageSeo } from "@/config/seo";
 import { getService } from "@/content/catalog";
 import { digitalMarketingTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { MarketingHero } from "@/components/sections/marketing/MarketingHero";
 import { MarketingScope } from "@/components/sections/marketing/MarketingScope";
 import { MarketingProcess } from "@/components/sections/marketing/MarketingProcess";
@@ -62,6 +63,13 @@ export default function DigitalMarketingPage() {
       <MarketingWhyUs />
       <MarketingCompare />
       <MarketingFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/blog/answer-engines-are-the-new-homepage", label: "Blog: answer engines are the new homepage" },
+          { href: "/guides/core-web-vitals-playbook", label: "Guide: the Core Web Vitals playbook for business websites" },
+        ]}
+      />
 
       <CtaBand
         title="Ready to grow your organic visibility?"

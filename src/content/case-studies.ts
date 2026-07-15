@@ -10,6 +10,8 @@ export interface CaseStudy {
   seoTitle?: string;
   /** Optional compact SEO/meta description under ~155 chars (falls back to summary). */
   seoDescription?: string;
+  /** The primary service slug this case study substantiates (links the detail page to that money page). */
+  serviceSlug?: string;
   /** One- or two-line card blurb. */
   summary: string;
   /** REAL, measured figures only - never fabricated. */
@@ -47,6 +49,7 @@ export const caseStudies: CaseStudy[] = [
     seoTitle: "WordPress to Next.js Rebuild",
     seoDescription:
       "How we rebuilt a training institute's slow WordPress site on Next.js and grew organic search traffic by around 120%, shipped in four weeks.",
+    serviceSlug: "web-design-development",
     summary:
       "Re-platformed a training institute's large, slow WordPress site onto a fast, statically-generated Next.js build with a headless-CMS blog - and grew organic search traffic by around 120%.",
     metrics: [
@@ -87,6 +90,7 @@ export const caseStudies: CaseStudy[] = [
     seoTitle: "Fast Loan-Comparison Site Build",
     seoDescription:
       "How we designed and built a fast loan-comparison and enquiry site - an EMI calculator, ten product pages and lead funnels - on Next.js in two weeks.",
+    serviceSlug: "web-design-development",
     summary:
       "Designed and built a fast, statically-generated Next.js site for a loan advisory - an interactive EMI calculator, clear per-product pages and enquiry funnels - shipped in two weeks.",
     metrics: [

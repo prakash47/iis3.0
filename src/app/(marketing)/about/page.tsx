@@ -349,6 +349,17 @@ export default function AboutPage() {
                   Talk to the people who would build it
                 </Button>
               </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Want to join a small, senior team instead?{" "}
+                <Link href="/careers" className="font-medium text-brand-500 hover:text-brand-600">
+                  See careers at Intention InfoService
+                </Link>
+                , or read how we think in our{" "}
+                <Link href="/resources" className="font-medium text-brand-500 hover:text-brand-600">
+                  guides and articles
+                </Link>
+                .
+              </p>
             </div>
           </Reveal>
         </Container>

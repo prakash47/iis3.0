@@ -6,6 +6,7 @@ import { servicePageSeo } from "@/config/seo";
 import { getService } from "@/content/catalog";
 import { mobileAppDevTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { MobileHero } from "@/components/sections/mobile/MobileHero";
 import { MobileScope } from "@/components/sections/mobile/MobileScope";
 import { MobileDecision } from "@/components/sections/mobile/MobileDecision";
@@ -66,6 +67,14 @@ export default function MobileAppDevelopmentPage() {
       <MobileWhyUs />
       <MobileCompare />
       <MobileFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/guides/react-native-vs-flutter", label: "Guide: React Native vs Flutter - how to decide" },
+          { href: "/guides/native-vs-cross-platform-vs-pwa", label: "Guide: native vs cross-platform vs PWA" },
+          { href: "/guides/what-drives-app-cost", label: "Guide: what drives the cost of a mobile app" },
+        ]}
+      />
 
       <CtaBand
         title="Ready to see a fixed price for your app?"

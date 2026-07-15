@@ -49,13 +49,21 @@ export function ServicesBento() {
   return (
     <Section className="bg-muted/60">
       <Container>
-        <Reveal>
-          <SectionHeading
-            eyebrow="What we do"
-            title={<>Everything you need to <span className="gradient-text">launch &amp; grow</span></>}
-            sub="End-to-end digital delivery - from a fast marketing site to a full product and the marketing engine behind it."
-          />
-        </Reveal>
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <Reveal>
+            <SectionHeading
+              eyebrow="What we do"
+              title={<>Everything you need to <span className="gradient-text">launch &amp; grow</span></>}
+              sub="End-to-end digital delivery - from a fast marketing site to a full product and the marketing engine behind it."
+            />
+          </Reveal>
+          <Link
+            href="/services"
+            className="text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600"
+          >
+            All services →
+          </Link>
+        </div>
         <Reveal group className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <Link

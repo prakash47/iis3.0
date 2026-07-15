@@ -6,6 +6,7 @@ import { servicePageSeo } from "@/config/seo";
 import { getService } from "@/content/catalog";
 import { webDesignDevTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { WebDevHero } from "@/components/sections/web-dev/WebDevHero";
 import { WebDevProof } from "@/components/sections/web-dev/WebDevProof";
 import { WebDevScope } from "@/components/sections/web-dev/WebDevScope";
@@ -64,6 +65,13 @@ export default function WebDesignDevelopmentPage() {
       <WebDevWhyUs />
       <WebDevCompare />
       <WebDevFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/guides/how-to-plan-a-website-build", label: "Guide: how to plan a website build - scope, stack and timeline" },
+          { href: "/guides/nextjs-vs-wordpress-for-seo", label: "Guide: Next.js vs WordPress for SEO" },
+        ]}
+      />
 
       <CtaBand
         title="Ready to see a fixed price for your build?"

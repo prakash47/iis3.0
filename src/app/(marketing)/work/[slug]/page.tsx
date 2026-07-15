@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -9,6 +10,13 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, webPageSchema } from "@/lib/seo/jsonLd";
 import { metadataFrom } from "@/lib/seo/metadata";
 import { caseStudies } from "@/content/case-studies";
+import { technologies, getService } from "@/content/catalog";
+
+/** Link a stack chip to its /technologies/<slug> spoke when one exists (e.g. "Sanity CMS" -> sanity). */
+function techSlugFor(tag: string): string | undefined {
+  const n = tag.toLowerCase();
+  return technologies.find((t) => n === t.name.toLowerCase() || n.startsWith(t.name.toLowerCase() + " "))?.slug;
+}
 
 // Only the known case-study slugs render; anything else 404s.
 export const dynamicParams = false;
@@ -151,17 +159,40 @@ export default async function CaseStudyPage({
                       <dt className="text-xs font-medium text-muted-foreground">Project</dt>
                       <dd className="mt-0.5 text-sm text-foreground">{cs.type}</dd>
                     </div>
+                    {cs.serviceSlug && getService(cs.serviceSlug) && (
+                      <div>
+                        <dt className="text-xs font-medium text-muted-foreground">Service</dt>
+                        <dd className="mt-0.5 text-sm">
+                          <Link
+                            href={`/services/${cs.serviceSlug}`}
+                            className="text-brand-500 hover:text-brand-600"
+                          >
+                            {getService(cs.serviceSlug)!.name}
+                          </Link>
+                        </dd>
+                      </div>
+                    )}
                     <div>
                       <dt className="text-xs font-medium text-muted-foreground">Stack</dt>
                       <dd className="mt-1.5 flex flex-wrap gap-1.5">
-                        {cs.stack.map((t) => (
-                          <span
-                            key={t}
-                            className="rounded-full border border-border bg-surface-2 px-2 py-0.5 text-xs font-medium text-muted-foreground"
-                          >
-                            {t}
-                          </span>
-                        ))}
+                        {cs.stack.map((t) => {
+                          const slug = techSlugFor(t);
+                          const cls =
+                            "rounded-full border border-border bg-surface-2 px-2 py-0.5 text-xs font-medium";
+                          return slug ? (
+                            <Link
+                              key={t}
+                              href={`/technologies/${slug}`}
+                              className={`${cls} text-muted-foreground transition-colors hover:border-brand-400 hover:text-brand-600`}
+                            >
+                              {t}
+                            </Link>
+                          ) : (
+                            <span key={t} className={`${cls} text-muted-foreground`}>
+                              {t}
+                            </span>
+                          );
+                        })}
                       </dd>
                     </div>
                     {cs.confidential && (

@@ -10,7 +10,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { breadcrumbSchema, itemListSchema, faqSchema } from "@/lib/seo/jsonLd";
+import { breadcrumbSchema, itemListSchema, faqSchema, webPageSchema } from "@/lib/seo/jsonLd";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { services } from "@/content/catalog";
 import {
@@ -125,6 +125,7 @@ export default function ServicesPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={webPageSchema({ path: "/services", name: "Web, App, Software & AI Services" })} />
       <JsonLd
         data={itemListSchema(
           services.map((s) => ({ name: s.name, path: `/services/${s.slug}` })),

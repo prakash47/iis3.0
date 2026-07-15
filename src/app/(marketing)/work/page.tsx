@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { IconArrow } from "@/components/icons";
-import { breadcrumbSchema } from "@/lib/seo/jsonLd";
+import { breadcrumbSchema, webPageSchema, itemListSchema } from "@/lib/seo/jsonLd";
 import { pageMetadata } from "@/lib/seo/metadata";
 import { caseStudies } from "@/content/case-studies";
 
@@ -22,6 +22,14 @@ export default function WorkPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
+      <JsonLd data={webPageSchema({ path: "/work", name: "Work: Web & App Case Studies" })} />
+      {caseStudies.length > 0 && (
+        <JsonLd
+          data={itemListSchema(
+            caseStudies.map((cs) => ({ name: cs.title, path: `/work/${cs.slug}` })),
+          )}
+        />
+      )}
       <Section>
         <Container>
           <Breadcrumbs items={crumbs} />

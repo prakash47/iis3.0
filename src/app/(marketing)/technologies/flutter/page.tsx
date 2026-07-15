@@ -5,6 +5,7 @@ import { metadataFrom } from "@/lib/seo/metadata";
 import { technologyPageSeo } from "@/config/seo";
 import { mobileAppDevTiers, priceCurrency } from "@/content/pricing";
 import { CtaBand } from "@/components/sections/CtaBand";
+import { FurtherReading } from "@/components/sections/FurtherReading";
 import { FlutterHero } from "@/components/sections/flutter/FlutterHero";
 import { FlutterScope } from "@/components/sections/flutter/FlutterScope";
 import { FlutterWhy } from "@/components/sections/flutter/FlutterWhy";
@@ -65,6 +66,13 @@ export default function FlutterPage() {
       <FlutterCompare />
       <FlutterPricing />
       <FlutterFaq />
+
+      <FurtherReading
+        links={[
+          { href: "/guides/react-native-vs-flutter", label: "Guide: React Native vs Flutter - how to decide" },
+          { href: "/guides/native-vs-cross-platform-vs-pwa", label: "Guide: native vs cross-platform vs PWA" },
+        ]}
+      />
 
       {/* Hub = the mobile money page, mirroring the react-native spoke. The subtitle is
           deliberately NOT a noun-swapped clone of react-native's: it leads with the Flutter
