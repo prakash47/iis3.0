@@ -49,7 +49,6 @@ export default function JavaSpringBootPage() {
         data={webPageSchema({
           path: PATH,
           name: "Java & Spring Boot Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

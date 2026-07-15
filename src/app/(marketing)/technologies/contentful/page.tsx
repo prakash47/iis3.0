@@ -55,7 +55,6 @@ export default function ContentfulPage() {
         data={webPageSchema({
           path: PATH,
           name: "Contentful Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

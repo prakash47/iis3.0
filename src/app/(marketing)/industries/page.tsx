@@ -181,7 +181,7 @@ export default function IndustriesPage() {
           deepIndustries.map((i) => ({ name: i.name, path: `/industries/${i.slug}` })),
         )}
       />
-      <JsonLd data={webPageSchema({ path: PATH, name: "Software Development for Regulated Industries", dateModified: new Date().toISOString() })} />
+      <JsonLd data={webPageSchema({ path: PATH, name: "Software Development for Regulated Industries" })} />
       <JsonLd data={faqSchema(faqs)} />
 
       {/* Hero */}

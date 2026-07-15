@@ -72,7 +72,6 @@ export default function KotlinPage() {
         data={webPageSchema({
           path: PATH,
           name: "Kotlin Android App Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

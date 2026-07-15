@@ -51,7 +51,6 @@ export default function PerformanceMarketingPage() {
         data={webPageSchema({
           path: PATH,
           name: "Performance Marketing",
-          dateModified: new Date().toISOString(),
         })}
       />
 

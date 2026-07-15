@@ -58,7 +58,6 @@ export default function TravelPage() {
         data={webPageSchema({
           path: PATH,
           name: "Travel & Hospitality Software Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

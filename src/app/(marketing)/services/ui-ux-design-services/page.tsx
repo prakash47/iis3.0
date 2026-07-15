@@ -52,7 +52,6 @@ export default function UiUxDesignServicesPage() {
         data={webPageSchema({
           path: PATH,
           name: "UI/UX Design & Branding",
-          dateModified: new Date().toISOString(),
         })}
       />
 

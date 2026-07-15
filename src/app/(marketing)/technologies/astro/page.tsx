@@ -53,7 +53,6 @@ export default function AstroPage() {
         data={webPageSchema({
           path: PATH,
           name: "Astro Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

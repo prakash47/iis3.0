@@ -49,7 +49,6 @@ export default function NodejsPage() {
         data={webPageSchema({
           path: PATH,
           name: "Node.js Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

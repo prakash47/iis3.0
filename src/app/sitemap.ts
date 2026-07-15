@@ -24,8 +24,6 @@ import type { SitemapEntry } from "@/sanity/types";
 const RESOURCE_BASE: Record<string, string> = { post: "/blog", guide: "/guides" };
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-
   const pages: PageSeo[] = [
     ...staticPages,
     ...services.map((s) => servicePageSeo(s.slug)!),
@@ -33,11 +31,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...technologies.map((t) => technologyPageSeo(t.slug)!),
   ];
 
+  // Static + case-study URLs carry NO lastModified: they have no real per-page edit
+  // date, and a build-time "now" is a synthetic freshness signal Google discounts once
+  // it proves unreliable. Only Sanity docs (a real _updatedAt) get a lastmod.
   const staticEntries = pages
     .filter((p) => !p.noindex)
     .map((p) => ({
       url: absoluteUrl(p.path),
-      lastModified: now,
       changeFrequency: p.changeFrequency ?? "monthly",
       priority: p.priority ?? 0.5,
     }));
@@ -51,14 +51,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .filter((d) => RESOURCE_BASE[d._type] && d.slug)
     .map((d) => ({
       url: absoluteUrl(`${RESOURCE_BASE[d._type]}/${d.slug}`),
-      lastModified: d._updatedAt ? new Date(d._updatedAt) : now,
+      ...(d._updatedAt ? { lastModified: new Date(d._updatedAt) } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     }));
 
   const caseStudyEntries = caseStudies.map((cs) => ({
     url: absoluteUrl(`/work/${cs.slug}`),
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

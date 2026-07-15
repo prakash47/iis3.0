@@ -50,7 +50,6 @@ export default async function CaseStudyPage({
     { name: "Work", path: "/work" },
     { name: cs.title, path: `/work/${cs.slug}` },
   ];
-  const dateModified = new Date().toISOString();
 
   return (
     <>
@@ -59,7 +58,6 @@ export default async function CaseStudyPage({
         data={webPageSchema({
           path: `/work/${cs.slug}`,
           name: `${cs.title} - Case Study`,
-          dateModified,
         })}
       />
       <Section>

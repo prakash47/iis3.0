@@ -45,7 +45,9 @@ export function ArticleLayout({
               <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
                 <span>By the Intention InfoService team</span>
                 {published && <span>Published {formatDate(published)}</span>}
-                {updated && updated !== published && <span>Updated {formatDate(updated)}</span>}
+                {updated && formatDate(updated) !== formatDate(published ?? "") && (
+                  <span>Updated {formatDate(updated)}</span>
+                )}
                 <span>{mins} min read</span>
               </div>
             </div>

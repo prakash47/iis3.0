@@ -246,7 +246,6 @@ export default function PricingPage() {
         data={webPageSchema({
           path: "/pricing",
           name: "Website, App & Software Pricing",
-          dateModified: new Date().toISOString(),
         })}
       />
       <JsonLd data={faqSchema(faqs)} />

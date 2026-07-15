@@ -64,7 +64,6 @@ export default async function ResourcesPage() {
           name: "Resources",
           description:
             "Guides, definitions and articles on web development, performance and AI search from Intention InfoService.",
-          dateModified: new Date().toISOString(),
           items: [
             { name: "Guides", path: "/guides" },
             { name: "Glossary", path: "/glossary" },

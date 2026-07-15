@@ -49,7 +49,6 @@ export default function PythonPage() {
         data={webPageSchema({
           path: PATH,
           name: "Python Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

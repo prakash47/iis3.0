@@ -49,7 +49,6 @@ export default function LaravelPage() {
         data={webPageSchema({
           path: PATH,
           name: "Laravel Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

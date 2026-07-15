@@ -49,7 +49,6 @@ export default function AngularPage() {
         data={webPageSchema({
           path: PATH,
           name: "Angular Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

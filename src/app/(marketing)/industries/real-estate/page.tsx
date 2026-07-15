@@ -55,7 +55,6 @@ export default function RealEstatePage() {
         data={webPageSchema({
           path: PATH,
           name: "Real Estate Software & Listing-Portal Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

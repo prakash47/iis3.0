@@ -51,7 +51,6 @@ export default function DigitalMarketingPage() {
         data={webPageSchema({
           path: PATH,
           name: "Digital Marketing",
-          dateModified: new Date().toISOString(),
         })}
       />
 

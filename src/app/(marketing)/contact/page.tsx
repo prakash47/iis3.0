@@ -106,7 +106,6 @@ export default function ContactPage() {
         data={contactPageSchema({
           path: PATH,
           name: "Contact Intention InfoService",
-          dateModified: new Date().toISOString(),
         })}
       />
 

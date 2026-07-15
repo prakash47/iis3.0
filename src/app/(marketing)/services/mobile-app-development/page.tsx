@@ -53,7 +53,6 @@ export default function MobileAppDevelopmentPage() {
         data={webPageSchema({
           path: PATH,
           name: "Mobile App Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

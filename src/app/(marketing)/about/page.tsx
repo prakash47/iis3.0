@@ -155,7 +155,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
-      <JsonLd data={webPageSchema({ path: PATH, name: "About Intention InfoService", dateModified: new Date().toISOString() })} />
+      <JsonLd data={webPageSchema({ path: PATH, name: "About Intention InfoService" })} />
       <JsonLd data={faqSchema(faqs)} />
 
       {/* Hero */}

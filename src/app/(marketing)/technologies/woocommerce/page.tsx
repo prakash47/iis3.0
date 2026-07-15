@@ -52,7 +52,6 @@ export default function WooCommercePage() {
         data={webPageSchema({
           path: PATH,
           name: "WooCommerce Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

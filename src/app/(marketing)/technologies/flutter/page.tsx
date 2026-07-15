@@ -53,7 +53,6 @@ export default function FlutterPage() {
         data={webPageSchema({
           path: PATH,
           name: "Flutter App Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

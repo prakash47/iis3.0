@@ -53,7 +53,6 @@ export default function FintechPage() {
         data={webPageSchema({
           path: PATH,
           name: "Fintech & Payment Software Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

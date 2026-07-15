@@ -185,7 +185,7 @@ export default function TechnologiesPage() {
           deepTechnologies.map((t) => ({ name: `${t.name} development`, path: `/technologies/${t.slug}` })),
         )}
       />
-      <JsonLd data={webPageSchema({ path: PATH, name: "Technologies & Tech Stacks We Build With", dateModified: new Date().toISOString() })} />
+      <JsonLd data={webPageSchema({ path: PATH, name: "Technologies & Tech Stacks We Build With" })} />
       <JsonLd data={faqSchema(faqs)} />
 
       {/* Hero */}

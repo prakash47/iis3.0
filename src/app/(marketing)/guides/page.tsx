@@ -33,7 +33,7 @@ export default async function GuidesPage() {
     <>
       <JsonLd data={breadcrumbSchema(crumbs)} />
       <JsonLd
-        data={webPageSchema({ path: "/guides", name: "Guides", dateModified: new Date().toISOString() })}
+        data={webPageSchema({ path: "/guides", name: "Guides" })}
       />
 
       <div className="aurora">

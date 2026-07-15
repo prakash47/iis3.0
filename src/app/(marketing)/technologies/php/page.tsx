@@ -54,7 +54,6 @@ export default function PhpPage() {
         data={webPageSchema({
           path: PATH,
           name: "PHP Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

@@ -49,7 +49,6 @@ export default function HealthcarePage() {
         data={webPageSchema({
           path: PATH,
           name: "Healthcare Software & Patient Portal Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

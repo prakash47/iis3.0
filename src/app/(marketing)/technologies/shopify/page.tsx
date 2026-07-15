@@ -51,7 +51,6 @@ export default function ShopifyPage() {
         data={webPageSchema({
           path: PATH,
           name: "Shopify Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

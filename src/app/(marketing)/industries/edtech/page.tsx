@@ -47,7 +47,6 @@ export default function EdtechPage() {
         data={webPageSchema({
           path: PATH,
           name: "Custom LMS & eLearning Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

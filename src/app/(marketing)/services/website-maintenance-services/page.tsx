@@ -59,7 +59,6 @@ export default function WebsiteMaintenanceServicesPage() {
         data={webPageSchema({
           path: PATH,
           name: "Website Maintenance Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

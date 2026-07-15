@@ -68,7 +68,6 @@ export default function SwiftuiPage() {
         data={webPageSchema({
           path: PATH,
           name: "SwiftUI App Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

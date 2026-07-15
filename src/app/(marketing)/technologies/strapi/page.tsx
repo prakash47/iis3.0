@@ -54,7 +54,6 @@ export default function StrapiPage() {
         data={webPageSchema({
           path: PATH,
           name: "Strapi Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

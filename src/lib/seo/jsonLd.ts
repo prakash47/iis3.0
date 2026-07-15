@@ -157,11 +157,16 @@ export function itemListSchema(
   };
 }
 
-/** Per-page WebPage node with a freshness date (drives the "last updated" signal). */
+/**
+ * Per-page WebPage node. `dateModified` is OPTIONAL and emitted only when a REAL
+ * content date exists (e.g. a Sanity doc's _updatedAt) - never a build-time
+ * `new Date()`, which stamps every deploy as "modified today" and trains engines
+ * to discount the honest dates.
+ */
 export function webPageSchema(input: {
   path: string;
   name: string;
-  dateModified: string;
+  dateModified?: string;
 }): WithContext<WebPage> {
   return {
     "@context": "https://schema.org",
@@ -169,7 +174,7 @@ export function webPageSchema(input: {
     "@id": `${absoluteUrl(input.path)}#webpage`,
     url: absoluteUrl(input.path),
     name: input.name,
-    dateModified: input.dateModified,
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
     isPartOf: { "@id": SITE_ID },
     about: { "@id": ORG_ID },
   };
@@ -185,7 +190,7 @@ export function webPageSchema(input: {
 export function contactPageSchema(input: {
   path: string;
   name: string;
-  dateModified: string;
+  dateModified?: string;
 }): WithContext<ContactPage> {
   return {
     "@context": "https://schema.org",
@@ -193,7 +198,7 @@ export function contactPageSchema(input: {
     "@id": `${absoluteUrl(input.path)}#webpage`,
     url: absoluteUrl(input.path),
     name: input.name,
-    dateModified: input.dateModified,
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
     isPartOf: { "@id": SITE_ID },
     about: { "@id": ORG_ID },
   };

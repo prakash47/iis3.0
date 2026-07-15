@@ -49,7 +49,6 @@ export default function DjangoPage() {
         data={webPageSchema({
           path: PATH,
           name: "Django Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

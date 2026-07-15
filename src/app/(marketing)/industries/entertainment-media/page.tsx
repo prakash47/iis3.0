@@ -57,7 +57,6 @@ export default function EntertainmentMediaPage() {
         data={webPageSchema({
           path: PATH,
           name: "Media & Entertainment Software Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

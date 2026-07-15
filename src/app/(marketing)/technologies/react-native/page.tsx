@@ -54,7 +54,6 @@ export default function ReactNativePage() {
         data={webPageSchema({
           path: PATH,
           name: "React Native App Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

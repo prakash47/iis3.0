@@ -112,7 +112,6 @@ export default function CareersPage() {
         data={webPageSchema({
           path: PATH,
           name: "Careers at Intention InfoService",
-          dateModified: new Date().toISOString(),
         })}
       />
 

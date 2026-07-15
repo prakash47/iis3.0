@@ -52,7 +52,6 @@ export default function CustomSoftwareDevelopmentPage() {
         data={webPageSchema({
           path: PATH,
           name: "Custom Software Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

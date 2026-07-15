@@ -16,15 +16,12 @@ import { pageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = pageMetadata("/");
 
 export default function Home() {
-  const lastUpdated = new Date();
-
   return (
     <>
       <JsonLd
         data={webPageSchema({
           path: "/",
           name: "Web, App & Software Development - Intention InfoService",
-          dateModified: lastUpdated.toISOString(),
         })}
       />
 

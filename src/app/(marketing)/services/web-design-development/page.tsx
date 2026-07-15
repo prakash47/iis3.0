@@ -52,7 +52,6 @@ export default function WebDesignDevelopmentPage() {
         data={webPageSchema({
           path: PATH,
           name: "Web Design & Development",
-          dateModified: new Date().toISOString(),
         })}
       />
 

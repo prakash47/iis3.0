@@ -49,7 +49,6 @@ export default function NextjsPage() {
         data={webPageSchema({
           path: PATH,
           name: "Next.js Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

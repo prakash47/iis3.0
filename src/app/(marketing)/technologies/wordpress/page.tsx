@@ -49,7 +49,6 @@ export default function WordpressPage() {
         data={webPageSchema({
           path: PATH,
           name: "WordPress Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

@@ -49,7 +49,6 @@ export default function ReactPage() {
         data={webPageSchema({
           path: PATH,
           name: "React Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

@@ -55,7 +55,6 @@ export default function DrupalPage() {
         data={webPageSchema({
           path: PATH,
           name: "Drupal Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

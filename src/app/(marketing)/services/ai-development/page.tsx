@@ -44,7 +44,6 @@ export default function AiDevelopmentPage() {
         data={webPageSchema({
           path: PATH,
           name: "AI Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 

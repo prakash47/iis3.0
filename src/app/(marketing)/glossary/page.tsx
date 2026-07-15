@@ -48,7 +48,6 @@ export default async function GlossaryPage() {
         data={webPageSchema({
           path: "/glossary",
           name: "Glossary",
-          dateModified: new Date().toISOString(),
         })}
       />
       {terms.length > 0 && (

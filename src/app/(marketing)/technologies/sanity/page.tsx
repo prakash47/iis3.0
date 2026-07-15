@@ -53,7 +53,6 @@ export default function SanityPage() {
         data={webPageSchema({
           path: PATH,
           name: "Sanity Development Services",
-          dateModified: new Date().toISOString(),
         })}
       />
 
