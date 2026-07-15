@@ -63,9 +63,9 @@ export function Footer() {
 
   return (
     <footer className="mt-auto border-t border-border bg-muted">
-      <Container className="grid gap-x-8 gap-y-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.6fr_repeat(5,1fr)]">
+      <Container className="grid gap-x-8 gap-y-12 py-16 sm:grid-cols-2 xl:grid-cols-[1.4fr_1.5fr_1fr_1.4fr_0.95fr]">
         {/* Brand + NAP */}
-        <div className="sm:col-span-2 lg:col-span-1">
+        <div className="sm:col-span-2 xl:col-span-1">
           <Link href="/" aria-label="Intention InfoService - home" className="flex items-center">
             <Image src="/logo.png" alt="" width={569} height={220} className="h-12 w-auto dark:hidden" />
             <Image src="/logo-white.png" alt="" width={620} height={240} className="hidden h-12 w-auto dark:block" />
@@ -142,7 +142,7 @@ export function Footer() {
 
         <FooterCol
           title="Hire Developers"
-          items={hireTechnologies.slice(0, 6).map((t) => ({
+          items={hireTechnologies.map((t) => ({
             label: t.name,
             href: `/technologies/${t.slug}`,
           }))}
@@ -155,25 +155,27 @@ export function Footer() {
           viewAll={{ label: "All industries", href: "/industries" }}
         />
 
-        <FooterCol
-          title="Company"
-          items={[
-            { label: "About", href: "/about" },
-            { label: "Work", href: "/work" },
-            { label: "Pricing", href: "/pricing" },
-            { label: "Careers", href: "/careers" },
-            { label: "Contact", href: "/contact" },
-          ]}
-        />
-
-        <FooterCol
-          title="Resources"
-          items={[
-            { label: "Blog", href: "/blog" },
-            { label: "Guides", href: "/guides" },
-            { label: "Glossary", href: "/glossary" },
-          ]}
-        />
+        {/* Company + Resources stacked in one column (Resources below Company) */}
+        <div className="space-y-8">
+          <FooterCol
+            title="Company"
+            items={[
+              { label: "About", href: "/about" },
+              { label: "Work", href: "/work" },
+              { label: "Pricing", href: "/pricing" },
+              { label: "Careers", href: "/careers" },
+              { label: "Contact", href: "/contact" },
+            ]}
+          />
+          <FooterCol
+            title="Resources"
+            items={[
+              { label: "Blog", href: "/blog" },
+              { label: "Guides", href: "/guides" },
+              { label: "Glossary", href: "/glossary" },
+            ]}
+          />
+        </div>
       </Container>
 
       <div className="border-t border-border">
