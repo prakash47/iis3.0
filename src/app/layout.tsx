@@ -6,7 +6,9 @@ import "./globals.css";
 import { siteConfig, absoluteUrl, isIndexable } from "@/config/site";
 import { seoConfig } from "@/config/seo";
 
-const ogImage = absoluteUrl("/og-default.png");
+const ogImages = [
+  { url: absoluteUrl("/og-default.png"), width: 1200, height: 630, alt: seoConfig.defaultTitle },
+];
 
 // Runs before paint: sets .js (enables reveal animations) and restores the
 // saved theme (or system preference) without a flash of wrong theme.
@@ -31,9 +33,10 @@ export const metadata: Metadata = {
     type: "website",
     url: siteConfig.url,
     siteName: seoConfig.siteName,
+    locale: seoConfig.locale,
     title: seoConfig.defaultTitle,
     description: seoConfig.defaultDescription,
-    images: [ogImage],
+    images: ogImages,
   },
   twitter: {
     card: "summary_large_image",
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
     creator: seoConfig.twitterHandle,
     title: seoConfig.defaultTitle,
     description: seoConfig.defaultDescription,
-    images: [ogImage],
+    images: ogImages,
   },
   // Site-wide default. Indexable pages inherit this (metadataFrom only sets its
   // own robots for explicitly-noindexed pages), so gating it here flips the WHOLE

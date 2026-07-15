@@ -43,7 +43,7 @@ export default function AiDevelopmentPage() {
       <JsonLd
         data={webPageSchema({
           path: PATH,
-          name: "AI Development & Automation Services",
+          name: "AI Development Services",
           dateModified: new Date().toISOString(),
         })}
       />

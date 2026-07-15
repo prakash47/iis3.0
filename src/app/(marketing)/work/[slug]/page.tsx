@@ -31,8 +31,8 @@ export async function generateMetadata({
   if (!cs) return {};
   return metadataFrom({
     path: `/work/${cs.slug}`,
-    title: `${cs.title} - Case Study`,
-    description: cs.summary,
+    title: cs.seoTitle ?? `${cs.title} - Case Study`,
+    description: cs.seoDescription ?? cs.summary,
   });
 }
 

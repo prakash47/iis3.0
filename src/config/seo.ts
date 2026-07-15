@@ -49,7 +49,7 @@ export const staticPages: PageSeo[] = [
     title: "Web, App & Software Development - Intention InfoService",
     titleAbsolute: true,
     description:
-      "Full-service web, app and software development for startups to enterprises. Custom websites, web apps and mobile apps at transparent fixed prices - US, UK, UAE, EU and India.",
+      "Custom websites, web apps, mobile apps and software for startups to enterprises, at transparent fixed prices. Serving the US, UK, UAE, EU and India.",
     priority: 1,
     changeFrequency: "weekly",
   },
@@ -57,7 +57,7 @@ export const staticPages: PageSeo[] = [
     path: "/services",
     title: "Web, App, Software & AI Services",
     description:
-      "Full-service web, app and software development, plus UI/UX, marketing, maintenance and AI for startups to enterprises, on any stack, at transparent fixed prices.",
+      "Web, app and software development plus UI/UX, marketing, maintenance and AI - for startups to enterprises, on any stack, at transparent fixed prices.",
     priority: 0.9,
     changeFrequency: "monthly",
   },
@@ -102,9 +102,9 @@ export const staticPages: PageSeo[] = [
   },
   {
     path: "/work",
-    title: "Our Work",
+    title: "Work: Web & App Case Studies",
     description:
-      "See how we build fast, accessible websites and apps, with the stack, timeline and measurable results behind each project.",
+      "Real, anonymized case studies - see how we build fast, accessible websites and apps, with the stack, timeline and honest outcomes behind each build.",
     priority: 0.8,
     changeFrequency: "monthly",
   },
@@ -241,42 +241,42 @@ const serviceSeoOverrides: Record<string, Partial<PageSeo>> = {
   "web-design-development": {
     title: "Web Design & Development Services",
     description:
-      "Full-service, stack-agnostic web design and development for startups, SMBs and enterprises. Custom sites, web apps and ecommerce at transparent, published fixed prices, shipped in weeks.",
+      "Full-service, stack-agnostic web design and development. Custom sites, web apps and ecommerce at transparent published fixed prices, shipped in weeks.",
   },
   "mobile-app-development": {
     title: "Mobile App Development Services",
     description:
-      "Native and cross-platform iOS and Android app development - React Native, Flutter, SwiftUI, Kotlin - at transparent, published fixed prices, shipped in weeks. You own the code.",
+      "Native and cross-platform iOS and Android app development - React Native, Flutter, SwiftUI and Kotlin - at published fixed prices. You own the code.",
   },
   "custom-software-development": {
     title: "Custom Software Development Services",
     description:
-      "Bespoke custom software - SaaS platforms, internal tools, portals, APIs and workflow automation - on the right stack, scoped and priced up front. You own the code, IP and data.",
+      "Bespoke custom software - SaaS, internal tools, portals, APIs and workflow automation - scoped and priced up front. You own the code, IP and data.",
   },
   "digital-marketing": {
     title: "Organic Digital Marketing Services",
     description:
-      "SEO-led organic growth - technical SEO, AI-search (AEO/GEO), content, organic social, email and CRO. We build the site and run the SEO. No paid ads, no vanity metrics.",
+      "SEO-led organic growth - technical SEO, AI-search (AEO/GEO), content, organic social, email and CRO. We build the site and run the SEO. No paid ads.",
   },
   "performance-marketing": {
     title: "Performance Marketing & PPC Management",
     description:
-      "Flat-fee paid media management - Google Ads, Meta, LinkedIn and more. You own the ad accounts, we never mark up your spend, and it's month-to-month. No results claims.",
+      "Flat-fee PPC and paid media management - Google Ads, Meta and LinkedIn. You own the ad accounts, we never mark up spend, and it's month-to-month.",
   },
   "ui-ux-design-services": {
     title: "UI/UX Design & Branding Services",
     description:
-      "UI/UX design, design systems and brand identity for startups to enterprises - designed in Figma, dev-ready and yours to own. Transparent fixed pricing, audit-first.",
+      "UI/UX design, design systems and brand identity - designed in Figma, dev-ready and yours to own. Transparent fixed pricing, audit-first.",
   },
   "website-maintenance-services": {
     title: "Website Maintenance Services",
     description:
-      "Ongoing website maintenance and support on any stack - updates, security, backups, performance and monitoring - on transparent published care plans, no lock-in.",
+      "Website maintenance and support on any stack - updates, security, backups, performance and monitoring - on published care plans, no lock-in.",
   },
   "ai-development": {
     title: "AI Development Services",
     description:
-      "Applied AI development - AI chatbots trained on your content, workflow automation and AI features for your site or app. Grounded in your data, and yours to own.",
+      "Applied AI development - AI chatbots on your content, workflow automation and AI features for your site or app. Grounded in your data, yours to own.",
   },
 };
 
@@ -328,7 +328,7 @@ const industrySeoOverrides: Record<string, Partial<PageSeo>> = {
   healthcare: {
     title: "Healthcare Software Development",
     description:
-      "Custom healthcare software and patient portals on the right stack, built to HL7 and FHIR, and architected so PHI stays inside your infrastructure, not ours.",
+      "Custom healthcare software and patient portals, built to HL7 and FHIR, and architected so PHI stays inside your infrastructure, not ours.",
     priority: 0.7,
   },
   // Sector term "fintech software development" leads the title; the honest product terms
@@ -400,17 +400,17 @@ export function industryPageSeo(slug: string): PageSeo | undefined {
 const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   nextjs: {
     description:
-      "Next.js development services for websites, web apps, ecommerce and SaaS, on the App Router at published fixed prices. This page is a Next.js build - inspect it.",
+      "Next.js development for websites, web apps, ecommerce and SaaS on the App Router, at fixed prices. This page is a Next.js build - inspect it.",
     priority: 0.7,
   },
   react: {
     description:
-      "Custom React development services: SPAs, dashboards, design systems and front-ends for your backend. Published fixed pricing - and this page is a live React 19 app.",
+      "Custom React development - SPAs, dashboards, design systems and front-ends for your backend. Published fixed pricing, and this page is a live React 19 app.",
     priority: 0.7,
   },
   angular: {
     description:
-      "Custom Angular development for enterprise web apps, dashboards and AngularJS migrations - modern Angular with signals and SSR, your code, no lock-in, fixed pricing.",
+      "Custom Angular development for enterprise web apps, dashboards and AngularJS migrations - signals, SSR, your code, no lock-in, fixed pricing.",
     priority: 0.7,
   },
   // The CONTENT-SITE / frontend lane. Title stays the base "Astro Development Services" (no override -
@@ -424,27 +424,27 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   },
   nodejs: {
     description:
-      "Node.js development services - custom backends, REST and GraphQL APIs, real-time and microservices in TypeScript, at published fixed prices. You own the code.",
+      "Node.js development - custom backends, REST and GraphQL APIs, real-time and microservices in TypeScript, at fixed prices. You own the code.",
     priority: 0.7,
   },
   python: {
     description:
-      "Python development services - FastAPI and Flask backends, data pipelines, automation and ML integration, at published fixed prices. You own the code and data.",
+      "Python development - FastAPI and Flask backends, data pipelines, automation and ML integration, at fixed prices. You own the code and data.",
     priority: 0.7,
   },
   laravel: {
     description:
-      "Laravel development services - custom web apps, SaaS, admin panels and APIs on Laravel 13, Livewire and Filament, at published fixed prices. You own the code.",
+      "Laravel development - custom web apps, SaaS, admin panels and APIs on Laravel 13, Livewire and Filament, at fixed prices. You own the code.",
     priority: 0.7,
   },
   django: {
     description:
-      "Django development services - custom Python web apps, admin panels, dashboards and DRF APIs on Django 6.0 and 5.2 LTS, at published fixed prices. You own the code.",
+      "Django development - custom Python web apps, admin panels, dashboards and DRF APIs on Django 6.0 and 5.2 LTS, at fixed prices. You own the code.",
     priority: 0.7,
   },
   "java-spring-boot": {
     description:
-      "Java and Spring Boot development services - enterprise-grade backends, APIs and microservices on Java 25 and Spring Boot 4, at published fixed prices. You own the code.",
+      "Java and Spring Boot development - enterprise backends, APIs and microservices on Java 25 and Spring Boot 4, at published fixed prices. You own the code.",
     priority: 0.7,
   },
   // The RAW / no-framework PHP + legacy-modernization lane the live Laravel page routes here.
@@ -459,7 +459,7 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   },
   wordpress: {
     description:
-      "WordPress development services - fast, secure CMS sites, custom block themes and headless WordPress at published fixed prices. You own the site and content.",
+      "WordPress development - fast, secure CMS sites, custom block themes and headless WordPress at fixed prices. You own the site and content.",
     priority: 0.7,
   },
   // The first CMS spoke - structured/headless (vs WordPress, the traditional one). Title stays the base
@@ -496,7 +496,7 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   // No own-site Shopify claim: this site is a static Next.js build, not a Shopify store.
   shopify: {
     description:
-      "Custom Shopify development - store builds, custom themes, headless storefronts and migrations, at published fixed prices. You own your data, domain and code.",
+      "Custom Shopify development - store builds, themes, headless storefronts and migrations, at fixed prices. You own your data, domain and code.",
     priority: 0.7,
   },
   // WooCommerce is SELF-HOSTED and GPL, so the ownership claim is genuinely the strongest of any
@@ -505,7 +505,7 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   // site is a static Next.js build, and WooCommerce is PHP on WordPress.
   woocommerce: {
     description:
-      "Custom WooCommerce development - store builds, block themes, extensions, speed and migrations, at published fixed prices. You own the store, the code and the data.",
+      "Custom WooCommerce development - store builds, block themes, extensions, speed and migrations, at fixed prices. You own the store, code and data.",
     priority: 0.7,
   },
   // FIRST tech spoke to override `title`. Every other spoke keeps the base template
@@ -518,7 +518,7 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   "react-native": {
     title: "React Native App Development Services",
     description:
-      "React Native app development - iOS and Android from one codebase, on the New Architecture with Expo and native modules. Fixed pricing, and you own the code.",
+      "React Native app development - iOS and Android from one codebase on the New Architecture with Expo. Fixed pricing, and you own the code.",
     priority: 0.7,
   },
   // Same title-override reasoning as react-native: the mobile SERP's commercial token is "app
@@ -529,7 +529,7 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   flutter: {
     title: "Flutter App Development Services",
     description:
-      "Flutter app development - iOS and Android from one Dart codebase, drawn pixel-for-pixel by Impeller. Published fixed pricing, and you own the code and store accounts.",
+      "Flutter app development - iOS and Android from one Dart codebase, drawn pixel-for-pixel by Impeller. Published fixed pricing, you own the code.",
     priority: 0.7,
   },
 
@@ -571,7 +571,7 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   kotlin: {
     title: "Kotlin Android App Development Services",
     description:
-      "Kotlin app development for native Android - built in Kotlin and Jetpack Compose with the Jetpack libraries and Material 3. You own the code and the Play account.",
+      "Kotlin app development for native Android - Jetpack Compose, the Jetpack libraries and Material 3, at fixed prices. You own the code and Play account.",
     priority: 0.7,
   },
 };

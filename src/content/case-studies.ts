@@ -6,6 +6,10 @@ export interface CaseStudy {
   sector: string;
   /** Project type, e.g. "Website rebuild". */
   type: string;
+  /** Optional compact SEO title (falls back to `${title} - Case Study`). Keep <=36 chars so the appended brand stays under ~60. */
+  seoTitle?: string;
+  /** Optional compact SEO/meta description under ~155 chars (falls back to summary). */
+  seoDescription?: string;
   /** One- or two-line card blurb. */
   summary: string;
   /** REAL, measured figures only - never fabricated. */
@@ -40,6 +44,9 @@ export const caseStudies: CaseStudy[] = [
     title: "A slow WordPress site, rebuilt on Next.js - organic traffic up around 120%",
     sector: "EdTech / professional training",
     type: "Website rebuild",
+    seoTitle: "WordPress to Next.js Rebuild",
+    seoDescription:
+      "How we rebuilt a training institute's slow WordPress site on Next.js and grew organic search traffic by around 120%, shipped in four weeks.",
     summary:
       "Re-platformed a training institute's large, slow WordPress site onto a fast, statically-generated Next.js build with a headless-CMS blog - and grew organic search traffic by around 120%.",
     metrics: [
@@ -77,6 +84,9 @@ export const caseStudies: CaseStudy[] = [
     title: "A fast loan-comparison and enquiry site, built fresh in 2 weeks",
     sector: "Financial services / lending",
     type: "New website",
+    seoTitle: "Fast Loan-Comparison Site Build",
+    seoDescription:
+      "How we designed and built a fast loan-comparison and enquiry site - an EMI calculator, ten product pages and lead funnels - on Next.js in two weeks.",
     summary:
       "Designed and built a fast, statically-generated Next.js site for a loan advisory - an interactive EMI calculator, clear per-product pages and enquiry funnels - shipped in two weeks.",
     metrics: [
