@@ -175,11 +175,15 @@ export function DesktopNav() {
                 )}
               </button>
 
-              {/* ── Mega panel (Services) ── */}
-              {entry.kind === "mega" && isOpen && (
+              {/* ── Mega panel (Services). Always rendered so its links are in the SSR HTML
+                     (crawlable + link equity); visibility is toggled by CSS off `isOpen`. ── */}
+              {entry.kind === "mega" && (
                 <div
                   id={panelId}
-                  className="absolute left-1/2 top-full z-50 w-[min(56rem,calc(100vw-2rem))] -translate-x-1/2 pt-3"
+                  className={cn(
+                    "absolute left-1/2 top-full z-50 w-[min(56rem,calc(100vw-2rem))] -translate-x-1/2 pt-3 transition-opacity duration-150",
+                    isOpen ? "visible opacity-100" : "invisible opacity-0",
+                  )}
                 >
                   <div className="nav-panel rounded-2xl border border-border bg-surface p-6 shadow-2xl shadow-black/10 dark:shadow-black/40">
                     <div className="grid grid-cols-[1.2fr_0.9fr_0.9fr] gap-8">
@@ -267,9 +271,16 @@ export function DesktopNav() {
                 </div>
               )}
 
-              {/* ── Simple dropdown (Industries) ── */}
-              {entry.kind === "dropdown" && isOpen && (
-                <div id={panelId} className="absolute left-0 top-full z-50 w-64 pt-3">
+              {/* ── Simple dropdown (Industries/Resources). Always rendered for crawlable SSR
+                     links; visibility toggled by CSS off `isOpen`. ── */}
+              {entry.kind === "dropdown" && (
+                <div
+                  id={panelId}
+                  className={cn(
+                    "absolute left-0 top-full z-50 w-64 pt-3 transition-opacity duration-150",
+                    isOpen ? "visible opacity-100" : "invisible opacity-0",
+                  )}
+                >
                   <div className="nav-panel rounded-2xl border border-border bg-surface p-2.5 shadow-2xl shadow-black/10 dark:shadow-black/40">
                     <ul className="space-y-0.5">
                       {entry.links.map((link) => (

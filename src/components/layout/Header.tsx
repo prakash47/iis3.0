@@ -16,6 +16,7 @@ export function Header() {
             alt=""
             width={569}
             height={220}
+            sizes="120px"
             priority
             className="h-11 w-auto dark:hidden"
           />
@@ -24,6 +25,8 @@ export function Header() {
             alt=""
             width={620}
             height={240}
+            sizes="120px"
+            loading="eager"
             className="hidden h-11 w-auto dark:block"
           />
         </Link>
