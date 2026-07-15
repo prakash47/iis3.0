@@ -489,11 +489,18 @@
 .iis-phone,
 .iis-phone .react-international-phone-input-container {
   width: 100%;
+  border-radius: 0.75rem;
 }
 .iis-phone .react-international-phone-input {
   flex: 1 1 auto;
   width: 100%;
   min-width: 0;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+.iis-phone .react-international-phone-country-selector-button {
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
 }
 .iis-phone:focus-within {
   box-shadow: 0 0 0 2px color-mix(in oklab, var(--grad-from) 30%, transparent);
