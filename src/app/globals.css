@@ -486,8 +486,14 @@
   --react-international-phone-dropdown-item-background-color-hover: var(--muted-bg);
   --react-international-phone-dropdown-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.45);
 }
-.iis-phone {
+.iis-phone,
+.iis-phone .react-international-phone-input-container {
   width: 100%;
+}
+.iis-phone .react-international-phone-input {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
 }
 .iis-phone:focus-within {
   box-shadow: 0 0 0 2px color-mix(in oklab, var(--grad-from) 30%, transparent);
