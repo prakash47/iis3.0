@@ -1,10 +1,24 @@
 import type { Metadata, Viewport } from "next";
-// Self-hosted variable fonts (no runtime Google dependency, GDPR-safe, faster).
-import "@fontsource-variable/inter";
-import "@fontsource-variable/sora";
+import localFont from "next/font/local";
 import "./globals.css";
 import { siteConfig, absoluteUrl, isIndexable } from "@/config/site";
 import { seoConfig } from "@/config/seo";
+
+// Self-hosted variable fonts via next/font/local: no runtime Google dependency, and
+// next/font handles preload + a size-adjusted fallback automatically (zero CLS from the
+// font swap). This is the "next/font for self-hosted fonts" the Next.js spoke sells.
+const inter = localFont({
+  src: "./fonts/inter-latin-wght-normal.woff2",
+  variable: "--font-inter",
+  weight: "100 900",
+  display: "swap",
+});
+const sora = localFont({
+  src: "./fonts/sora-latin-wght-normal.woff2",
+  variable: "--font-sora",
+  weight: "100 900",
+  display: "swap",
+});
 
 const ogImages = [
   { url: absoluteUrl("/og-default.png"), width: 1200, height: 630, alt: seoConfig.defaultTitle },
@@ -74,7 +88,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`h-full antialiased ${inter.variable} ${sora.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
