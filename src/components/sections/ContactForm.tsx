@@ -1,24 +1,24 @@
 "use client";
 
-import { useState, useRef, useEffect, forwardRef } from "react";
-import type { InputHTMLAttributes } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
-import flags from "react-phone-number-input/flags";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+import { isValidPhoneNumber } from "libphonenumber-js";
 import { siteConfig } from "@/config/site";
 import { IconArrow, IconCheck, IconUser, IconMail, IconBuilding, IconLayers, IconTag, IconClock, IconChat } from "@/components/icons";
 
 /**
  * The /contact lead form. POSTs to /api/contact (SMTP via Gmail). Best-practice UX:
- *  - International phone field with a country-code dropdown + flags (react-phone-number-input),
- *    validated per selected country with libphonenumber-js (E.164 value on the wire).
- *  - Email + required-field validation on blur, then live once a field has errored.
- *  - Accessible errors (aria-invalid, aria-describedby -> helper + error, role=alert,
- *    focus-first-error on submit) with icon + colour + text (never colour alone) and helper
- *    text under every field.
- *  - Invisible Google reCAPTCHA v3 (executed on submit) when a site key is configured; the
- *    server verifies the token. Everything degrades gracefully when keys/SMTP are unset.
- *  - A hidden honeypot handled server-side; no client-side silent-drop of real leads.
+ *  - International phone field (react-international-phone) with a flag + dial-code country
+ *    selector and a searchable, fully-themed dropdown (a real element, so it renders correctly
+ *    in dark mode); validated per selected country with libphonenumber-js.
+ *  - Email + required-field validation on blur, then live once a field has errored; a
+ *    non-blocking "did you mean" typo hint for common domains; focus-first-error on submit.
+ *  - Accessible errors (aria-invalid, aria-describedby -> error, role=alert, icon+colour+text).
+ *    Single column, an icon inside each field, and placeholder text (no separate helper text).
+ *  - Invisible Google reCAPTCHA v3 executed on submit when a site key is set; the server verifies.
+ *  - A hidden honeypot handled server-side. Everything degrades gracefully when keys/SMTP are unset.
  */
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 const RECAPTCHA_ACTION = "contact_submit";
@@ -51,8 +51,6 @@ function lev(a: string, b: string): number {
       d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
   return d[m][n];
 }
-
-/** Non-blocking "did you mean" suggestion for a mistyped common email domain. */
 function suggestEmail(email: string): string {
   const at = email.lastIndexOf("@");
   if (at < 1) return "";
@@ -69,25 +67,21 @@ function suggestEmail(email: string): string {
 type Values = { name: string; email: string; phone: string; company: string; project_type: string; budget: string; timeline: string; message: string };
 type Status = "idle" | "submitting" | "success" | "error";
 
+// Phone is OPTIONAL: no error unless a national number was actually entered.
+const phoneErrorFor = (national: string, full: string) =>
+  !national ? "" : isValidPhoneNumber(full) ? "" : "Enter a valid phone number for the country you selected.";
+
 function validateField(name: keyof Values, v: string): string {
   switch (name) {
     case "name": return v.trim() ? "" : "Please enter your name.";
     case "email":
       if (!v.trim()) return "Please enter your email.";
       return EMAIL_RE.test(v.trim()) ? "" : "Enter a valid email, e.g. name@company.com.";
-    case "phone": return !v ? "" : isValidPhoneNumber(v) ? "" : "Enter a valid phone number for the country you selected.";
     case "project_type": return v ? "" : "Please choose what we can help with.";
     case "message": return v.trim().length >= 10 ? "" : "Tell us a little about your project - a sentence is plenty.";
     default: return "";
   }
 }
-const REQUIRED: (keyof Values)[] = ["name", "email", "project_type", "message"];
-
-/** Borderless input for the phone field (module-level so it never remounts / loses focus). */
-const PhoneTextInput = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>((props, ref) => (
-  <input ref={ref} {...props} className="min-w-0 flex-1 border-0 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
-));
-PhoneTextInput.displayName = "PhoneTextInput";
 
 const labelCls = "block text-sm font-medium text-foreground";
 const reqMark = (
@@ -115,6 +109,7 @@ declare global {
 
 export function ContactForm() {
   const [values, setValues] = useState<Values>({ name: "", email: "", phone: "", company: "", project_type: "", budget: "Not sure yet", timeline: "Not sure yet", message: "" });
+  const [phoneNat, setPhoneNat] = useState(""); // the national part typed (for optional-phone logic)
   const [errors, setErrors] = useState<Partial<Record<keyof Values, string>>>({});
   const [touched, setTouched] = useState<Partial<Record<keyof Values, boolean>>>({});
   const [emailHint, setEmailHint] = useState("");
@@ -123,7 +118,6 @@ export function ContactForm() {
   const honeypot = useRef<HTMLInputElement>(null);
   const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, "")}`;
 
-  // Load reCAPTCHA v3 only on this page; tear the badge + script down on unmount.
   useEffect(() => {
     if (!SITE_KEY || document.getElementById("recaptcha-v3")) return;
     const s = document.createElement("script");
@@ -151,6 +145,16 @@ export function ContactForm() {
     setErrors((p) => ({ ...p, [name]: validateField(name, v) }));
     if (name === "email") setEmailHint(suggestEmail(v.trim()));
   }
+  function onPhoneChange(phone: string, meta: { inputValue?: string }) {
+    const nat = meta.inputValue ?? "";
+    setValues((p) => ({ ...p, phone }));
+    setPhoneNat(nat);
+    if (touched.phone) setErrors((p) => ({ ...p, phone: phoneErrorFor(nat, phone) }));
+  }
+  function onPhoneBlur() {
+    setTouched((p) => ({ ...p, phone: true }));
+    setErrors((p) => ({ ...p, phone: phoneErrorFor(phoneNat, values.phone) }));
+  }
 
   async function getToken(): Promise<string | null> {
     if (!SITE_KEY || !window.grecaptcha) return null;
@@ -160,9 +164,10 @@ export function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Validate everything; mark all touched so errors show.
     const next: Partial<Record<keyof Values, string>> = {};
-    (Object.keys(values) as (keyof Values)[]).forEach((k) => { const msg = validateField(k, values[k]); if (msg) next[k] = msg; });
+    (["name", "email", "project_type", "message"] as (keyof Values)[]).forEach((k) => { const msg = validateField(k, values[k]); if (msg) next[k] = msg; });
+    const pErr = phoneErrorFor(phoneNat, values.phone);
+    if (pErr) next.phone = pErr;
     setTouched({ name: true, email: true, phone: true, project_type: true, message: true });
     setErrors(next);
     const firstError = (["name", "email", "phone", "project_type", "message"] as (keyof Values)[]).find((k) => next[k]);
@@ -279,18 +284,12 @@ export function ContactForm() {
         <div>
           <label htmlFor="phone-input" className={labelCls}>Phone or WhatsApp{optMark}</label>
           <PhoneInput
-            id="phone-input"
-            name="phone"
-            defaultCountry="US"
-            flags={flags}
-            placeholder="Enter phone number"
+            defaultCountry="us"
             value={values.phone}
-            onChange={(v) => setField("phone", v || "")}
-            onBlur={() => blurField("phone", values.phone)}
-            inputComponent={PhoneTextInput}
-            aria-describedby={describedBy("phone")}
-            aria-invalid={!!(touched.phone && errors.phone)}
-            className={`mt-1.5 flex h-11 items-center gap-2 rounded-xl border bg-background px-3.5 transition-colors focus-within:ring-2 ${touched.phone && errors.phone ? "border-red-500 focus-within:ring-red-500/30" : "border-border focus-within:border-brand-500 focus-within:ring-brand-500/30"}`}
+            onChange={onPhoneChange}
+            placeholder="Enter phone number"
+            inputProps={{ id: "phone-input", name: "phone", onBlur: onPhoneBlur, "aria-invalid": !!(touched.phone && errors.phone), "aria-describedby": describedBy("phone") }}
+            className={`iis-phone mt-1.5${touched.phone && errors.phone ? " iis-phone-error" : ""}`}
           />
           {errText("phone")}
         </div>
