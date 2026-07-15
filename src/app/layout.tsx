@@ -95,6 +95,12 @@ export default function RootLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${siteConfig.name} - Resources`}
+          href="/feed.xml"
+        />
       </head>
       {/* True shell only. The marketing chrome (Header/Footer/MobileCtaBar + skip
           link + sitewide Org/WebSite JSON-LD) lives in (marketing)/layout.tsx so
