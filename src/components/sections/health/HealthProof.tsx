@@ -206,29 +206,30 @@ export function HealthProof() {
         {/* THE BRIDGE. Claim the PROBLEM SHAPE, never the sector, and lead with the CLINICAL BREAK
             so it cannot read as "a store is a hospital". Rebuilt in genuinely different prose - it
             must NOT paraphrase EdtechProof's "a school administrator is a store administrator"
-            sentence, and it must NOT reuse the "See our work" anchor (live on ~13 pages). It must
-            import no metric from case-studies.ts (those entries are placeholder:true sample data). */}
+            sentence, and it must NOT reuse the "See our work" anchor. It argues from the two real
+            builds now on /work (a training-platform rebuild and a financial-services site). */}
         <Reveal className="mt-6">
           <div className="rounded-2xl border border-border bg-surface p-6">
             <h3 className="font-display text-base font-semibold text-foreground">
               What our real work proves here, and what it does not
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is a custom, full-stack online store on its own backend, and a
-              corporate site. Neither is a clinic system, and we will not pretend otherwise. What
-              carries over is narrow and deliberately non-clinical: identity and roles deciding who
-              may see which record, a booking-and-payment flow that has to post once and exactly once,
-              state that must stay correct under load, and an operator screen a non-technical person
-              runs all day. That machinery we have built and run in production, and a patient or
-              provider portal is made partly of it.{" "}
+              Our production work is real, custom web builds - a professional training platform
+              rebuild and a financial-services site, both on our work page. Neither is a clinic
+              system, and we will not pretend otherwise. What carries over is narrow and deliberately
+              non-clinical: identity and roles deciding who may see which record, structured catalogs
+              and records that must stay correct, enquiry and enrolment flows that have to post
+              reliably and never silently drop, and an operator screen a non-technical person runs
+              all day. That machinery we have built and run in production, and a patient or provider
+              portal is made partly of it.{" "}
               <span className="font-semibold text-foreground">What does not carry over is the entire clinical core.</span>{" "}
-              A wrong order costs money; a wrong allergy, medication or lab value can harm a patient.
-              PHI is not cart data, an electronic health record is not a payment processor, and
-              breach notification, minimum-necessary access and the business associate boundary are
-              things a store never taught anyone. So we claim the first machine, and we fence off the
-              second as work we have not shipped:{" "}
+              A wrong enrolment costs money; a wrong allergy, medication or lab value can harm a
+              patient. PHI is not catalog data, an electronic health record is not an enquiry form,
+              and breach notification, minimum-necessary access and the business associate boundary
+              are things a training site or a loan-comparison site never taught anyone. So we claim
+              the first machine, and we fence off the second as work we have not shipped:{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                our two real projects, described honestly
+                the two real builds on our work page, described honestly
               </Link>
               . We have no healthcare clients, no shipped patient portal, and no EHR integrated in
               production. The healthcare-specific part of what we offer is the standards depth on this

@@ -194,22 +194,24 @@ export function EntertainmentProof() {
               What our real work proves here, and where the shape breaks
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is a custom, full-stack online store on its own backend, and a
-              corporate site. Strip the store to its logic and the checkout is a gate: it decides, in
-              code, who is allowed to receive the thing before the thing is served - payment clears, an
-              order exists, fulfilment follows. A media front door asks the identical question with
-              different words: is this viewer entitled to this item right now? A paywall unlock, a
-              subscription gate, a valid ticket, an in-window and in-territory licence - these are all
-              one question, answered by the software before it serves, and we have built one honest
-              version of that gate against a product catalog with real filtering and a real checkout.{" "}
-              <span className="font-semibold text-foreground">Here is the exact seam where that shape stops being a store.</span>{" "}
-              A store sells goods you own and can serve to anyone who pays; a media platform serves
-              content someone else owns, so the gate is not just did they pay but do you have the right to
-              show them this, here, today - and the store never had to prove a licence, keep a safe-harbor
-              shelter alive, or keep a viewing pixel honest, because it carried none of those risks. So we
-              claim the entitlement-gate skeleton and fence off the rest, plainly:{" "}
+              Our production work is real, custom web builds - a professional training platform
+              rebuild and a financial-services site, both on our work page - with catalogs of items,
+              structured content, enquiry and enrolment funnels, certificate validation, and an admin
+              a non-technical team runs. A media platform shares some of that plumbing, and one part
+              especially: a gate that decides, in code, who is allowed to receive a thing before it is
+              served. Certificate validation asks a version of that question - is this credential
+              valid for this person - and an enrolment gate another, and we have built honest versions
+              of both.{" "}
+              <span className="font-semibold text-foreground">Here is the exact seam where that shape stops matching a media platform.</span>{" "}
+              Those builds serve content the client owns to anyone entitled to it; a media platform
+              serves content someone else owns, so the gate is not just did they pay or enrol but do
+              you have the right to show them this, here, today - a valid, in-window, in-territory
+              licence - and none of our builds had to prove a licence, keep a safe-harbor shelter
+              alive for what users upload, or keep a viewing pixel honest, because they carried none of
+              those risks. So we claim the catalog-content-and-access plumbing and fence off the
+              rights-and-shelter core, plainly:{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                see the storefront gate we actually built
+                the real builds on our work page, described honestly
               </Link>
               . We have no media clients and no streaming, publishing, community or ticketing platform in
               production. The media-specific part of what we offer is the rights-and-shelter engineering

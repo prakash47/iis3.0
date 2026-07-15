@@ -46,7 +46,7 @@ export function EdtechProof() {
           <SectionHeading
             eyebrow="Proof, honestly"
             title={<>We have not built an <span className="gradient-text">LMS.</span></>}
-            sub="No education clients, no university logos, no learner counts, no case study we can point you at. You should weigh that. What we can offer instead is the thing most agencies in this sector get wrong on purpose, because getting it right forfeits the badge language they use - an accurate account of who the law actually binds, and what we build so that you can meet it."
+            sub="We have one genuine education-sector build - a professional training institute's website, on our work page - but no shipped LMS, no university logos and no learner counts, and you should weigh that. What we offer beyond that build is the thing most agencies in this sector get wrong on purpose, because getting it right forfeits the badge language they use - an accurate account of who the law actually binds, and what we build so that you can meet it."
           />
         </Reveal>
 
@@ -180,30 +180,33 @@ export function EdtechProof() {
           </div>
         </Reveal>
 
-        {/* THE BRIDGE. Claim the PROBLEM SHAPE, never the sector. It must not import a single
-            metric from case-studies.ts - those entries are placeholder:true SAMPLE data. */}
+        {/* THE BRIDGE. Lead with the real, directly-relevant education-sector build now on /work
+            (the training-institute rebuild). Keep the LMS fence: it was the catalog/enrolment/
+            marketing surface of a training business, not the learning-delivery core. */}
         <Reveal className="mt-6">
           <div className="rounded-2xl border border-border bg-surface p-6">
             <h3 className="font-display text-base font-semibold text-foreground">
-              The machine underneath a learning platform, we have shipped
+              The education platform we actually rebuilt
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is a custom, full-stack online store on its own backend, and a
-              corporate site. Look at what an LMS is once you take the word off it: a catalog of
-              things people can acquire, a transaction that grants access, roles that decide who sees
-              what, state that must never be wrong, and an admin a non-technical person runs every
-              day. A course catalog is a product catalog. An enrolment is a checkout. A gradebook is
-              an order history that has to be right the first time and stay right. A school
-              administrator is a store administrator with a different vocabulary and much higher
-              stakes. That machine is one we have built and run in production, and it is what a
-              learning platform is made of.{" "}
+              Our production work here is real and directly relevant: we rebuilt a professional
+              training institute&apos;s website - a large course catalog turned into a fast,
+              filterable experience, templated per-city course pages that rank without tipping into
+              thin content, demo-class and enquiry funnels, certificate validation, and a
+              headless-CMS content operation the marketing team runs itself - migrated off a slow
+              WordPress build without losing its search footing, after which organic traffic grew by
+              around 120%.{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                See our work
-              </Link>
-              , described honestly. What we will not do is relabel a store as education work. We have
-              not built an LMS. We have no education clients. The education-specific part of what we
-              offer is the standards depth on this page, the compliance allocation above it, and a
-              willingness to tell you the thing that costs us the sale.
+                You can see that build on our work page.
+              </Link>{" "}
+              <span className="font-semibold text-foreground">What it is not is a full LMS.</span>{" "}
+              We did not build the learning-delivery core - no assessment engine, no gradebook, no
+              SCORM or xAPI runtime, no adaptive course player. A training business&apos;s catalog,
+              enrolment and marketing surface is genuine education work and it is what we shipped; the
+              learning platform itself is a different machine, and we will not relabel one as the
+              other. Beyond that build we have no other education clients. The education-specific part
+              of what we offer is the standards depth on this page, the compliance allocation above
+              it, and a willingness to tell you the thing that costs us the sale.
             </p>
           </div>
         </Reveal>

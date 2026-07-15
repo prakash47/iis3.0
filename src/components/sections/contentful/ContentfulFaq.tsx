@@ -62,7 +62,7 @@ const faqs = [
   {
     question: "Does this website run on Contentful?",
     answer:
-      "No, and it shouldn't. This site is a static Next.js and React build, and its content is one small team's - a handful of pages, one release at a time. That is exactly the case where Contentful's enterprise governance would be overkill, so we would steer ourselves away from it, the same call we would make for you. We do plan to move our own blog onto a leaner CMS, Sanity, not Contentful, so Contentful is a permanent zero on our own domain - not for lack of capability, but because it would not fit.",
+      "No, and it shouldn't. This site is a static Next.js and React build, and its content is one small team's - a handful of pages, one release at a time. That is exactly the case where Contentful's enterprise governance would be overkill, so we would steer ourselves away from it, the same call we would make for you. Our own blog, guides and glossary run on a leaner CMS, Sanity, not Contentful, so Contentful is a permanent zero on our own domain - not for lack of capability, but because it would not fit.",
   },
 ];
 

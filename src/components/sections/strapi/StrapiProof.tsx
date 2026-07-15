@@ -30,8 +30,8 @@ export function StrapiProof() {
         <Reveal>
           <SectionHeading
             eyebrow="Proof, honestly"
-            title={<>This site doesn&apos;t run Strapi - and unlike Sanity, <span className="gradient-text">it isn&apos;t on the plan to.</span></>}
-            sub="Our own site is a static Next.js and React build, and it does not run Strapi - not the runtime, not the admin. Here is the honest part that separates this page from our Sanity one: we do plan to move our own blog onto Sanity, but Strapi is not on that list, so this is a permanent zero, not a 'not yet.' The adjacency is real and worth stating plainly as adjacency, never as a track record: Strapi is a Node.js and TypeScript application whose admin panel is a React app, and Node and React are what we build every day - which is exactly why we can read a Strapi codebase cold. But knowing Node and React is not the same as having shipped a Strapi CMS, and we won't blur the two. And we won't show you a Core Web Vitals or Lighthouse score for a Strapi build we haven't shipped."
+            title={<>This site&apos;s content runs on Sanity, <span className="gradient-text">not Strapi - and that is deliberate.</span></>}
+            sub="Our own site is a static Next.js and React build, and it does not run Strapi - not the runtime, not the admin. Here is the honest part that separates this page from our Sanity one: our own blog, guides and glossary now run on Sanity, but Strapi runs nothing here and is not going to, so this is a permanent zero, not a 'not yet.' The adjacency is real and worth stating plainly as adjacency, never as a track record: Strapi is a Node.js and TypeScript application whose admin panel is a React app, and Node and React are what we build every day - which is exactly why we can read a Strapi codebase cold. But knowing Node and React is not the same as having shipped a Strapi CMS, and we won't blur the two. And we won't show you a Core Web Vitals or Lighthouse score for a Strapi build we haven't shipped."
           />
         </Reveal>
 

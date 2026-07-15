@@ -49,7 +49,7 @@ export function IndustriesGrid() {
             <SectionHeading
               eyebrow="Industries"
               title="Industries we build for"
-              sub="Focused engineering and design for the verticals where a fast, modern product moves the needle - from proven builds to new capabilities we're growing."
+              sub="Focused engineering and design for the verticals where a fast, modern product moves the needle - built on the same honest, stack-agnostic method as everything else we do."
             />
           </Reveal>
           <Link

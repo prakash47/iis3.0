@@ -36,7 +36,7 @@ export default function Home() {
       {/* ── Services (bento) ─────────────────────────────────────────────── */}
       <ServicesBento />
 
-      {/* ── Selected work / case studies (data = PLACEHOLDER until real) ───── */}
+      {/* ── Selected work / case studies (2 REAL, NDA-anonymized case studies) ───── */}
       <CaseStudies />
 
       {/* ── Why us ───────────────────────────────────────────────────────── */}

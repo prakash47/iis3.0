@@ -47,7 +47,7 @@ const faqs = [
   {
     question: "Can you redesign or rebuild my existing website?",
     answer:
-      "Yes. We start with a short audit of your current site's performance, SEO and content, then rebuild it on a modern stack - usually migrating your content and preserving search rankings with proper redirects. Many clients come to us to replace a slow WordPress or template site.",
+      "Yes. We start with a short audit of your current site's performance, SEO and content, then rebuild it on a modern stack - usually migrating your content and preserving search rankings with proper redirects. One of our published case studies is exactly this: a slow WordPress site rebuilt on Next.js, with its search footing carried across rather than reset.",
   },
   {
     question: "Is a small team a risk for my project?",

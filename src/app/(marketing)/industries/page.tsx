@@ -197,11 +197,12 @@ export default function IndustriesPage() {
                 <span className="gradient-text">and the domain expertise we won&apos;t fake.</span>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Intention InfoService has no case studies in these sectors, and we will not borrow any.
-                What a regulated vertical actually demands is not a logo wall - it is knowing exactly
-                which legal obligation binds you and which never touches us, building the machinery so
-                you can meet the one that is yours, and declining the role or the badge that carries the
-                liability. Each guide below does that for its sector in the open, including the parts
+                Intention InfoService has real, published web builds - including a professional-training
+                platform and a financial-services site - but not a client portfolio in every regulated
+                sector below, and we will not fake the ones we lack. What a regulated vertical actually
+                demands is not a logo wall anyway - it is knowing exactly which legal obligation binds
+                you and which never touches us, building the machinery so you can meet the one that is
+                yours, and declining the role or the badge that carries the liability. Each guide below does that for its sector in the open, including the parts
                 that cost us the sale. What we&apos;ll actually do for you lives on the{" "}
                 <Link href="/services" className="font-medium text-brand-500 hover:text-brand-600">services pages</Link>;
                 what we build it with, and how we choose, lives on the{" "}
@@ -240,8 +241,9 @@ export default function IndustriesPage() {
                   <span className="gradient-text">Here&apos;s how to tell ours is real.</span>
                 </h2>
                 <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                  We have no case studies in these sectors - no client logos, no &quot;trusted by&quot;,
-                  no years-in-healthcare to quote - and we won&apos;t borrow any. A wall of marques is
+                  We have real builds you can see on our work page, but not a client in every sector
+                  below - no healthcare logos, no &quot;trusted by&quot;, no years-in-fintech to quote -
+                  and we won&apos;t fake the ones we lack. A wall of marques is
                   the cheapest thing an agency can assemble and the hardest thing you can verify, so it
                   proves almost nothing about the one thing that matters here: whether a team
                   understands the sector, or just redecorated a generic pitch with its vocabulary. The

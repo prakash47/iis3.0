@@ -129,8 +129,8 @@ export function SwiftuiProof() {
         {/* THE BRIDGE. Claims the STATE-DRIVEN-PRODUCT-OVER-A-BACKEND shape (distinct from RnProof's
             backend-engine and FlutterProof's interface-craft), then fences the store, the SDKs, the
             Swift toolchain and the treadmill by name. The anchor is deliberately MODEST - not "the two
-            web builds we can point to" (that over-promises verifiable case studies, and /work still
-            carries sample-badged placeholders) - and labelled as web, never an app. */}
+            web builds we can point to" (that over-promises for a native page; /work carries 2 real
+            but web case studies) - and labelled as web, never an app. */}
         <Reveal className="mt-6">
           <div className="rounded-2xl border border-border bg-surface p-6">
             <h3 className="font-display text-base font-semibold text-foreground">

@@ -32,7 +32,7 @@ export function ContentfulProof() {
           <SectionHeading
             eyebrow="Proof, honestly"
             title={<>We wouldn&apos;t put our own site on Contentful - <span className="gradient-text">and that is the recommendation working.</span></>}
-            sub="No Contentful build lives on this domain, and there is a fit reason, not an excuse. Our site is one small team's content - a handful of pages, one voice, one release at a time - and that is exactly the case where Contentful's enterprise governance is weight without payoff, so we would steer ourselves toward something leaner. That is the same call we would make for you if your shape were ours. (For the record, our blog is an empty-state placeholder we plan to move onto Sanity, not Contentful, so Contentful is a permanent zero on our own domain.) We show no performance numbers for a Contentful build here; any speed figures on this site belong to our own Next.js build and would not honestly transfer to work we have not shipped."
+            sub="No Contentful build lives on this domain, and there is a fit reason, not an excuse. Our site is one small team's content - a handful of pages, one voice, one release at a time - and that is exactly the case where Contentful's enterprise governance is weight without payoff, so we would steer ourselves toward something leaner. That is the same call we would make for you if your shape were ours. (For the record, our own blog, guides and glossary run on Sanity, not Contentful, so Contentful is a permanent zero on our own domain.) We show no performance numbers for a Contentful build here; any speed figures on this site belong to our own Next.js build and would not honestly transfer to work we have not shipped."
           />
         </Reveal>
 

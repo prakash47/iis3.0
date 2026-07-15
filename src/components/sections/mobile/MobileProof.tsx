@@ -8,8 +8,8 @@ import { IconCheck } from "@/components/icons";
 // THE MAKE-OR-BREAK SECTION. We have zero mobile portfolio, no store ratings,
 // and a website's Lighthouse score does NOT prove anything about a native app.
 // So this section refuses the fake-portfolio play and builds trust from HONEST,
-// checkable substitutes only. No case-study cards (they are placeholder until
-// real), no rating badge (no Clutch profile yet), no device mockups.
+// checkable substitutes only. No case-study cards (the 2 real ones are web,
+// not mobile), no rating badge (no Clutch profile yet), no device mockups.
 const engineeringChips = [
   "Offline sync", "Push notifications", "Deep links", "Biometric auth",
   "App-store submission", "Over-the-air updates", "Real-device QA",

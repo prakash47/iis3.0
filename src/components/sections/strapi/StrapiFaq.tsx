@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "Does this website run on Strapi?",
     answer:
-      "No, and unlike Sanity it is not on the plan to. This site is a static Next.js and React build; we do plan to move our own blog onto Sanity, but Strapi is not on that list, so this is a permanent no, not a 'not yet.' Strapi is a Node.js app with a React admin, and Node and React are what we build every day - which is why we can read a Strapi codebase cold - but knowing Node and React is not the same as having shipped a Strapi CMS, and we will not blur the two.",
+      "No, and unlike Sanity it is not going to. This site is a static Next.js and React build; our own blog, guides and glossary run on Sanity, but Strapi does not run here and is not on that list, so this is a permanent no, not a 'not yet.' Strapi is a Node.js app with a React admin, and Node and React are what we build every day - which is why we can read a Strapi codebase cold - but knowing Node and React is not the same as having shipped a Strapi CMS, and we will not blur the two.",
   },
   {
     question: "Do I own the code you build?",

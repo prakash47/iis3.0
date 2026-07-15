@@ -86,7 +86,7 @@ const faqs = [
   {
     question: "Have you built fintech software before?",
     answer:
-      "No regulated fintech, and we will not dress that up. We have no fintech clients, no bank or processor logos and no money system in production, and you should weigh that. Our production work is a custom, full-stack online store on its own backend - which did take real payments at checkout through a processor - and a corporate site. What we offer instead of a portfolio is the reconciliation and ledger depth on this page, an accurate account of where the money and the licence actually live, and a willingness to tell you to rent the rails rather than build them. If a fintech portfolio is your deciding criterion, there are firms who have one, and we would rather you knew that now than after a discovery.",
+      "No regulated fintech, and we will not dress that up. We have built a financial-services site - a loan-comparison and enquiry platform for a lending advisory, which you can see on our work page - but that is lead-generation: it moves no money, holds no funds and runs no ledger, so it is not the regulated core this page is about. We have no bank or processor logos and no money system in production, and you should weigh that. What we offer instead of a regulated-fintech portfolio is the reconciliation and ledger depth on this page, an accurate account of where the money and the licence actually live, and a willingness to tell you to rent the rails rather than build them. If a shipped money system is your deciding criterion, there are firms who have one, and we would rather you knew that now than after a discovery.",
   },
   {
     question: "What is a ledger, and why does reconciliation matter so much?",

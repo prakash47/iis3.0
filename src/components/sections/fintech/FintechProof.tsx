@@ -53,7 +53,7 @@ export function FintechProof() {
           <SectionHeading
             eyebrow="Proof, honestly"
             title={<>In fintech, the worst bug never crashes. It leaves the number <span className="gradient-text">quietly wrong.</span></>}
-            sub="We have no fintech clients, no bank or processor logos, no transaction volumes to quote and no audit to wave, and you should weigh that. What we have instead is a clear account of a fact most of this sector blurs: you are almost never the bank, the money moves on rails you rent, and the ledger you show on a screen is only a claim about someone else's money until it reconciles with the party that actually holds it. Below is what we build so it does, and what building it that way costs us."
+            sub="We have built a financial-services site - a loan-comparison platform, on our work page - but no regulated money system, no bank or processor logos, no transaction volumes to quote and no audit to wave, and you should weigh that. What we have instead is a clear account of a fact most of this sector blurs: you are almost never the bank, the money moves on rails you rent, and the ledger you show on a screen is only a claim about someone else's money until it reconciles with the party that actually holds it. Below is what we build so it does, and what building it that way costs us."
           />
         </Reveal>
 
@@ -207,38 +207,34 @@ export function FintechProof() {
         {/* THE BRIDGE. Claim the PROBLEM SHAPE, never the sector. Genuinely fresh prose - it must
             NOT paraphrase HealthProof's "a booking-and-payment flow that has to post once and
             exactly once" sentence, which is spent on the SAME store project. The word "reconcile" in
-            the CLAIM half means "the capture matched the processor's confirmation", never "we ran a
-            reconciliation engine" (that is the unshipped signature capability). Fence off held
-            balances, disputes at scale, KYC and multi-party reconciliation. Fresh /work anchor. */}
+            argue from the loan-comparison site now on /work (real financial-services web work), and
+            keep the hard fence: lead-gen, never money-movement - no funds, no payments, no ledger,
+            no multi-party reconciliation. Fresh /work anchor. */}
         <Reveal className="mt-6">
           <div className="rounded-2xl border border-border bg-surface p-6">
             <h3 className="font-display text-base font-semibold text-foreground">
               What our real work proves here, and what it does not
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is a custom, full-stack online store on its own backend, and a
-              corporate site. The store took real payments at checkout through a payment processor,
-              and that is a genuine instance of one thing this page is about: a charge that had to be
-              captured once, recorded against the right order, and confirmed against what the
-              processor reported back - money coming in that could not be allowed to post twice or go
-              missing, on an operator&apos;s screen a non-technical person used every day. That much we
-              have built and run.{" "}
-              <span className="font-semibold text-foreground">What a checkout is not is the hard fintech case.</span>{" "}
-              It is one-directional money-in, a single counterparty, with the processor carrying the
-              risk - there are no held balances sitting in a sponsor bank&apos;s accounts, no disputes
-              at scale, no onboarding and identity checks, and no reconciliation across you, a
-              processor, a sponsor bank and a card network at once. The matching our store did was
-              confirming a capture agreed with the processor&apos;s record; the reconciliation this
-              page is really about - a ledger of held balances kept provably equal, day after day, to
-              the bank that holds them - is work we have not shipped. So we claim the first machine and
-              fence off the second, plainly:{" "}
+              Our production work includes a genuine financial-services build: a loan-comparison and
+              enquiry site for a lending advisory - structured pages for ten loan categories with
+              eligibility and rate detail, a real-time affordability calculator, and enquiry funnels
+              that turn interest into qualified leads, on a fast custom build you can see on our work
+              page. That is real, fintech-adjacent web work.{" "}
+              <span className="font-semibold text-foreground">What it is not is the hard fintech case.</span>{" "}
+              It is lead-generation: it moves no money, holds no funds, processes no payments, runs no
+              ledger, and reconciles nothing across you, a processor, a sponsor bank and a card
+              network. The reconciliation this page is really about - a ledger of held balances kept
+              provably equal, day after day, to the bank that holds them - is work we have not
+              shipped. So we claim the financial-services front end and fence off the regulated
+              money-movement core, plainly:{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                the two builds we&apos;ve actually shipped
+                the builds we&apos;ve actually shipped
               </Link>
-              , described honestly. We have no fintech clients and no money system in production. The
-              fintech-specific part of what we offer is the reconciliation and ledger depth on this
-              page, the boundary above it, and a willingness to tell you the thing that costs us the
-              sale.
+              , described honestly. We have no regulated-fintech clients and no money system in
+              production. The fintech-specific part of what we offer is the reconciliation and ledger
+              depth on this page, the boundary above it, and a willingness to tell you the thing that
+              costs us the sale.
             </p>
           </div>
         </Reveal>

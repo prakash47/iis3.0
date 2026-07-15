@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "Have you built an LMS before?",
     answer:
-      "No, and we will not dress that up. We have no education clients, no university logos and no learner counts, and you should weigh that against whatever else we say. Our production work is a custom, full-stack online store on its own backend, and a corporate site. What we offer instead is standards depth - LTI, OneRoster, SCORM, xAPI, QTI - an accurate account of who each regulation actually binds, and a willingness to tell you not to build when you should not. If a portfolio in education is your deciding criterion, there are firms who have one, and we would rather you knew that now than after a discovery.",
+      "No. We have rebuilt a professional training institute's website - a real education-sector project you can see on our work page - but that was its catalog, enrolment and marketing surface, not a learning platform. We have not built the LMS core: no assessment engine, no gradebook, no SCORM or xAPI runtime, no adaptive course player. What we offer instead of a shipped LMS is standards depth - LTI, OneRoster, SCORM, xAPI, QTI - an accurate account of who each regulation actually binds, and a willingness to tell you not to build when you should not. If a shipped custom LMS is your deciding criterion, there are firms who have one, and we would rather you knew that now than after a discovery.",
   },
   {
     question: "Are you FERPA compliant?",

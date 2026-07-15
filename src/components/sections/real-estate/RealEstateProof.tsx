@@ -237,24 +237,25 @@ export function RealEstateProof() {
               What our real work proves here, and where the shape breaks
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is a custom, full-stack online store on its own backend, and a
-              corporate site. The store is a genuine instance of the shape a listing portal is built
-              on: a searchable catalog with real filtering, a shortlist, and a lead-and-transaction
-              flow a non-technical team ran every day - browse, filter, narrow, enquire, transact.
-              Strip the vocabulary off a property portal and that is its skeleton: a listing is a
-              catalog item, a saved search is a shortlist, an enquiry is a lead. That machine we have
-              built and run in production.{" "}
+              Our production work is real, custom web builds - a professional training platform
+              rebuild and a loan-comparison site, both on our work page - and both are genuine
+              instances of the shape a listing portal is built on: a searchable, filterable catalog
+              (courses in one, loan products in the other), structured detail pages, and a lead flow
+              a non-technical team runs every day - browse, filter, narrow, enquire. Strip the
+              vocabulary off a property portal and that is its skeleton: a listing is a catalog item,
+              a saved search is a shortlist, an enquiry is a lead. That machine we have built and run
+              in production.{" "}
               <span className="font-semibold text-foreground">Here is exactly where the shape breaks, and we won&apos;t paper over it.</span>{" "}
-              A product catalog is not regulated by fair housing; a housing search is. The same filter
-              that is harmless on a shoe - price, size, colour - can, on a home, raise a steering or
-              disparate-impact risk the moment it keys on neighbourhood, family-friendliness, or
-              anything that stands in for a protected class - whether it crosses the line is your
-              counsel&apos;s call, but designing against that risk is ours. And the store shipped none
-              of the parts that make real estate real estate: no MLS or RESO integration, no
-              fair-housing-tested ranking, no tenant screening, no escrow or funds custody. So we
-              claim the skeleton and fence off the rest, plainly:{" "}
+              A course catalog or a loan table is not regulated by fair housing; a housing search is.
+              The same filter that is harmless on a course - price, location, level - can, on a home,
+              raise a steering or disparate-impact risk the moment it keys on neighbourhood,
+              family-friendliness, or anything that stands in for a protected class - whether it
+              crosses the line is your counsel&apos;s call, but designing against that risk is ours.
+              And neither build shipped the parts that make real estate real estate: no MLS or RESO
+              integration, no fair-housing-tested ranking, no tenant screening, no escrow or funds
+              custody. So we claim the skeleton and fence off the rest, plainly:{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                the catalog, filtering and lead flow we actually built
+                the catalogs, filtering and lead flows we actually built
               </Link>
               , described honestly. We have no real-estate clients and no proptech system in
               production. The real-estate-specific part of what we offer is the disparate-impact

@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "Does this website run on Drupal?",
     answer:
-      "No, and it shouldn't. This site is a static Next.js and React build, and its content is a handful of simple types - the case where Drupal's native structural power would be over-engineered. We plan to move our own blog onto a lighter structured CMS, not a full traditional CMS like Drupal, so Drupal is a permanent zero on our own domain. That is a fit judgment, not a knock on the platform, and it is exactly the judgment we would apply to your project.",
+      "No, and it shouldn't. This site is a static Next.js and React build, and its content is a handful of simple types - the case where Drupal's native structural power would be over-engineered. Our own blog, guides and glossary run on a lighter structured CMS - Sanity - not a full traditional CMS like Drupal, so Drupal is a permanent zero on our own domain. That is a fit judgment, not a knock on the platform, and it is exactly the judgment we would apply to your project.",
   },
 ];
 

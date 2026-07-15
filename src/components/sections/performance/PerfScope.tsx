@@ -52,7 +52,7 @@ export function PerfScope() {
             <Link href="/services/digital-marketing" className="font-medium text-brand-500 hover:text-brand-600">
               See digital marketing
             </Link>
-            . Most clients run both.
+            . Most teams run both.
           </p>
         </Reveal>
       </Container>

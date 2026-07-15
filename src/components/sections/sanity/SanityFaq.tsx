@@ -46,12 +46,12 @@ const faqs = [
   {
     question: "Is Sanity good with Next.js?",
     answer:
-      "Yes - it is one of the most natural pairings. Sanity is API-first, so a Next.js front end reads it over GROQ from server components, uses on-demand revalidation to refresh only the routes an edit affects, and shows editors in-context live preview. Sanity Studio is itself a React application, which is our core stack. That adjacency is why Sanity is the headless CMS we reach for with Next.js - though, honestly, our own site does not run Sanity yet.",
+      "Yes - it is one of the most natural pairings. Sanity is API-first, so a Next.js front end reads it over GROQ from server components, uses on-demand revalidation to refresh only the routes an edit affects, and shows editors in-context live preview. Sanity Studio is itself a React application, which is our core stack. That adjacency is why Sanity is the headless CMS we reach for with Next.js - and it is exactly how this site works: our blog, guides and glossary are Sanity content rendered by a Next.js front end.",
   },
   {
     question: "Does this website run on Sanity?",
     answer:
-      "No, not yet - and we will not pretend it does. This site is a static Next.js and React build, and its blog is an empty-state placeholder; wiring it up to Sanity is on our own to-do list, not shipped. Sanity is the headless CMS we plan to adopt for our own blog, and it is our home ground because the Studio is a React app, but React competence is not a shipped-Sanity claim, and we will not dress it up as one.",
+      "The part of it that is content does. This site is a static Next.js and React build, and everything under Resources - the blog, the guides and the glossary - is modelled in a Sanity Studio, stored in the Content Lake and queried over GROQ. It is our home ground because the Studio is a React app, and rather than just recommend Sanity we put our own content on it, so what you read there is the result. The marketing, service and technology pages are code, not Sanity - we won't overstate it - but the resource library is genuinely Sanity-powered.",
   },
   {
     question: "Do I own the code you build?",

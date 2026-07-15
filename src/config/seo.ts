@@ -439,7 +439,7 @@ const techSeoOverrides: Record<string, Partial<PageSeo>> = {
   },
   django: {
     description:
-      "Django development services - custom Python web apps, admin panels, dashboards and DRF APIs on Django 5.2 LTS, at published fixed prices. You own the code.",
+      "Django development services - custom Python web apps, admin panels, dashboards and DRF APIs on Django 6.0 and 5.2 LTS, at published fixed prices. You own the code.",
     priority: 0.7,
   },
   "java-spring-boot": {

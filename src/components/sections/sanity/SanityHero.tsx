@@ -12,13 +12,11 @@ const trustChips = [
   { icon: <IconLayers className="h-4 w-4" />, label: "Content as data, not pages" },
 ];
 
-// IMPORTANT: Sanity powers NOTHING in our stack YET - our site is a Next.js/React build and the
-// blog is an empty-state placeholder (wiring Sanity is a planned TODO, see seo.ts). So this card
-// describes SANITY IN 2026 as a discipline; it does NOT claim "this site runs Sanity". Adjacency:
-// Sanity is API-first + pairs with Next.js/React, and the Studio is a React app - fenced hard in
-// Proof, never a shipped-Sanity claim. No version pin (Studio versions are not marketed as a badge);
-// the badge is a category signal. No Lighthouse/CWV number anywhere (laundering - our numbers are
-// our Next.js site's).
+// This site's blog, guides and glossary NOW run on Sanity (shipped 2026-07) - so Sanity is a real
+// dogfooded track record, not a plan. This card describes SANITY IN 2026 as a discipline. Adjacency:
+// Sanity is API-first + pairs with Next.js/React, and the Studio is a React app. No version pin
+// (Studio versions are not marketed as a badge); the badge is a category signal. No Lighthouse/CWV
+// number for a CLIENT build (laundering - measured on real content after launch, per Proof).
 const at2026 = [
   { icon: <IconType className="h-4 w-4" />, k: "Content model", v: "Typed schemas, in code" },
   { icon: <IconDatabase className="h-4 w-4" />, k: "Query", v: "GROQ, joins in one request" },
@@ -30,7 +28,8 @@ const at2026 = [
  * Sanity spoke hero - our 18th tech spoke and the first of the 4 CMS spokes. Sanity is the
  * headless SOURCE the rest of our site already names as the backend our Next.js/Astro front ends
  * read; this page reciprocates - it owns the CMS side and routes the FRONT-END build to Next.js
- * (app/SEO-critical) or Astro (content site). No own-site claim. Signature (content-as-data) lives
+ * (app/SEO-critical) or Astro (content site). Own-site dogfooding is real (resources run on Sanity).
+ * Signature (content-as-data) lives
  * in the Why band. Ownership stated the Shopify-hosted-SaaS way (content/schema/Studio yours, the
  * Content Lake is Sanity's hosted service) - never "own the platform", never flat "no lock-in".
  */

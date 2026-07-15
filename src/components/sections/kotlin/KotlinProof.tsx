@@ -120,8 +120,8 @@ export function KotlinProof() {
         {/* THE BRIDGE. Claims the CLIENT-OVER-A-BACKEND-WE'VE-BUILT shape (distinct from swiftui's
             "state-driven product over a backend" framing): the real store is the API-shaped side a
             native app also needs. Fences the native Android SDKs, the device landscape and the Play
-            pipeline by name. Anchor is the modest "See our work" - /work still carries placeholder
-            sample cards, so do not over-promise a mobile portfolio. */}
+            pipeline by name. Anchor is the modest "See our work" - /work carries 2 real but WEB
+            case studies, so do not over-promise a mobile portfolio. */}
         <Reveal className="mt-6">
           <div className="rounded-2xl border border-border bg-surface p-6">
             <h3 className="font-display text-base font-semibold text-foreground">

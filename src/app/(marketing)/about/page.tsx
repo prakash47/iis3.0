@@ -52,9 +52,8 @@ const crumbs = [
  *    and SMBs", Next.js/React-as-identity, "Founder in every project", "measurable outcomes/conversions/
  *    growth" as a delivered result. The team is a MECHANISM ("you work with the senior people who do the
  *    work"), never the "founder-led" label; no names/bios/photos/Person schema (a clean later addition).
- *  - The two /work case studies are still Sample-badged placeholders: referenced only in the honestly-
- *    caveated routing (caveat BEFORE the /work click), NEVER in the "check it now" bucket, and their
- *    placeholder client names are never surfaced.
+ *  - The two /work case studies are REAL, anonymized under NDA: referenced honestly (client names are
+ *    withheld, never surfaced). Real confirmed figures only (~+120% organic, 4 weeks, 2 weeks, 10 cats).
  *  - Counts derive from services.length / technologies.length (the catalog "6 core offerings" comment is
  *    stale). The only numbers on the page are honest, checkable facts (2016, 401208, the counts, the $300
  *    published floor). No pinned performance score (method only). No currencies the site does not quote.
@@ -69,8 +68,8 @@ const heroChips = [
   { icon: <IconPin className="h-4 w-4" />, label: "Based in Maharashtra, India - serving worldwide" },
 ];
 
-// Real + CHECKABLE. Each item carries its own way to verify. The two real projects are NOT here (they
-// are Sample-badged on /work) - they live in the caveated routing line below the grid.
+// Real + CHECKABLE. Each item carries its own way to verify. The two real case studies are NOT here
+// (they live on /work, anonymized under NDA) - referenced in the routing line below the grid.
 const realSignals = [
   { icon: <IconBuilding className="h-5 w-5" />, t: "We are a registered company", d: "Intention InfoService Private Limited, a private limited company incorporated in 2016. A legal entity on the public register, not a freelancer or a trading name." },
   { icon: <IconPin className="h-5 w-5" />, t: "A real address and phone", d: "Juchandra, Naigaon East, Maharashtra 401208, India - a registered place of business, serving clients across India, the US, UK, UAE and Europe." },
@@ -84,7 +83,7 @@ const refusals = [
   "No client logo wall, and no trusted-by strip. A grid of logos tells you who paid us, not how the work went.",
   "No star ratings or reviews. We do not have a Clutch or GoodFirms profile yet, so we will not manufacture the look of one.",
   "No project or client counts. A big number with a plus sign after it is the easiest thing to type and the hardest to verify.",
-  "No case-study metrics presented as fact. Our work case studies are marked Sample until the real, published numbers are cleared to share.",
+  "No inflated or invented metrics. Our two case studies are real work, anonymized at the client's request; the only figures on them are the ones the client confirmed.",
   "No invented team. No stock-photo headshots, no fabricated bios, no borrowed credentials.",
   "No certifications, badges, partner tiers or awards we do not hold. If a badge is not real and current, it is not on the page.",
 ];
@@ -275,15 +274,15 @@ export default function AboutPage() {
             ))}
           </Reveal>
 
-          {/* The two real projects - referenced honestly, with the Sample caveat BEFORE the /work click. */}
+          {/* The two real case studies - referenced honestly (real, anonymized under NDA). */}
           <Reveal className="mt-6">
             <div className="rounded-2xl border border-border bg-surface p-6">
               <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
                 <span className="font-semibold text-foreground">A few real projects, not a wall of logos.</span>{" "}
-                We would rather go deep on real production work than flash a logo grid. One honest caveat,
-                because this is a page about honesty: the case studies on our work page are currently marked
-                Sample while we finalize the real, published numbers with the clients involved. The shape of
-                the work is real; the final metrics go up only when they are cleared and verifiable. You can{" "}
+                We would rather go deep on real production work than flash a logo grid. One honest note,
+                because this is a page about honesty: the case studies on our work page are real work,
+                anonymized at each client&apos;s request - the client names are withheld under NDA, and the
+                only figures we publish are the ones the client confirmed. You can{" "}
                 <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
                   see the projects we go deep on
                 </Link>

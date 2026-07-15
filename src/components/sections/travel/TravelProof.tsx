@@ -219,26 +219,28 @@ export function TravelProof() {
               What our real work proves here, and where the shape breaks
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-              Our production work is a custom, full-stack online store on its own backend, and a
-              corporate site. The store is a real instance of the shape a booking engine is built on: a
-              searchable catalog with real filtering, a select-and-pay checkout, and an operator screen
-              a non-technical team ran every day - browse, filter, select, pay. Strip the vocabulary off
-              a booking flow and that skeleton is under it: a fare or a room is a catalog item, a booking
-              is a checkout. That machine we have built and run.{" "}
+              Our production work is real, custom web builds - a professional training platform
+              rebuild and a financial-services site, both on our work page. The training rebuild is a
+              real instance of part of the shape a booking engine is built on: a searchable,
+              filterable catalog, structured per-location landing pages for many cities, and an
+              enquiry flow a non-technical team ran every day - browse, filter, narrow by place,
+              enquire. Strip the vocabulary off that half of a booking flow and the skeleton is under
+              it: a course in a city is a catalog item found by place, just as a fare or a room is.
+              That much we have built and run.{" "}
               <span className="font-semibold text-foreground">Here is the exact seam where that shape stops being travel.</span>{" "}
-              A store&apos;s stock is yours and it sits still - when the catalog says three in stock,
-              three is the truth, and the order ships from your own warehouse on your own schedule.
-              Travel inventory is none of those: a seat or a room is a live, shared, oversell-prone claim
-              on a supplier&apos;s system that other sellers are drawing down at the same instant, so
-              &quot;available&quot; is a moment-in-time answer from a system that may already disagree
-              with itself. And a store order is a thing you ship; a booking is a promise a third party
-              has to honour at a fixed place and time, when weather, a strike or an insolvency may be
-              breaking it. The store shipped none of the parts that make travel travel: no GDS, NDC or
-              OpenTravel integration, no availability-across-channels or oversell engine, no disruption
-              handling, no package-organiser status, and no traveller funds custody. So we claim the
-              skeleton and fence off the rest, plainly:{" "}
+              A course catalog is yours and it sits still - when a page says a place exists, nothing
+              else is drawing it down. Travel inventory is the opposite: a seat or a room is a live,
+              shared, oversell-prone claim on a supplier&apos;s system that other sellers are drawing
+              down at the same instant, so &quot;available&quot; is a moment-in-time answer from a
+              system that may already disagree with itself. And a catalog enquiry asks for a callback;
+              a booking is a promise a third party has to honour at a fixed place and time, when
+              weather, a strike or an insolvency may be breaking it. Neither build shipped the parts
+              that make travel travel: no GDS, NDC or OpenTravel integration, no
+              availability-across-channels or oversell engine, no disruption handling, no
+              package-organiser status, and no traveller funds custody. So we claim the
+              catalog-and-enquiry skeleton and fence off the rest, plainly:{" "}
               <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
-                the browse, filter and checkout store we actually shipped
+                the filterable, per-location catalog we actually built
               </Link>
               . We have no travel or hospitality clients and no booking system in production. The
               travel-specific part of what we offer is the promise-honest engineering on this page, the
