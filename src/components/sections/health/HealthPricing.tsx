@@ -67,22 +67,22 @@ export function HealthPricing() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               The portal or integration is one line. The site that markets the practice is a
               different job with its own published starting prices, on{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 our web design and development service
               </Link>
               . A native patient experience on phones is a separate build again, on{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 mobile app development, on honest terms
               </Link>{" "}
               - and we have shipped no mobile apps for anyone yet, which that page says plainly. The
               system itself is{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 a paid discovery before any build quote
               </Link>
               .{" "}
               <span className="font-semibold text-foreground">One boundary matters more here than on any other page:</span>{" "}
               our published{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 care plans
               </Link>{" "}
               - the monitoring, the standing access and above all the scheduled offsite backups - are

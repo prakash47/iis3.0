@@ -42,7 +42,7 @@ export function ReactCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >

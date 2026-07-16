@@ -68,7 +68,7 @@ export function PythonProof() {
               Our production web work has been built from the same primitives a Python backend is
               made of: relational data models, an authenticated accounts and roles layer, a checkout
               and payments flow, content APIs, and third-party integrations that have to not break.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>
               , described honestly - and never dressed up as Python projects or ML case studies with

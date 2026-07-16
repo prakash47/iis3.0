@@ -83,7 +83,7 @@ export function FlutterScope() {
                     HTML, so it works against crawling, first paint and the accessibility tree. It is a
                     fine choice behind a login, for an internal tool or a companion to a Flutter app.
                     For anything that must rank, we route you to{" "}
-                    <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Next.js, when the web build has to be found on Google
                     </Link>
                     , and we say so before you spend.
@@ -98,7 +98,7 @@ export function FlutterScope() {
                     {" - "}
                     Dart is a language most teams do not know yet, and that cost is real. If sharing
                     logic with a React web codebase matters more than owning every pixel, consider{" "}
-                    <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       React Native, the JavaScript route to the same two stores
                     </Link>
                     .
@@ -113,15 +113,15 @@ export function FlutterScope() {
                     {" - "}
                     cross-platform, fully native or an install-free web app is a budget and strategy
                     call before it is a technical one. That decision belongs on{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our mobile app development service, where we make that call with you in writing
                     </Link>
                     . And when the real work is the platform behind the app, that is{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       the platform behind the app, scoped as custom software
                     </Link>
                     , with{" "}
-                    <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       the backend and APIs your Flutter app calls
                     </Link>{" "}
                     built alongside it.

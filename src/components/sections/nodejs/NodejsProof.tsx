@@ -74,7 +74,7 @@ export function NodejsProof() {
               loan-category pages, enquiry and enrolment funnels, certificate validation, and a
               real-time affordability calculator, with a headless CMS the marketing team runs
               itself.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See both builds
               </Link>
               , described honestly and never dressed up as Node case studies with invented metrics.

@@ -72,7 +72,7 @@ export function PhpProof() {
               filterable catalog, enquiry and enrolment funnels, a real-time affordability calculator,
               certificate validation, an admin surface a non-technical team runs itself, and third-party
               integrations that have to not break. You can{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 see the two builds, labelled for exactly what they are
               </Link>
               , and never dressed up as PHP projects, because they weren&apos;t. What they prove is one

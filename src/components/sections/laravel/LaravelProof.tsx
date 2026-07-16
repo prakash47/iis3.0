@@ -70,7 +70,7 @@ export function LaravelProof() {
               catalog, enquiry and enrolment funnels, a real-time affordability calculator, an admin
               surface a non-technical team runs itself, and third-party integrations that have to not
               break.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>
               , described honestly - and never relabelled as Laravel or PHP projects, because they

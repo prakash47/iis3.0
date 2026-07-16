@@ -57,7 +57,7 @@ export function ReactScope() {
                 moment a page must rank in Google, React needs server rendering - and the standard
                 way to get that is Next.js, a React framework. So for public, SEO-critical sites,
                 ecommerce and full-stack apps, see our{" "}
-                <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   Next.js development
                 </Link>
                 . We&apos;ll pick the right one for the job.
@@ -69,15 +69,15 @@ export function ReactScope() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             React is one of the stacks behind our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web design and development services
             </Link>
             . Building a React web app or SaaS?{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Custom software development
             </Link>{" "}
             covers the systems side. And the same React model powers mobile via{" "}
-            <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               React Native
             </Link>
             .

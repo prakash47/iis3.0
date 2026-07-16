@@ -72,7 +72,7 @@ export function UiuxPricing() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             Need the site or app designed <em>and</em> built as one fixed-price project?{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See web design &amp; development pricing
             </Link>
             . Not sure which door fits? Tell us what you&apos;re working on and your budget, and

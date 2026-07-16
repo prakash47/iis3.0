@@ -82,12 +82,12 @@ export function SanityWhy() {
               real-time, collaborative environment with structured fields and rich text. But if what your
               team wants is to log into a familiar admin and edit whole pages with no developer in the loop,
               that is a{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>{" "}
               job, and we will route you straight there rather than sell you a mismatch. Not sure which side
               you are on?{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We will make that call with you
               </Link>{" "}
               before we quote.

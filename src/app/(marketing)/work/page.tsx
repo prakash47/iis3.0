@@ -68,7 +68,7 @@ export default function WorkPage() {
                       </div>
                     ))}
                   </div>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                     Read the case study
                     <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>

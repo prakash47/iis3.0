@@ -67,12 +67,12 @@ export function PythonPricing() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               A Python web app lands at the upper tiers. A standalone API, a data pipeline or an
               ML-integration system is genuinely bespoke, so it&apos;s scoped through our{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software Discovery Sprint
               </Link>{" "}
               from {discoverySprint.from}, which ends in a written scope and a fixed build quote. And a
               finished AI product is requirement-based on our{" "}
-              <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 AI development service
               </Link>{" "}
               - never a fixed tier. No published tier &quot;buys&quot; a machine-learning system: an
@@ -88,11 +88,11 @@ export function PythonPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software service
             </Link>
             .

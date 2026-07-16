@@ -52,7 +52,7 @@ export function WebDevProof() {
               href={pageSpeedUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600"
+              className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-600 dark:text-brand-400"
             >
               Verify it on PageSpeed Insights
               <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

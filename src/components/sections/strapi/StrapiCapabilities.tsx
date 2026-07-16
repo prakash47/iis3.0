@@ -63,16 +63,16 @@ export function StrapiCapabilities() {
               the paid features you actually need - to how your team really works; extend the API in
               typed Node only where the generated REST or GraphQL genuinely falls short; then build the
               front end that reads it in{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/astro" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/astro" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Astro
               </Link>
               . And when the real job is a team editing pages in a familiar admin, we will tell you that
               is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               , not Strapi.

@@ -60,16 +60,16 @@ export function SanityCapabilities() {
               model the content as typed schemas first, because every later decision inherits from it;
               stand up the Studio as a product wired to how your team edits; write the data layer in GROQ
               with generated types; then build the front end that reads it in{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/astro" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/astro" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Astro
               </Link>
               , with on-demand revalidation so a publish refreshes only the affected routes. And when the
               job is really a team editing pages in a familiar admin, we will tell you that is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               , not Sanity.

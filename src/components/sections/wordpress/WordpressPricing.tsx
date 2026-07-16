@@ -59,11 +59,11 @@ export function WordpressPricing() {
               A brochure or content site is a Starter or Launch Sprint, a larger multi-section
               marketing site is a Growth Site, and a WordPress store lands on the Commerce Sprint -
               though selling online is really{" "}
-              <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WooCommerce
               </Link>
               , on its own page. Ongoing updates, security and backups are separate, on published{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 monthly care plans
               </Link>{" "}
               from {carePlanFrom}, plus a one-time Website Health Audit from $100 - because WordPress
@@ -79,11 +79,11 @@ export function WordpressPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web design &amp; development service
             </Link>
             .

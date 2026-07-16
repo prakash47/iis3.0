@@ -54,7 +54,7 @@ export function RealEstateCompare() {
                         scope="col"
                         className={
                           i === 2
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -84,11 +84,11 @@ export function RealEstateCompare() {
             the smaller build. The third column is the automated screening and valuation of record we
             refuse to build - and when a product genuinely needs it, that is a validated provider and
             a fair-housing expert, with the software around it{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               scoped as custom software
             </Link>
             . Which stack it lands on is a separate question, answered on{" "}
-            <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               how we choose the stack
             </Link>
             .

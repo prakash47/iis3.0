@@ -53,7 +53,7 @@ export function EntertainmentCompare() {
                         scope="col"
                         className={
                           i === 2
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -83,11 +83,11 @@ export function EntertainmentCompare() {
             footprint and our fee are smallest relative to building the whole platform. The commodity
             parts - the player, the CMS, the ticket engine - are usually better bought than rebuilt;
             the rights, shelter and consent machinery is the part worth building, and it is{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               scoped as custom software
             </Link>
             . Which stack any of it lands on is a separate question, answered on{" "}
-            <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               how we choose the stack
             </Link>
             .

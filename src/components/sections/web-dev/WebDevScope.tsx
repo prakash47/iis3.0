@@ -73,7 +73,7 @@ export function WebDevScope() {
             Pairs well with{" "}
             {relatedServices.map((r, i) => (
               <span key={r.href}>
-                <Link href={r.href} className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href={r.href} className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   {r.label}
                 </Link>
                 {i < relatedServices.length - 2 ? ", " : i === relatedServices.length - 2 ? " and " : "."}

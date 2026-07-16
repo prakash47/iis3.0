@@ -228,7 +228,7 @@ export function FintechProof() {
               provably equal, day after day, to the bank that holds them - is work we have not
               shipped. So we claim the financial-services front end and fence off the regulated
               money-movement core, plainly:{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 the builds we&apos;ve actually shipped
               </Link>
               , described honestly. We have no regulated-fintech clients and no money system in

@@ -105,7 +105,7 @@ export function MobileNav() {
                       {viewAll && (
                         <Link
                           href={viewAll.href}
-                          className="mt-3 inline-flex items-center gap-1.5 px-3 text-sm font-semibold text-brand-600 dark:text-brand-400"
+                          className="mt-3 inline-flex items-center gap-1.5 px-3 text-sm font-semibold text-brand-700 dark:text-brand-400"
                         >
                           {viewAll.label} <span aria-hidden="true">→</span>
                         </Link>

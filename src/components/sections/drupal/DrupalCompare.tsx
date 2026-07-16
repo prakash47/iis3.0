@@ -47,7 +47,7 @@ export function DrupalCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -76,12 +76,12 @@ export function DrupalCompare() {
             Drupal earns its keep when the content model itself is genuinely complex - deep taxonomies,
             many interrelated types, fine-grained roles and real multilingual. When a team edits mostly
             simple content, a page-based CMS like{" "}
-            <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               WordPress
             </Link>{" "}
             is the simpler, familiar-admin call. And when the front end is fully separate and API-first, a
             headless backend such as{" "}
-            <Link href="/technologies/sanity" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/sanity" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Sanity
             </Link>
             , Contentful or Strapi fits the shape better. We recommend the fit, not a badge we hold.

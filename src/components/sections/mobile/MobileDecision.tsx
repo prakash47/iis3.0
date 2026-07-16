@@ -44,7 +44,7 @@ export function MobileDecision() {
                 <thead>
                   <tr className="border-b border-border">
                     <th scope="col" className="p-4" />
-                    <th scope="col" className="bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400">
+                    <th scope="col" className="bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400">
                       Cross-platform
                       <span className="block text-xs font-normal text-muted-foreground">React Native / Flutter</span>
                     </th>
@@ -93,7 +93,7 @@ export function MobileDecision() {
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <span className="font-medium text-foreground">Go deeper:</span>
               {spokes.map((s) => (
-                <Link key={s.href} href={s.href} className="group inline-flex items-center gap-1 font-medium text-brand-500 hover:text-brand-600">
+                <Link key={s.href} href={s.href} className="group inline-flex items-center gap-1 font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   {s.label}
                   <IconArrow className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </Link>

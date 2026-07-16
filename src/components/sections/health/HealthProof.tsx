@@ -228,7 +228,7 @@ export function HealthProof() {
               and breach notification, minimum-necessary access and the business associate boundary
               are things a training site or a loan-comparison site never taught anyone. So we claim
               the first machine, and we fence off the second as work we have not shipped:{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 the two real builds on our work page, described honestly
               </Link>
               . We have no healthcare clients, no shipped patient portal, and no EHR integrated in

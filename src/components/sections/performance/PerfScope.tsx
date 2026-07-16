@@ -49,7 +49,7 @@ export function PerfScope() {
             Paid buys attention now; organic earns it over time - and we&apos;ll tell you honestly
             when your money is better spent on organic first. Want the organic half - SEO,
             content, social and email?{" "}
-            <Link href="/services/digital-marketing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/digital-marketing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See digital marketing
             </Link>
             . Most teams run both.

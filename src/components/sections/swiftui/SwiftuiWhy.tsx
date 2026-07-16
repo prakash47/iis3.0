@@ -101,17 +101,17 @@ export function SwiftuiWhy() {
               so if you need iOS and Android - and most products do - native means a second, wholly
               separate codebase and a second specialist pool to hire and keep. If that is you,
               cross-platform is usually the smart default, and we would rather{" "}
-              <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 cover both stores from one React Native codebase
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/flutter" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/flutter" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 one Flutter codebase for both
               </Link>{" "}
               than sell you two native builds. If you want native on both platforms but want to share
               the business logic underneath, Kotlin Multiplatform is a different native model again -
               native{" "}
-              <Link href="/technologies/kotlin" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/kotlin" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Kotlin on the Android side
               </Link>
               , shared logic across both - and we won&apos;t pretend SwiftUI plus a separate Kotlin app
@@ -119,7 +119,7 @@ export function SwiftuiWhy() {
               presence, that should not be an app at all. Which of these is right for you - and whether
               it should be cross-platform, fully native or a web app - is the bigger call, and we make it
               with you in writing during{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 discovery on our mobile app development service
               </Link>
               , before you spend on a build you don&apos;t need.

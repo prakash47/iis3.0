@@ -48,7 +48,7 @@ export function ContentfulCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -76,16 +76,16 @@ export function ContentfulCompare() {
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             Contentful earns its keep when content is a coordination problem across many teams, brands and
             channels, and it is overkill below that scale. A leaner headless CMS like{" "}
-            <Link href="/technologies/sanity" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/sanity" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Sanity
             </Link>{" "}
             sits in the same structured, headless family - developer-first and lighter-weight - and{" "}
-            <Link href="/technologies/strapi" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/strapi" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Strapi
             </Link>{" "}
             is the self-hosted route when you want to own the running software. When a single team just
             edits pages in a familiar admin, a page-based CMS like{" "}
-            <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               WordPress
             </Link>{" "}
             is the simpler, cheaper call. We recommend the fit, not a badge we hold.

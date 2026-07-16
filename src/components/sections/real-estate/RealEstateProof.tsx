@@ -254,7 +254,7 @@ export function RealEstateProof() {
               And neither build shipped the parts that make real estate real estate: no MLS or RESO
               integration, no fair-housing-tested ranking, no tenant screening, no escrow or funds
               custody. So we claim the skeleton and fence off the rest, plainly:{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 the catalogs, filtering and lead flows we actually built
               </Link>
               , described honestly. We have no real-estate clients and no proptech system in

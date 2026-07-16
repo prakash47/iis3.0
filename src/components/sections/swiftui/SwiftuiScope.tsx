@@ -68,7 +68,7 @@ export function SwiftuiScope() {
                     fully native earns its higher cost only when the product genuinely demands deep
                     performance, hardware access or platform-specific features. We make that call with
                     you on{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our mobile app development service, before any build begins
                     </Link>
                     .
@@ -82,15 +82,15 @@ export function SwiftuiScope() {
                     </span>
                     {" - "}
                     SwiftUI is Apple-only, so if you need both stores from a single codebase that is{" "}
-                    <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       React Native
                     </Link>{" "}
                     or{" "}
-                    <Link href="/technologies/flutter" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/flutter" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Flutter
                     </Link>
                     ; for native on both while sharing the business logic, that is{" "}
-                    <Link href="/technologies/kotlin" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/kotlin" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Kotlin on the Android side
                     </Link>
                     .

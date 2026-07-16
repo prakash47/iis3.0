@@ -40,7 +40,7 @@ export function MarketingWhyUs() {
               {r.link && (
                 <Link
                   href={r.link.href}
-                  className="mt-4 inline-flex text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600"
+                  className="mt-4 inline-flex text-sm font-semibold text-brand-700 transition-colors hover:text-brand-600 dark:text-brand-400"
                 >
                   {r.link.label}
                 </Link>

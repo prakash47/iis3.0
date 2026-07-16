@@ -45,7 +45,7 @@ export function PythonCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -72,11 +72,11 @@ export function PythonCompare() {
         <Reveal className="mt-6">
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             The 2026 reality: many teams run both - Python for the AI and data layer,{" "}
-            <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Node.js for the real-time API edge
             </Link>
             . Weighing heavy enterprise instead? See our{" "}
-            <Link href="/technologies/java-spring-boot" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/java-spring-boot" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Java and Spring Boot
             </Link>{" "}
             page - and we&apos;ll recommend the fit, not the language we happen to sell.

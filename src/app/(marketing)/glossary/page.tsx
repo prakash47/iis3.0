@@ -92,7 +92,7 @@ export default async function GlossaryPage() {
             <div className="space-y-14">
               {grouped.map(([letter, items]) => (
                 <div key={letter}>
-                  <h2 className="font-display text-2xl font-bold text-brand-500">{letter}</h2>
+                  <h2 className="font-display text-2xl font-bold text-brand-700 dark:text-brand-400">{letter}</h2>
                   <dl className="mt-6 divide-y divide-border border-y border-border">
                     {items.map((t) => (
                       <div key={t.slug} id={t.slug} className="scroll-mt-24 py-6">
@@ -115,7 +115,7 @@ export default async function GlossaryPage() {
                                   <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="font-medium text-brand-500 hover:text-brand-600"
+                                    className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400"
                                   >
                                     {link.label ?? link.href}
                                   </Link>

@@ -53,20 +53,20 @@ export function PythonWhy() {
               typed API. It is the wrong tool - and we&apos;ll say so - when the work is raw CPU-bound,
               latency-critical compute: Python is comparatively slow in hot loops, so if the whole
               product is a low-latency engine we&apos;d reach for Go or Rust and scope it through a{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software Discovery Sprint
               </Link>{" "}
               rather than force the language. If you want a real-time, I/O-heavy app in one JavaScript
               language across the stack, that&apos;s{" "}
-              <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Node.js, the other backend runtime
               </Link>
               . If it&apos;s a content and admin-heavy web app, that&apos;s a{" "}
-              <Link href="/technologies/django" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/django" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Django, the batteries-included Python web framework
               </Link>{" "}
               decision. And if what you actually want is a finished AI product, that&apos;s our{" "}
-              <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 AI development
               </Link>{" "}
               service, priced to the requirement.

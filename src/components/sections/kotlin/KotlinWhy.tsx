@@ -100,28 +100,28 @@ export function KotlinWhy() {
               behaviour. Most products do not, and for them going native is the expensive answer. The
               plainest reason is arithmetic: native Android is Android only, so if you need iOS and
               Android from one codebase, cross-platform is usually the smart default, and we would rather{" "}
-              <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 cover both stores with React Native
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/flutter" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/flutter" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 one Flutter codebase for both
               </Link>{" "}
               than sell you two native builds. If you want each platform native but shared business
               logic underneath, Kotlin Multiplatform is a different model again - and the iOS half of a
               native pair is{" "}
-              <Link href="/technologies/swiftui" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/swiftui" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 SwiftUI on the iOS side
               </Link>
               , a separate codebase and a separate specialist pool. If what you really need is an
               install-free, search-indexable presence, that should not be an app at all. And if you are
               actually asking about{" "}
-              <Link href="/technologies/java-spring-boot" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/java-spring-boot" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Kotlin on a Spring Boot backend
               </Link>
               , that is the server, not the app, and it lives on the Java page. Which of these is right
               is the bigger call, and we make it with you in writing during{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 discovery on our mobile app development service
               </Link>
               , before you spend on a build you don&apos;t need.

@@ -196,7 +196,7 @@ export function EdtechProof() {
               headless-CMS content operation the marketing team runs itself - migrated off a slow
               WordPress build without losing its search footing, after which organic traffic grew by
               around 120%.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 You can see that build on our work page.
               </Link>{" "}
               <span className="font-semibold text-foreground">What it is not is a full LMS.</span>{" "}

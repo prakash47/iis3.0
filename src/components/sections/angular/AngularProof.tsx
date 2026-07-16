@@ -61,7 +61,7 @@ export function AngularProof() {
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               We&apos;ve shipped real production web apps for real clients -{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 see our work
               </Link>
               , honestly labelled and not dressed up as Angular case studies with invented metrics.

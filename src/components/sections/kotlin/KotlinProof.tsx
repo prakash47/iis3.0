@@ -145,7 +145,7 @@ export function KotlinProof() {
               Compose or the Android SDKs, none of the device-landscape engineering, and nothing of the
               Play Store submission and review pipeline - and we won&apos;t blur that line, or hand you
               our own website as Android proof, because none of it is a native app.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>
               , labelled as web and never dressed up as an app. The Kotlin-specific proof on this page is

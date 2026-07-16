@@ -107,7 +107,7 @@ export default async function ResourcesPage() {
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                     {s.desc}
                   </p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                     {s.cta}
                     <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>

@@ -107,7 +107,7 @@ export function RealEstateWhy() {
               <span className="font-semibold text-foreground">Where a custom build genuinely wins:</span>{" "}
               when the portal, the search, the CRM and the lead flow are the product and an
               off-the-shelf IDX portal fights it. That is{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 where a listings platform is scoped before it&apos;s priced
               </Link>
               , and we will make that case with you in writing. Talking you out of building the

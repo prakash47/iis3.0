@@ -81,19 +81,19 @@ export function AstroWhy() {
               so - when the project needs to behave like an application: authenticated areas, heavy
               client state, dashboards, data-driven views that change constantly. Past a handful of
               interactive pieces sharing state, you are fighting the framework, and that work belongs on{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js, the React framework for sites that behave like apps
               </Link>
               . When the whole point is a non-developer editing content every day, that is often{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               , and when you are selling products it is{" "}
-              <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Shopify or WooCommerce
               </Link>
               . Not sure which side of the line you are on?{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We will make that call with you
               </Link>{" "}
               before we quote anything.

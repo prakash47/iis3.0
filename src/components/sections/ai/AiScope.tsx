@@ -85,20 +85,20 @@ export function AiScope() {
             </h3>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               We add the intelligence layer. Need the underlying system, SaaS or API first?{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Custom software
               </Link>{" "}
               builds it; we add the AI. Adding AI to a new{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 website or web app
               </Link>{" "}
               or a{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 mobile app
               </Link>
               ? We build the product there and add the AI here. Want AI to lift your search
               visibility and get you cited in AI answers? That&apos;s{" "}
-              <Link href="/services/digital-marketing" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/digital-marketing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 digital marketing
               </Link>
               , not this page. And we don&apos;t train foundation models or do ML research - we

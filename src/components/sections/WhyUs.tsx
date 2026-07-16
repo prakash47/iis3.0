@@ -64,7 +64,7 @@ export function WhyUs() {
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-surface-2 text-brand-500">
                     {p.icon}
                   </span>
-                  <span className="rounded-full border border-brand-400/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-600 dark:text-brand-400">
+                  <span className="rounded-full border border-brand-400/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-700 dark:text-brand-400">
                     {p.stat}
                   </span>
                 </div>
@@ -73,7 +73,7 @@ export function WhyUs() {
                 {p.link && (
                   <Link
                     href={p.link.href}
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-600 dark:text-brand-400"
                   >
                     {p.link.label}
                     <IconArrow className="h-4 w-4" />

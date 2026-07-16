@@ -56,7 +56,7 @@ export function FintechCompare() {
                         scope="col"
                         className={
                           i === 2
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -85,11 +85,11 @@ export function FintechCompare() {
             The highlighted column is the one that most often wins, and it is the one that costs us
             the smaller build. When the third column genuinely is right, the first project is a
             licensing and sponsor-bank question for your counsel - and the software that follows is{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               where a fintech build gets scoped and priced
             </Link>
             . Which stack it lands on is a separate question, answered on{" "}
-            <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               how we choose the stack
             </Link>
             .

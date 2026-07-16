@@ -165,7 +165,7 @@ export default async function CaseStudyPage({
                         <dd className="mt-0.5 text-sm">
                           <Link
                             href={`/services/${cs.serviceSlug}`}
-                            className="text-brand-500 hover:text-brand-600"
+                            className="text-brand-700 hover:text-brand-600 dark:text-brand-400"
                           >
                             {getService(cs.serviceSlug)!.name}
                           </Link>

@@ -64,22 +64,22 @@ export function EdtechPricing() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               The platform is one line. The site that markets the programme is a different job with
               its own published starting prices, on{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 our web design and development service
               </Link>
               . A learner experience on phones is a separate build again, priced on{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 building a mobile learning app
               </Link>{" "}
               - and we have shipped no mobile apps for anyone yet, which that page says plainly. The
               platform itself is{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software, scoped in a paid discovery
               </Link>
               . After launch, a system that carries student records is never finished, so ongoing
               care runs on published monthly plans from {carePlanFrom} rather than a mystery
               retainer. Our website and app starting prices are all published on{" "}
-              <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 one pricing page
               </Link>
               , and every number on this site reads from a single source, so it is the same figure

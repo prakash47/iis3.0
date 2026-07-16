@@ -72,11 +72,11 @@ export function HealthScope() {
                     </span>
                     {" - "}
                     a portal or an integration layer is custom software, so it enters through{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       the discovery-first way we price a bespoke build
                     </Link>
                     . Which stack it lands on is a separate question, answered on{" "}
-                    <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       how we decide what to build it with
                     </Link>
                     .
@@ -91,11 +91,11 @@ export function HealthScope() {
                     {" - "}
                     the public site that people find you through holds no patient data and is a
                     different job with its own published starting prices. That is{" "}
-                    <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a healthcare marketing site, priced and published
                     </Link>
                     , and being found in the first place is{" "}
-                    <Link href="/services/digital-marketing" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/digital-marketing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       an organic growth engagement
                     </Link>
                     .
@@ -110,11 +110,11 @@ export function HealthScope() {
                     {" - "}
                     a native patient experience is a separate build, and we have not shipped a mobile
                     app for anyone yet, in this sector or any other. The honest terms are set out on{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       mobile app development, on honest terms
                     </Link>
                     . Assistive features route to{" "}
-                    <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       AI features, grounded in your own data
                     </Link>
                     .

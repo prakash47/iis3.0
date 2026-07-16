@@ -239,7 +239,7 @@ export function TravelProof() {
               availability-across-channels or oversell engine, no disruption handling, no
               package-organiser status, and no traveller funds custody. So we claim the
               catalog-and-enquiry skeleton and fence off the rest, plainly:{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 the filterable, per-location catalog we actually built
               </Link>
               . We have no travel or hospitality clients and no booking system in production. The

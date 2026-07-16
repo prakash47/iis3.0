@@ -63,7 +63,7 @@ export function RnCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -90,20 +90,20 @@ export function RnCompare() {
         <Reveal className="mt-6">
           <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
             Still deciding whether it should be an app at all?{" "}
-            <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Our mobile app development service
             </Link>{" "}
             weighs cross-platform against fully native and against an install-free web app, and we put
             that call in writing. Or go deeper on{" "}
-            <Link href="/technologies/flutter" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/flutter" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               weighing the Flutter alternative
             </Link>
             , or on going fully native with{" "}
-            <Link href="/technologies/swiftui" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/swiftui" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               SwiftUI
             </Link>{" "}
             or{" "}
-            <Link href="/technologies/kotlin" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/kotlin" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Kotlin
             </Link>
             . We recommend the fit, not the tool we feel like selling.

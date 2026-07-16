@@ -73,7 +73,7 @@ export function RnScope() {
                     {" - "}
                     cross-platform, fully native, or a progressive web app is a budget and strategy
                     call before it is a technical one. That decision belongs on{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our mobile app development service, where we make the native-or-cross-platform call in writing
                     </Link>
                     .
@@ -88,11 +88,11 @@ export function RnScope() {
                     {" - "}
                     dashboards, single-page apps and design systems that render to the browser are a
                     different job with a different renderer. That is{" "}
-                    <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       React on the web, the DOM side of the same model
                     </Link>
                     , or{" "}
-                    <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a server-rendered web app in Next.js
                     </Link>{" "}
                     when search engines need to read it.
@@ -106,11 +106,11 @@ export function RnScope() {
                     </span>
                     {" - "}
                     when the real work is the platform behind the app, that is{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       custom software, scoped in a paid discovery
                     </Link>
                     , with{" "}
-                    <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       the server your app talks to
                     </Link>{" "}
                     built alongside it.

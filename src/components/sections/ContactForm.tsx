@@ -244,9 +244,9 @@ export function ContactForm() {
           <p className="font-semibold">That did not send.</p>
           <p className="mt-1 text-muted-foreground">
             We could not confirm your message reached us. Please email it to us at{" "}
-            <a href={`mailto:${siteConfig.contact.email}`} className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400">{siteConfig.contact.email}</a>{" "}
+            <a href={`mailto:${siteConfig.contact.email}`} className="font-medium text-brand-700 hover:text-brand-500 dark:text-brand-400">{siteConfig.contact.email}</a>{" "}
             or send it on{" "}
-            <a href={whatsappHref} className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400">WhatsApp</a>{" "}
+            <a href={whatsappHref} className="font-medium text-brand-700 hover:text-brand-500 dark:text-brand-400">WhatsApp</a>{" "}
             so nothing is lost. It reaches the same people.
           </p>
         </div>

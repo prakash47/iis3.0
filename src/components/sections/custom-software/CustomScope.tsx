@@ -49,15 +49,15 @@ export function CustomScope() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             Need a website, web app or PWA as your web presence?{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See web design &amp; development
             </Link>
             . A native iOS or Android app?{" "}
-            <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See mobile app development
             </Link>
             . An AI chatbot or AI automation?{" "}
-            <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See AI development
             </Link>
             .

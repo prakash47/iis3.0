@@ -107,7 +107,7 @@ export function JavaProof() {
               made of: structured, related data models, a searchable and filterable catalog, enquiry and
               enrolment funnels, a real-time affordability calculator, certificate validation, and an
               admin a non-technical team runs itself. One of them is a WordPress-to-Next.js rebuild.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See both on our work page
               </Link>
               , described honestly - and never relabelled as Java or Spring Boot projects, because they

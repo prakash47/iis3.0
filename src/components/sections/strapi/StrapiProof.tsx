@@ -75,7 +75,7 @@ export function StrapiProof() {
               a fast filterable listing, templated per-city landing pages, enquiry and demo-class funnels
               and an admin a non-technical marketing team runs day to day, which is the same model-once,
               serve-many job a headless CMS exists to do. You can{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 see the two production builds whose code the client owns outright
               </Link>{" "}
               and a team that ships real web software with real Node and front-end engineering. The

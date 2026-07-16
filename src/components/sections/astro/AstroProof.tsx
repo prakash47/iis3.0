@@ -75,7 +75,7 @@ export function AstroProof() {
               large course catalog turned into a fast, filterable experience, templated per-city landing
               pages, fast static delivery, and a headless-CMS editing path a non-technical marketing
               team runs itself. You can{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 see the training platform and the financial-services site we actually built
               </Link>
               , described for what they are and never relabelled as Astro projects, because they

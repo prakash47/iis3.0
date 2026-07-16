@@ -46,7 +46,7 @@ export function StrapiCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -74,7 +74,7 @@ export function StrapiCompare() {
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             Self-hosted Strapi and managed Strapi Cloud are the same open-source CMS, hosted differently;
             a hosted SaaS headless CMS such as{" "}
-            <Link href="/technologies/sanity" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/sanity" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Sanity
             </Link>{" "}
             or Contentful keeps the software and rents you the backend. Payload and Directus are other

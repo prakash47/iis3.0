@@ -75,7 +75,7 @@ export function AiProof() {
                 {r.t === "AI lives inside real software" && (
                   <>
                     {" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       See our software work
                     </Link>
                     .

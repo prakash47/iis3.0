@@ -69,11 +69,11 @@ export function EdtechScope() {
                     {" - "}
                     a learning platform is custom software, so it enters through a paid discovery
                     that ends in a written scope and a fixed build quote. See{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       how we scope and build a bespoke platform
                     </Link>
                     , and{" "}
-                    <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       how we choose the stack
                     </Link>
                     .
@@ -88,11 +88,11 @@ export function EdtechScope() {
                     {" - "}
                     the site that sells the programme is a different job from the platform that
                     delivers it. That is{" "}
-                    <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our web design and development service
                     </Link>
                     , and growing enrolment organically is{" "}
-                    <Link href="/services/digital-marketing" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/digital-marketing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       an organic growth engagement
                     </Link>
                     .
@@ -107,11 +107,11 @@ export function EdtechScope() {
                     {" - "}
                     a native mobile learning experience is a separate build, and we have not shipped
                     a mobile app for anyone yet. We say so plainly on{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       building a mobile learning app
                     </Link>
                     , where the honest terms are set out. AI features route to{" "}
-                    <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       adding AI features to a learning product
                     </Link>
                     .

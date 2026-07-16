@@ -42,7 +42,7 @@ export function MarketingScope() {
               }
             >
               {s.featured && (
-                <span className="mb-2 inline-flex w-fit rounded-full bg-brand-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400">
+                <span className="mb-2 inline-flex w-fit rounded-full bg-brand-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-brand-700 dark:text-brand-400">
                   The 2026 wedge
                 </span>
               )}
@@ -61,7 +61,7 @@ export function MarketingScope() {
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Every site we build ships with an SEO and schema baseline - the one-time technical
               foundation that makes a site findable from day one (that&apos;s part of{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 web design &amp; development
               </Link>
               ). This is the ongoing growth on top of it. If we built your site, we start growing
@@ -69,7 +69,7 @@ export function MarketingScope() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-justify">
               Looking for the paid half - Google Ads and paid social?{" "}
-              <Link href="/services/performance-marketing" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/performance-marketing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See performance marketing
               </Link>
               . Organic compounds; paid buys speed - most teams run both.

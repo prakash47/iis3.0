@@ -46,7 +46,7 @@ export function WordpressCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -74,7 +74,7 @@ export function WordpressCompare() {
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             Wix sits close to Squarespace - easiest, all-in-one, and capped. And if raw speed and
             bespoke interactivity matter most, a custom{" "}
-            <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Next.js build
             </Link>{" "}
             beats all three - or run headless WordPress behind a Next.js front end to get the WordPress

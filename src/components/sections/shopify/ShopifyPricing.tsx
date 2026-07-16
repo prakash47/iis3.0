@@ -71,12 +71,12 @@ export function ShopifyPricing() {
               those three is a Shopify store, and we won&apos;t sell you one as though it were. If a
               marketing site with a buy button or two is all you actually need, paying for Shopify is
               overkill, and a{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom Next.js build
               </Link>{" "}
               is the leaner call. Ongoing work is separate: a live store needs app, theme and content
               attention, so we run it on published{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 monthly care plans
               </Link>{" "}
               from {carePlanFrom}, plus a one-time Website Health Audit from $100. Your Shopify
@@ -93,11 +93,11 @@ export function ShopifyPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web design &amp; ecommerce development service
             </Link>
             .

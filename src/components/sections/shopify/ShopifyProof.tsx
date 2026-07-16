@@ -127,7 +127,7 @@ export function ShopifyProof() {
               it as one. It proves one true thing: this team ships a working catalog, cart and checkout
               that holds up in production, which is exactly the problem shape Shopify exists to solve.
               Our{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 work page
               </Link>{" "}
               features two other real builds, described honestly. The Shopify-specific proof

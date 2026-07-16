@@ -97,7 +97,7 @@ export function PythonScope() {
                         {r.label}
                       </span>
                       {" - "}
-                      <Link href={r.href} className="font-medium text-brand-500 hover:text-brand-600">
+                      <Link href={r.href} className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                         {r.anchor}
                       </Link>{" "}
                       {r.tail}

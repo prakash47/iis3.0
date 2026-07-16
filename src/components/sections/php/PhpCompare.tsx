@@ -46,7 +46,7 @@ export function PhpCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -74,13 +74,13 @@ export function PhpCompare() {
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             Most legacy PHP can be walked across the line in place, which is where we start. When plain
             PHP really is the limit, a new build on{" "}
-            <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Laravel, the framework layer over PHP
             </Link>{" "}
             is the move; when the workload has shifted to real-time or data, a rewrite to another
             language can be right, but it is the last resort, not the first. Not sure which situation
             you are in?{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               We will scope it with you
             </Link>
             , and we will not sell you a rewrite because it bills more.

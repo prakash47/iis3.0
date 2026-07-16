@@ -67,19 +67,19 @@ export function KotlinScope() {
                     fully native earns its higher cost only when the product genuinely demands deep
                     performance, hardware access or platform-specific features. We make that call with
                     you on{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our mobile app development service, before any build begins
                     </Link>
                     ; if you need both stores from one codebase, that is{" "}
-                    <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       React Native
                     </Link>{" "}
                     or{" "}
-                    <Link href="/technologies/flutter" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/flutter" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Flutter
                     </Link>
                     , and the iOS side of a native pair is{" "}
-                    <Link href="/technologies/swiftui" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/swiftui" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       SwiftUI on iOS
                     </Link>
                     .
@@ -93,7 +93,7 @@ export function KotlinScope() {
                     </span>
                     {" - "}
                     this page is the Android app. Kotlin is also a first-class JVM language for a{" "}
-                    <Link href="/technologies/java-spring-boot" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/java-spring-boot" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Kotlin or Spring Boot backend
                     </Link>
                     , and that lives on our Java and Spring Boot page. Here, Kotlin means native

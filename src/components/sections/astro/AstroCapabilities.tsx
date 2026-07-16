@@ -60,11 +60,11 @@ export function AstroCapabilities() {
               bake in image optimization and semantic HTML rather than auditing performance at the end,
               and choose the rendering mode and adapter to match where you deploy. When the project is
               really an app, that is{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js
               </Link>
               ; when it is content a team edits daily, that is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               . We say which before we quote.

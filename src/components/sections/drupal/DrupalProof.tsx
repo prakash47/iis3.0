@@ -78,7 +78,7 @@ export function DrupalProof() {
               instead of scattering it across pages, is precisely the problem a traditional CMS like Drupal
               is built to solve. We will not relabel that store as Drupal experience; we are showing you
               that we already think in structured content models. You can{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 see the structured content model behind the two builds we actually shipped
               </Link>{" "}
               and a team that ships real web software. The Drupal-specific proof is the current-standard

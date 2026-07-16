@@ -52,7 +52,7 @@ export function EdtechCompare() {
                         scope="col"
                         className={
                           i === 2
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -80,12 +80,12 @@ export function EdtechCompare() {
           <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
             The highlighted column is the one that most often wins, and it is the one that pays us
             least. When the third column genuinely is right, it is{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software, scoped in a paid discovery
             </Link>
             , and we will make that case with you in writing rather than assume it. Which stack it
             lands on is a separate question, answered on{" "}
-            <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               how we choose the stack
             </Link>
             .

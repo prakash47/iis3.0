@@ -199,7 +199,7 @@ export default function ServicesPage() {
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                     {service.tagline}
                   </p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                     {serviceCtas[service.slug]}
                     <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
                   {h.t}
                 </h3>
                 <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted-foreground">{h.d}</p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                   {h.cta}
                   <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>

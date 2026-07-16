@@ -61,12 +61,12 @@ export function AstroPricing() {
               A landing page or small marketing site sits at the Starter or Launch tier; a fuller
               content site, blog or docs site lands around the Growth tier. A large content platform,
               or a migration of an existing site onto Astro, is scoped as part of our{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 web design and development service
               </Link>
               . And if what you need is to keep publishing and grow the site&apos;s search traffic over
               time, that is our{" "}
-              <Link href="/services/digital-marketing" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/digital-marketing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 organic digital marketing service
               </Link>
               , not a fresh build.
@@ -81,11 +81,11 @@ export function AstroPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web development service
             </Link>
             .

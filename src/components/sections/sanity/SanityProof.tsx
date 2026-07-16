@@ -75,7 +75,7 @@ export function SanityProof() {
               exactly the job it does best. Between that build and this site, the Sanity-specific proof
               is not a borrowed case study but content we actually model, query and ship - plus the
               standard, open Sanity code you would own outright. You can{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 see the training-platform build on our work page
               </Link>.
             </p>

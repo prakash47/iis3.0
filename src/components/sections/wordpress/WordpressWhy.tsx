@@ -80,30 +80,30 @@ export function WordpressWhy() {
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               WordPress is the right tool for a lot of sites and the wrong one for some. When raw
               speed is the product or the experience is genuinely bespoke, a custom{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js build
               </Link>{" "}
               is faster and more flexible - it&apos;s the path we chose for our own site - and you can
               keep the WordPress editing experience by going headless, with the WordPress admin
               feeding a Next.js front end. For a fully hosted store you never want to maintain, that&apos;s{" "}
-              <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Shopify
               </Link>
               . For a custom application WordPress can&apos;t cleanly do, that&apos;s{" "}
-              <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Laravel
               </Link>
               ,{" "}
-              <Link href="/technologies/django" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/django" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Django
               </Link>{" "}
               or{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software
               </Link>
               . And if you do choose WordPress, it genuinely needs ongoing updates, security and
               backups, so we pair it with{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 care plans
               </Link>
               . Recommending the right tool, even when it isn&apos;t WordPress, is the whole point.

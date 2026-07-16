@@ -97,12 +97,12 @@ export function EdtechWhy() {
               when the answer is that an existing platform already clears the gate, that is our
               recommendation. And if what you actually need is the site that sells the programme
               rather than the platform that delivers it, that is{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 a website, and a much smaller number
               </Link>
               . Where custom genuinely wins - an adaptive engine, a cohort model, a marketplace, an
               assessment product - it is{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software, scoped in a paid discovery
               </Link>
               , and we will say that just as plainly. Talking you out of a build you do not need is

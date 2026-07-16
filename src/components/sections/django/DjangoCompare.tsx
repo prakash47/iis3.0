@@ -45,7 +45,7 @@ export function DjangoCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -72,15 +72,15 @@ export function DjangoCompare() {
         <Reveal className="mt-6">
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             Django and{" "}
-            <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Laravel, the same batteries-included idea in PHP
             </Link>
             , are close cousins. Need real-time or one JavaScript language across the stack? That&apos;s{" "}
-            <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Node.js, for real-time and JavaScript-everywhere
             </Link>
             . And for a pure async API-first service,{" "}
-            <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               FastAPI on our Python page
             </Link>{" "}
             is the sharper default. We recommend the fit, not the framework we sell.

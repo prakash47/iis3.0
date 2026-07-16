@@ -67,7 +67,7 @@ export function NodejsPricing() {
               <span className="font-medium text-foreground">MVP Sprint</span> - a web app with auth
               and a database, deployed and measured. A standalone API, microservices or a larger
               bespoke system is scoped through our{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software Discovery Sprint
               </Link>{" "}
               from {discoverySprint.from}, which ends in a written scope and a fixed build quote
@@ -84,11 +84,11 @@ export function NodejsPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software service
             </Link>
             .

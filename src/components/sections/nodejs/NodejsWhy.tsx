@@ -54,17 +54,17 @@ export function NodejsWhy() {
               processing, or large in-process computation can block Node&apos;s single-threaded event
               loop and stall every other request. For machine learning, data science and serious
               numerical work,{" "}
-              <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Python
               </Link>{" "}
               is years ahead, and we&apos;d build that in Python. For large, transaction-heavy
               enterprise systems where your team already lives in the JVM,{" "}
-              <Link href="/technologies/java-spring-boot" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/java-spring-boot" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Java and Spring Boot
               </Link>{" "}
               is often the better long-term fit. And plenty of projects need no custom backend at all.
               Not sure which way to go?{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We&apos;ll pick the right stack
               </Link>{" "}
               for the job, not the one this page happens to be about.

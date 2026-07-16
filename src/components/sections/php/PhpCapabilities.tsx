@@ -62,19 +62,19 @@ export function PhpCapabilities() {
               on PHP-FPM and Nginx in Docker, and reach for a worker-mode app server only once a profile
               says it will pay. And when the codebase is really a framework job, a CMS job, or a rewrite,
               we say so: a new custom application on a framework is{" "}
-              <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Laravel
               </Link>
               , content your team edits is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               , and we reach for{" "}
-              <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Node
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Python
               </Link>{" "}
               when the workload is theirs.

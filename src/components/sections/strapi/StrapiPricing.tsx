@@ -59,13 +59,13 @@ export function StrapiPricing() {
               A content or marketing site on Strapi with a Next.js or Astro front end maps to the Starter,
               Launch or Growth tier by scope; a larger platform, custom plugins, or a migration onto Strapi
               is scoped as part of our{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 web design and development service
               </Link>
               . Two honest notes on cost: our fee is for the build - Strapi&apos;s Community Edition is free
               to self-host, and you pay your own hosting (or Strapi Cloud) directly, with no markup from us.
               And because a self-hosted CMS has to be kept patched and current, ongoing upkeep runs on a{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 website maintenance care plan
               </Link>{" "}
               - ours, or your own team&apos;s.
@@ -80,11 +80,11 @@ export function StrapiPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web development service
             </Link>
             .

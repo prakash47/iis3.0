@@ -81,12 +81,12 @@ export function WooPricing() {
               keep patched - core, theme, extensions and PHP - and that is true whether we do it, your
               team does it in-house, or you hand it to any other WordPress developer, because standard
               GPL WooCommerce is portable and never locked to us. We publish ours as{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 monthly care plans
               </Link>{" "}
               from {carePlanFrom}, plus a one-time Website Health Audit from $100, rather than a
               mystery retainer. And if never touching any of that is what you actually want, a{" "}
-              <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 hosted store on Shopify
               </Link>{" "}
               is the better call, and we&apos;ll say so before you commit.
@@ -101,11 +101,11 @@ export function WooPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web design &amp; ecommerce development service
             </Link>
             .

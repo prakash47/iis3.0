@@ -87,20 +87,20 @@ export function ContentfulWhy() {
               buy. If your content is one small team writing for one site, the governance and the
               enterprise plan are weight without payoff, and a leaner, developer-first structured backend
               like{" "}
-              <Link href="/technologies/sanity" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/sanity" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Sanity
               </Link>{" "}
               is the honest call. If owning and self-hosting the running software matters more than a
               managed service, that is{" "}
-              <Link href="/technologies/strapi" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/strapi" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Strapi
               </Link>
               . And if your team just wants to edit whole pages in a familiar admin, that is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               . Not sure which side of that line you are on?{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We will make that call with you
               </Link>{" "}
               before we quote.

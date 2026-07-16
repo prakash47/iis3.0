@@ -89,7 +89,7 @@ const components: PortableTextComponents = {
     internalLink: ({ value, children }) => (
       <Link
         href={(value as LinkValue)?.href ?? "#"}
-        className="font-medium text-brand-500 hover:text-brand-600"
+        className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400"
       >
         {children}
       </Link>
@@ -101,7 +101,7 @@ const components: PortableTextComponents = {
           href={v?.href}
           rel={v?.nofollow ? "nofollow noopener noreferrer" : "noopener noreferrer"}
           target="_blank"
-          className="font-medium text-brand-500 hover:text-brand-600"
+          className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400"
         >
           {children}
         </a>

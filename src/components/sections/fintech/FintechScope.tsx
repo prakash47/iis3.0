@@ -71,11 +71,11 @@ export function FintechScope() {
                     {" - "}
                     a ledger, a dashboard or an integration layer is custom software, so it enters
                     through{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       the discovery that ends in a fixed build price
                     </Link>
                     . Which stack it lands on is a separate question, answered on{" "}
-                    <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       how we decide what to build it with
                     </Link>
                     .
@@ -90,15 +90,15 @@ export function FintechScope() {
                     {" - "}
                     if you are selling goods and need a shop with a cart and checkout, the payments
                     are handled for you by the commerce platform, and that is{" "}
-                    <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a Shopify store
                     </Link>{" "}
                     or{" "}
-                    <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a WooCommerce store
                     </Link>
                     , not a fintech build. The marketing site in front of the product is{" "}
-                    <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our web design and development service
                     </Link>
                     .
@@ -114,11 +114,11 @@ export function FintechScope() {
                     a native finance experience is a separate build, and we have shipped no mobile
                     app for anyone yet, in this sector or any other. The honest state of our app work
                     is on{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       mobile app development, on honest terms
                     </Link>
                     . AI routes to{" "}
-                    <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       adding AI to a financial product, carefully
                     </Link>
                     , on the assistive side - not underwriting or fraud-scoring models we would have

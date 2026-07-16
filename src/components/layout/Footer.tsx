@@ -38,7 +38,7 @@ function FooterCol({
           <li>
             <Link
               href={viewAll.href}
-              className="font-semibold text-brand-600 transition-colors hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300"
+              className="font-semibold text-brand-700 transition-colors hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300"
             >
               {viewAll.label} →
             </Link>
@@ -69,8 +69,8 @@ export function Footer() {
         {/* Brand + NAP */}
         <div className="sm:col-span-2 xl:col-span-1">
           <Link href="/" aria-label="Intention InfoService - home" className="flex items-center">
-            <Image src="/logo.png" alt="" width={569} height={220} className="h-12 w-auto dark:hidden" />
-            <Image src="/logo-white.png" alt="" width={620} height={240} className="hidden h-12 w-auto dark:block" />
+            <Image src="/logo.png" alt="" width={569} height={220} sizes="128px" className="h-12 w-auto dark:hidden" />
+            <Image src="/logo-white.png" alt="" width={620} height={240} sizes="128px" className="hidden h-12 w-auto dark:block" />
           </Link>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             {siteConfig.tagline}

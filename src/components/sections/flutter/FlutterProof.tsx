@@ -168,7 +168,7 @@ export function FlutterProof() {
               the page you are reading right now is a React and DOM interface too. So we will not hand
               you our own website as Flutter proof - a toolkit that draws its own pixels shares none of
               ours.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>
               , honestly labelled, and never relabelled as a Flutter app, because none of it is one.

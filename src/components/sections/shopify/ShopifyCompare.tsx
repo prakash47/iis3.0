@@ -52,7 +52,7 @@ export function ShopifyCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -80,18 +80,18 @@ export function ShopifyCompare() {
           <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
             There&apos;s a fourth path we build too: headless Shopify, where Shopify keeps the catalog,
             cart and checkout and a{" "}
-            <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Next.js front end
             </Link>{" "}
             renders the storefront. It removes the front-end ceiling without giving up the checkout,
             and it earns its keep only when the storefront experience is genuinely the differentiator.
             Worth knowing: the column on the right is where our own production store sits, and we still
             point most brands at the column on the left. Deciding between the middle two?{" "}
-            <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               WooCommerce has its own page
             </Link>
             , and a genuinely bespoke store is{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software
             </Link>
             . We recommend the fit, not the platform we sell.

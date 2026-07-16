@@ -73,11 +73,11 @@ export function AngularWhy() {
               Angular is overkill for a small marketing site, a simple content page, or a team that
               wants maximum flexibility and a minimal footprint - its structure is overhead you
               don&apos;t need at that size. If that&apos;s you,{" "}
-              <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 React
               </Link>{" "}
               or a lighter stack is the better call, and{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 we&apos;ll build it that way
               </Link>
               . Talking you out of the heavier framework when you don&apos;t need it is the whole

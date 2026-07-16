@@ -78,17 +78,17 @@ export function StrapiWhy() {
               Owning the software is the upside; running it is the trade. If your team does not want to
               patch a server, manage deploys and keep a self-hosted app current, that is a real reason to
               rent instead - a managed, hosted CMS like{" "}
-              <Link href="/technologies/sanity" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/sanity" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Sanity
               </Link>{" "}
               (or Strapi&apos;s own managed Strapi Cloud) is the cleaner call, and we will say so before
               you spend anything. If what you actually want is a team editing whole pages through a
               familiar themed admin, that is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               . Not sure which side you are on?{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We will make that call with you
               </Link>{" "}
               before we quote.

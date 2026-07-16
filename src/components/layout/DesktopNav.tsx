@@ -50,7 +50,7 @@ function ViewAllLink({ link, onNavigate }: { link: NavLink; onNavigate: () => vo
     <Link
       href={link.href}
       onClick={onNavigate}
-      className="mt-3 inline-flex items-center gap-1.5 border-t border-border pt-3 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300"
+      className="mt-3 inline-flex items-center gap-1.5 border-t border-border pt-3 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300"
     >
       {link.label}
       <span aria-hidden="true">→</span>
@@ -259,7 +259,7 @@ export function DesktopNav() {
                           <Link
                             href={entry.promo.href}
                             onClick={closeNow}
-                            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300"
+                            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-500 dark:text-brand-400 dark:hover:text-brand-300"
                           >
                             {entry.promo.linkLabel}
                             <span aria-hidden="true">→</span>

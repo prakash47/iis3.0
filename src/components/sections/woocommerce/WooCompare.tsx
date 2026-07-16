@@ -63,7 +63,7 @@ export function WooCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -91,13 +91,13 @@ export function WooCompare() {
           <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
             All three hand you the store and the responsibility. If you&apos;d rather have neither,
             the hosted alternative most people mean is{" "}
-            <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Shopify
             </Link>
             , which is usually the cleaner choice for a serious, product-first store because checkout,
             payments, inventory and PCI compliance are handled for you - it has its own comparison. And
             when no platform fits the commerce model at all, that&apos;s{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               a ground-up custom commerce platform
             </Link>
             . We recommend the fit, not the platform we sell.

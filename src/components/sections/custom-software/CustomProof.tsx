@@ -65,7 +65,7 @@ export function CustomProof() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               The backend, APIs, authentication and data layer a real system needs are the same
               ones we build for the web - and we&apos;ve shipped those in production.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>{" "}
               (real web projects, honestly labelled - not a mockup of a system we haven&apos;t built).

@@ -63,16 +63,16 @@ export function DrupalCapabilities() {
               model; configure the governance - workflow, roles and multilingual - as a real system;
               manage the configuration as code; then build the theme, or, when the project wants an
               application-grade front end, run Drupal decoupled and build that front end in{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/astro" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/astro" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Astro
               </Link>
               . And when the content is really a handful of simple pages, we will tell you that is a
               simpler{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 CMS
               </Link>
               &apos;s job, not Drupal&apos;s.

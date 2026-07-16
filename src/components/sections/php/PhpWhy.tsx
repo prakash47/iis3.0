@@ -62,7 +62,7 @@ export function PhpWhy() {
                         <th scope="col" className="p-4 font-semibold text-foreground">
                           The cheap kind, the tells
                         </th>
-                        <th scope="col" className="bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400">
+                        <th scope="col" className="bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400">
                           Done right, the tells
                         </th>
                       </tr>
@@ -120,24 +120,24 @@ export function PhpWhy() {
               exists. It is the wrong starting point - and we will say so - when you are building a new
               application with real scope, where hand-rolling routing, auth and a data layer just
               recreates a private framework only your last developer understood: that belongs on{" "}
-              <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Laravel, the batteries-included PHP framework
               </Link>
               . When the core of the product is hard real-time at scale, or one JavaScript language
               across front and back end,{" "}
-              <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Node.js on the event loop
               </Link>{" "}
               is the sharper tool; when it leans on data, automation or machine learning,{" "}
-              <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Python, the data language
               </Link>{" "}
               leads. And if the job is really content your team edits, that is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               . Not sure which way to go?{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We will pick the right stack
               </Link>{" "}
               for the job, not the one this page happens to be about.

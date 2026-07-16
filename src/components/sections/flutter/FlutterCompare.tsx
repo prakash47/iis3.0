@@ -62,7 +62,7 @@ export function FlutterCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -94,22 +94,22 @@ export function FlutterCompare() {
           <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
             In practice most Flutter decisions come down to Flutter or React Native, or Flutter versus
             going fully native - the two we build most. Weigh it against{" "}
-            <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               React Native, the JavaScript route to the same two stores
             </Link>
             , or against{" "}
-            <Link href="/technologies/swiftui" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/swiftui" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               going fully native on iOS with SwiftUI
             </Link>{" "}
             and{" "}
-            <Link href="/technologies/kotlin" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/kotlin" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               native Android in Kotlin
             </Link>
             . Kotlin Multiplatform is a different cross-platform model again, and .NET MAUI is
             Microsoft&apos;s successor to Xamarin. Whether you want an app at all - and whether it
             should be cross-platform, fully native or an install-free web app - is the bigger question,
             and it lives on{" "}
-            <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               our mobile app development service, where we make that call with you in writing
             </Link>
             .

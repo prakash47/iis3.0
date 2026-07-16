@@ -63,13 +63,13 @@ export function PhpPricing() {
               endpoint sits at the low end, a fuller custom PHP application at the upper tiers. But a
               legacy rescue, a version upgrade or a modernization is genuinely scoped work, not a
               fixed tier, so it enters through our{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software Discovery Sprint
               </Link>{" "}
               from {discoverySprint.from}, which ends in a written scope and a fixed build quote. And
               ongoing upkeep of an existing PHP codebase - updates, patches and small fixes - runs on
               a{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 website maintenance care plan
               </Link>
               , not a fresh build.
@@ -84,11 +84,11 @@ export function PhpPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software service
             </Link>
             .

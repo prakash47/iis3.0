@@ -82,7 +82,7 @@ export function MarketingPricing() {
             Just want your foundations checked, or one thing fixed - a technical pass or an
             AI-search structuring pass? That can be small - tell us your budget and we&apos;ll scope
             an honest fixed price. See our{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               transparent pricing
             </Link>{" "}
             for the rest.

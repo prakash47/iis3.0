@@ -204,9 +204,9 @@ export default function IndustriesPage() {
                 you and which never touches us, building the machinery so you can meet the one that is
                 yours, and declining the role or the badge that carries the liability. Each guide below does that for its sector in the open, including the parts
                 that cost us the sale. What we&apos;ll actually do for you lives on the{" "}
-                <Link href="/services" className="font-medium text-brand-500 hover:text-brand-600">services pages</Link>;
+                <Link href="/services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">services pages</Link>;
                 what we build it with, and how we choose, lives on the{" "}
-                <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">technologies pages</Link>.
+                <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">technologies pages</Link>.
                 This page is who each obligation belongs to, and the roles we won&apos;t take.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -263,7 +263,7 @@ export default function IndustriesPage() {
                       <p className="text-sm leading-relaxed text-muted-foreground">
                         <Link
                           href={`/industries/${p.slug}#when-not`}
-                          className="font-semibold text-brand-500 hover:text-brand-600"
+                          className="font-semibold text-brand-700 hover:text-brand-600 dark:text-brand-400"
                         >
                           {p.lead}
                         </Link>{" "}
@@ -309,7 +309,7 @@ export default function IndustriesPage() {
                   </span>
                   <h3 className="mt-5 font-display text-lg font-semibold text-foreground">{ind.name}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{ind.tagline}</p>
-                  <span className="mt-6 inline-flex items-start gap-1.5 text-sm font-semibold text-brand-500">
+                  <span className="mt-6 inline-flex items-start gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                     {guideAnchors[ind.slug]}
                     <IconArrow className="mt-0.5 h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
@@ -383,7 +383,7 @@ export default function IndustriesPage() {
                   {h.t}
                 </h3>
                 <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted-foreground">{h.d}</p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                   {h.cta}
                   <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>

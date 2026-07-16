@@ -90,16 +90,16 @@ export function DrupalWhy() {
               trade for a simple site. If your content is a handful of straightforward page types that one
               team maintains, that native power is capability you would pay to carry and never use, and the
               simpler, page-based, familiar-admin choice is{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress
               </Link>
               . If what you actually want is a pure API-first headless backend with the front end fully
               separate, a{" "}
-              <Link href="/technologies/sanity" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/sanity" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 leaner headless CMS
               </Link>{" "}
               fits the shape better. Not sure which side of that line you are on?{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We will make that call with you
               </Link>{" "}
               before we quote.

@@ -44,7 +44,7 @@ export function NodejsCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -72,11 +72,11 @@ export function NodejsCompare() {
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             The 2026 reality: many teams run both - Node.js for the public API and real-time layer,
             Python behind it for AI and data work. Weighing the other side? See our{" "}
-            <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Python
             </Link>{" "}
             and{" "}
-            <Link href="/technologies/java-spring-boot" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/java-spring-boot" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Java and Spring Boot
             </Link>{" "}
             pages, and we&apos;ll recommend the fit, not the framework we happen to sell.

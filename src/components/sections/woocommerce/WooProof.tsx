@@ -80,7 +80,7 @@ export function WooProof() {
               <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
                 So here is the line most WooCommerce agencies leave off the quote. We put the ongoing
                 cost of ownership on the table before you buy, not after, as published{" "}
-                <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   monthly care plans
                 </Link>{" "}
                 rather than a mystery retainer, because a build price with no maintenance plan is
@@ -90,7 +90,7 @@ export function WooProof() {
                 GPL, so that care is portable and nobody holds it hostage, us included. If never
                 thinking about any of this is what you actually want, that is a sign you want a hosted
                 store, and we&apos;ll point you to{" "}
-                <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   Shopify
                 </Link>{" "}
                 before you spend anything - even though the WooCommerce build and its care plan are
@@ -146,7 +146,7 @@ export function WooProof() {
               as one. What it proves is two true things a WooCommerce buyer actually cares about: this
               team ships a working catalog, cart and checkout that holds up in production, and we build
               a store you own rather than one you rent. Our{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 work page
               </Link>{" "}
               features two other real builds, described honestly. The

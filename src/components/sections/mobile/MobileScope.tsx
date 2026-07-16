@@ -49,11 +49,11 @@ export function MobileScope() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             Not building a native app? Need a website, web app or a web-presence PWA?{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See web design &amp; development
             </Link>
             . Building a SaaS platform or internal system without a mobile app?{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See custom software development
             </Link>
             .

@@ -226,7 +226,7 @@ export default function AboutPage() {
                   From the first wireframe to the traffic that arrives after launch: web design and
                   development, mobile apps, custom software, UI/UX and branding, organic and paid
                   marketing, website maintenance, and AI development. You can see the full range on our{" "}
-                  <Link href="/services" className="font-medium text-brand-500 hover:text-brand-600">
+                  <Link href="/services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                     services pages
                   </Link>
                   .
@@ -240,7 +240,7 @@ export default function AboutPage() {
                   We are stack-agnostic on purpose, across {technologies.length} technologies - WordPress,
                   Shopify, Laravel, Django, Next.js, React, Node, Python, headless CMS, React Native,
                   Flutter and more. Next.js and React are genuine strengths of ours, not our identity.{" "}
-                  <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+                  <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                     Each guide names when not to use that stack
                   </Link>
                   .
@@ -283,7 +283,7 @@ export default function AboutPage() {
                 because this is a page about honesty: the case studies on our work page are real work,
                 anonymized at each client&apos;s request - the client names are withheld under NDA, and the
                 only figures we publish are the ones the client confirmed. You can{" "}
-                <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   see the projects we go deep on
                 </Link>
                 , and ask us to walk you through relevant work on a call.
@@ -351,11 +351,11 @@ export default function AboutPage() {
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
                 Want to join a small, senior team instead?{" "}
-                <Link href="/careers" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/careers" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   See careers at Intention InfoService
                 </Link>
                 , or read how we think in our{" "}
-                <Link href="/resources" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/resources" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   guides and articles
                 </Link>
                 .
@@ -414,19 +414,19 @@ export default function AboutPage() {
           <Reveal className="mt-6">
             <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
               See the{" "}
-              <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 published prices
               </Link>
               , how we{" "}
-              <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 choose a stack
               </Link>
               , the{" "}
-              <Link href="/services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 full range of services
               </Link>
               , and{" "}
-              <Link href="/contact" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/contact" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 how to reach us
               </Link>
               .

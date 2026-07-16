@@ -66,13 +66,13 @@ export function JavaPricing() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               A bespoke enterprise system, microservices platform or standalone API is genuinely
               scoped work, so it enters through our{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software Discovery Sprint
               </Link>{" "}
               from {discoverySprint.from}, which ends in a written architecture, scope and a fixed build
               quote (credited toward the build). The tiers above fit smaller, more standard builds. A
               Spring Boot backend usually pairs with a separate front end, which is part of our{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 web design and development service
               </Link>
               .
@@ -87,11 +87,11 @@ export function JavaPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software service
             </Link>
             .

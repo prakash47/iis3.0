@@ -51,13 +51,13 @@ export function ReactWhy() {
               A plain React app renders in the browser, so by itself it&apos;s a weak choice for
               pages that must rank in Google - it ships a near-empty HTML shell. If SEO and server
               rendering matter, you want a React framework, which is{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js
               </Link>
               . And a simple content site or blog may not need React at all - static HTML can be
               lighter and cheaper, and we&apos;ll say so rather than over-engineer. Not sure which
               way to go?{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We&apos;ll pick the right stack
               </Link>{" "}
               for the job.

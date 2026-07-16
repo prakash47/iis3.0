@@ -81,7 +81,7 @@ export function CustomPricing() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             Building a web-first SaaS MVP as your product front-end?{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See the MVP Sprint on web design &amp; development
             </Link>
             . Just automating one process or connecting two tools? That can be small - tell us your

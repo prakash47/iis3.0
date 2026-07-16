@@ -81,7 +81,7 @@ export function MobilePricing() {
             </p>
             <Link
               href="/contact"
-              className="group mt-3 inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600 sm:mt-0"
+              className="group mt-3 inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-600 dark:text-brand-400 sm:mt-0"
             >
               Get a fixed-price estimate
               <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -101,11 +101,11 @@ export function MobilePricing() {
         <Reveal className="mt-6">
           <p className="text-sm text-muted-foreground">
             Need AI features in your app?{" "}
-            <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See how we scope AI development
             </Link>
             . Ongoing care plans from {carePlanFrom}. Prices in USD. See full details on our{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               transparent pricing page
             </Link>
             .

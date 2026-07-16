@@ -54,7 +54,7 @@ export function IndustriesGrid() {
           </Reveal>
           <Link
             href="/industries"
-            className="text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600"
+            className="text-sm font-semibold text-brand-700 transition-colors hover:text-brand-600 dark:text-brand-400"
           >
             All industries →
           </Link>
@@ -74,7 +74,7 @@ export function IndustriesGrid() {
                 </span>
                 <h3 className="mt-5 font-display text-lg font-semibold text-foreground">{ind.name}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{ind.tagline}</p>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                   {industryCtas[ind.slug]}
                   <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>

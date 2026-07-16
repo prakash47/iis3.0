@@ -74,15 +74,15 @@ export function EntertainmentScope() {
                     {" - "}
                     a streaming backend, a community platform or a rights-and-shelter machinery layer
                     is custom software, so it enters through{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       where a media build is scoped before it&apos;s priced
                     </Link>
                     . A publishing or news site is often web-dev-shaped -{" "}
-                    <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our web design and development service
                     </Link>{" "}
                     - and which stack any of it lands on is answered on{" "}
-                    <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       how we choose the stack
                     </Link>
                     .
@@ -97,7 +97,7 @@ export function EntertainmentScope() {
                     {" - "}
                     the money movement, the cardholder-data environment and the billing engine ride a
                     licensed processor, not us. It is the same regulated-rails posture as{" "}
-                    <Link href="/industries/fintech" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/industries/fintech" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       the way we build for fintech
                     </Link>
                     . We build the paywall gate, the ticket-inventory and the subscription flows; the
@@ -112,20 +112,20 @@ export function EntertainmentScope() {
                     </span>
                     {" - "}
                     a shop that sells physical goods with a cart and checkout is{" "}
-                    <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a Shopify
                     </Link>{" "}
                     or{" "}
-                    <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       WooCommerce
                     </Link>{" "}
                     build, not a media platform; a native mobile experience is{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a mobile build, on honest terms
                     </Link>{" "}
                     - and we have shipped no mobile app for anyone yet. Recommendations, tagging or
                     moderation assistance with AI routes to{" "}
-                    <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       adding AI to a media product, carefully
                     </Link>
                     .

@@ -72,7 +72,7 @@ export function DjangoProof() {
               non-technical marketing team runs itself, a large catalog turned into a fast filterable
               experience, enquiry and demo-class funnels, a real-time affordability calculator, and
               third-party integrations that have to not break.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our real builds
               </Link>
               , described honestly - and never relabelled as Django or Python projects, because they

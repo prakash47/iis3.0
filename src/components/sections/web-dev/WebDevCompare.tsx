@@ -41,7 +41,7 @@ export function WebDevCompare() {
                     <th scope="col" className="p-4 font-semibold text-foreground">Website builder</th>
                     <th scope="col" className="p-4 font-semibold text-foreground">Freelancer / offshore</th>
                     <th scope="col" className="p-4 font-semibold text-foreground">Premium agency</th>
-                    <th scope="col" className="bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400">
+                    <th scope="col" className="bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400">
                       {siteConfig.name}
                     </th>
                   </tr>

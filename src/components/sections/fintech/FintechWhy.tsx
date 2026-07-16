@@ -105,7 +105,7 @@ export function FintechWhy() {
               when the ledger, the reconciliation, the dashboards, the back office or the
               embedded-payment experience is the product and the off-the-shelf tools fight it. That
               is{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 where a fintech build gets scoped and priced
               </Link>
               , and we will make that case with you in writing rather than assume it. Talking you out

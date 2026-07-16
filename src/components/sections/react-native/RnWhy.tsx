@@ -104,24 +104,24 @@ export function RnWhy() {
               call. When the product truly demands deep performance, hardware access or
               platform-specific experiences, fully native earns its higher cost, and we&apos;d point
               you to{" "}
-              <Link href="/technologies/swiftui" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/swiftui" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 native iOS with SwiftUI
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/kotlin" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/kotlin" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 native Android with Kotlin
               </Link>{" "}
               and build it that way. When the interface is highly custom and animation-rich, the other
               cross-platform option can be the cleaner fit, because it draws every pixel itself -
               we&apos;d talk you through{" "}
-              <Link href="/technologies/flutter" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/flutter" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 weighing the Flutter alternative
               </Link>{" "}
               honestly rather than force React Native onto it. And when install-free reach matters more
               than an app-store presence - content and light tools nobody should have to download - a
               progressive web app does the job for less, and we&apos;ll say so. React Native or
               Flutter, native or a web app, we make that call with you in writing during{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 discovery
               </Link>
               , before you spend on a build you don&apos;t need.

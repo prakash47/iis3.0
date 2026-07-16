@@ -32,7 +32,7 @@ export function FurtherReading({
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="group inline-flex items-start gap-2 text-sm font-medium text-brand-500 hover:text-brand-600"
+                    className="group inline-flex items-start gap-2 text-sm font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400"
                   >
                     <IconArrow className="mt-0.5 h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                     <span>{l.label}</span>

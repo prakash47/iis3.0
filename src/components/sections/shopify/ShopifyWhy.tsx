@@ -92,24 +92,24 @@ export function ShopifyWhy() {
               Shopify is the right tool for a lot of stores and the wrong one for some, and we&apos;d
               rather say so up front. When the store is content-led - a blog or brand site with a shop
               attached, where you want full control and ownership -{" "}
-              <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 a content-led store on WooCommerce
               </Link>{" "}
               is usually the better fit. When your commerce model is genuinely bespoke - complex B2B
               pricing, a marketplace, deep ERP integration, or checkout logic that outgrows even Plus -
               that&apos;s{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software
               </Link>
               . When you don&apos;t need a store at all, a{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom Next.js build
               </Link>{" "}
               is the leaner call. And when the store itself is fine but the storefront needs to be
               faster or more custom than a theme allows, the answer isn&apos;t leaving Shopify - it&apos;s
               a headless front end on top of it. Whichever you choose, a live store needs ongoing app,
               theme and content work, so we pair it with{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 care plans
               </Link>
               . Recommending the right platform, even when it isn&apos;t Shopify, is the whole point.

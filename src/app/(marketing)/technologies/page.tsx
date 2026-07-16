@@ -251,7 +251,7 @@ export default function TechnologiesPage() {
                       <p className="text-sm leading-relaxed text-muted-foreground">
                         <Link
                           href={`/technologies/${p.slug}#when-not`}
-                          className="font-semibold text-brand-500 hover:text-brand-600"
+                          className="font-semibold text-brand-700 hover:text-brand-600 dark:text-brand-400"
                         >
                           Our {p.tech} guide
                         </Link>{" "}
@@ -311,7 +311,7 @@ export default function TechnologiesPage() {
                         <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted-foreground">
                           {t.tagline}
                         </p>
-                        <span className="mt-5 inline-flex items-start gap-1.5 text-sm font-semibold text-brand-500">
+                        <span className="mt-5 inline-flex items-start gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                           {guideAnchors[t.slug]}
                           <IconArrow className="mt-0.5 h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                         </span>
@@ -363,7 +363,7 @@ export default function TechnologiesPage() {
                 Whether you should build an app at all - and whether it should be cross-platform,
                 fully native, or an install-free web app - is a budget and strategy decision before it
                 is a technical one, and it belongs on{" "}
-                <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   our mobile app development service, where we make that call with you in writing
                 </Link>
                 . And which of these stacks your project needs is not something a page can decide for
@@ -418,7 +418,7 @@ export default function TechnologiesPage() {
                   {h.t}
                 </h3>
                 <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted-foreground">{h.d}</p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400">
                   {h.cta}
                   <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>

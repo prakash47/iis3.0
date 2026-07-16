@@ -90,7 +90,7 @@ export function MaintenanceScope() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               WordPress, Shopify, a headless CMS, a Next.js or React build, or a fully custom site -
               we are not a WordPress-only care shop. For stack-specific questions, see the{" "}
-              <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 technologies we work with
               </Link>
               .
@@ -108,7 +108,7 @@ export function MaintenanceScope() {
               Maintenance keeps your existing site healthy - it isn&apos;t{" "}
               {notIncluded.map((n, i) => (
                 <span key={n.href}>
-                  <Link href={n.href} className="font-medium text-brand-500 hover:text-brand-600">
+                  <Link href={n.href} className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                     {n.label}
                   </Link>
                   {i < notIncluded.length - 2 ? ", " : i === notIncluded.length - 2 ? ", or " : ""}
@@ -119,25 +119,25 @@ export function MaintenanceScope() {
               plans take backups of, and hold access to, ordinary websites, so we do not point them
               at a system that stores protected health information - that would make us a business
               associate under HIPAA. For healthcare builds we care for the non-PHI surfaces only,{" "}
-              <Link href="/industries/healthcare" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/industries/healthcare" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 on the terms set out on our healthcare page
               </Link>
               . The same firm boundary holds for financial account data, cardholder data and any
               system that sits in the path money moves along - we don&apos;t point standard care
               plans at those either, and a fintech build is cared for{" "}
-              <Link href="/industries/fintech" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/industries/fintech" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 on the terms set out on our fintech page
               </Link>
               . And it holds again for a real-estate build that stores tenant or applicant personal
               information or carries MLS listing data under a redistribution-limited licence, cared
               for{" "}
-              <Link href="/industries/real-estate" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/industries/real-estate" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 on the terms set out on our real-estate page
               </Link>
               . And a fourth time for a travel build that stores traveller passport or personal data,
               sits in a booking-payments path, or carries GDS, channel or supplier data under a
               redistribution-limited agreement, cared for{" "}
-              <Link href="/industries/travel" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/industries/travel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 on the terms set out on our travel page
               </Link>
               . And a fifth time for an entertainment or media build that stores rights-licensed
@@ -145,7 +145,7 @@ export function MaintenanceScope() {
               records behind them, or carries the viewing data the VPPA reaches - taking a routine
               offsite backup of any of those would put a copy of licensed content, user-uploaded
               material or viewing records on a system we run, cared for{" "}
-              <Link href="/industries/entertainment-media" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/industries/entertainment-media" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 on the terms set out on our entertainment and media page
               </Link>
               .

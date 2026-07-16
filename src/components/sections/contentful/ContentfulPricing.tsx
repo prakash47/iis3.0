@@ -60,7 +60,7 @@ export function ContentfulPricing() {
               A content or marketing site on Contentful with a Next.js or Astro front end maps to the
               Starter, Launch or Growth tier by scope; a larger multi-team platform, deeper governance, or
               a migration onto Contentful is scoped as part of our{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 web design and development service
               </Link>
               . One honest note on cost: our fee is for the build. The Contentful platform is a hosted
@@ -78,11 +78,11 @@ export function ContentfulPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web development service
             </Link>
             .

@@ -48,7 +48,7 @@ export function SanityCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -77,7 +77,7 @@ export function SanityCompare() {
             Sanity earns its keep when content is genuinely structured and reused across surfaces, when
             you need custom editorial workflows, or when the CMS has to outlive the original build. When a
             single team just edits pages in a familiar admin, a traditional CMS like{" "}
-            <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               WordPress
             </Link>{" "}
             is often the simpler, cheaper call - and we will say so. Sanity sits in the same structured,

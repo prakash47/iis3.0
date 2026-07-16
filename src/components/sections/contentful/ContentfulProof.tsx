@@ -82,7 +82,7 @@ export function ContentfulProof() {
               once, serve it to many surfaces, keep it coherent as it changes: that is the coordination
               job Contentful scales up across teams, brands and channels. The tool would differ; the
               discipline is the one we already practise. You can{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 walk the two builds where one model already feeds many surfaces
               </Link>{" "}
               and see a team that ships real web software - never a Contentful case study we don&apos;t

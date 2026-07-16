@@ -26,7 +26,7 @@ export default function NotFound() {
         <Section>
           <Container>
             <div className="mx-auto max-w-2xl py-16 text-center sm:py-24">
-              <p className="font-display text-sm font-semibold uppercase tracking-wide text-brand-500">
+              <p className="font-display text-sm font-semibold uppercase tracking-wide text-brand-700 dark:text-brand-400">
                 404
               </p>
               <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">

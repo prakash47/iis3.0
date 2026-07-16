@@ -54,22 +54,22 @@ export function JavaScope() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               A Spring Boot backend usually exposes a clean REST or GraphQL API and pairs with a
               separate front end -{" "}
-              <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 React
               </Link>
               ,{" "}
-              <Link href="/technologies/angular" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/angular" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Angular
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js
               </Link>{" "}
               - rather than rendering its own UI (it can serve HTML via Thymeleaf, but usually
               doesn&apos;t), and we build both sides. And Kotlin is a first-class JVM language for
               Spring Boot backends, so we build in it where a team prefers it - that&apos;s Kotlin on
               the server. Native Android with Kotlin is a different job, and it lives on our{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 mobile app development
               </Link>{" "}
               page.

@@ -60,16 +60,16 @@ export function ContentfulCapabilities() {
               model the content types first, because every later decision inherits from the model; stand
               up environments, roles and the editorial workflow as a governed platform; wire the APIs and
               the webhooks; then build the front end that reads it in{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Next.js
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/astro" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/astro" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Astro
               </Link>
               , with on-demand revalidation so a publish refreshes only the affected routes. And when the
               content is really one team editing one site, we will tell you that is a leaner{" "}
-              <Link href="/technologies/sanity" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/sanity" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 CMS
               </Link>
               &apos;s job, not Contentful&apos;s.

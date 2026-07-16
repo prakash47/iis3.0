@@ -210,7 +210,7 @@ export function EntertainmentProof() {
               alive for what users upload, or keep a viewing pixel honest, because they carried none of
               those risks. So we claim the catalog-content-and-access plumbing and fence off the
               rights-and-shelter core, plainly:{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 the real builds on our work page, described honestly
               </Link>
               . We have no media clients and no streaming, publishing, community or ticketing platform in

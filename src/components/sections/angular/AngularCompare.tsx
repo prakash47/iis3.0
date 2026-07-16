@@ -44,7 +44,7 @@ export function AngularCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -70,7 +70,7 @@ export function AngularCompare() {
         <Reveal className="mt-6">
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             If your project is small or wants maximum flexibility, we&apos;ll steer you to{" "}
-            <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               React
             </Link>{" "}
             - and build it that way. We recommend the fit, not the framework we happen to sell.

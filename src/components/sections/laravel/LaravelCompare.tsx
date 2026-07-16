@@ -45,7 +45,7 @@ export function LaravelCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -73,11 +73,11 @@ export function LaravelCompare() {
           <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-muted-foreground">
             Laravel and Django are close cousins - the same batteries-included, full-stack idea, on
             different languages. Weighing Python instead? See our{" "}
-            <Link href="/technologies/django" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/django" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Django, the batteries-included Python framework
             </Link>{" "}
             page. Need real-time or one JavaScript language across the stack? That&apos;s{" "}
-            <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Node.js, the JavaScript backend runtime
             </Link>
             . We recommend the fit, not the framework we sell.

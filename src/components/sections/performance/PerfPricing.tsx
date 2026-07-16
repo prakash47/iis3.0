@@ -82,7 +82,7 @@ export function PerfPricing() {
             Starting lean? Good - we&apos;d rather begin with a modest budget, prove the mechanics on
             your account, and scale what&apos;s working than talk you into spend you&apos;re not ready
             for. See our{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               transparent pricing
             </Link>{" "}
             for the rest.

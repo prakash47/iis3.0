@@ -51,7 +51,7 @@ export function SwiftuiCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -80,7 +80,7 @@ export function SwiftuiCompare() {
             SDKs and revised guidelines you have to keep up with - which is real work regardless of
             which framework drew the screen. Whether you should go native at all, or reach both stores
             from one cross-platform codebase, is a separate question answered on{" "}
-            <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               our mobile app development service, which weighs native against cross-platform for you
             </Link>
             .

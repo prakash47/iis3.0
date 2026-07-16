@@ -66,13 +66,13 @@ export function LaravelPricing() {
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
               A Laravel web app usually lands at the upper tiers. A bespoke SaaS platform, portal or
               standalone API is genuinely scoped work, so it enters through our{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 custom software Discovery Sprint
               </Link>{" "}
               from {discoverySprint.from}, which ends in a written scope and a fixed build quote. And
               if you need the broader web build - design, content and front end together - that&apos;s
               our{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 web design and development service
               </Link>
               .
@@ -87,11 +87,11 @@ export function LaravelPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software service
             </Link>
             .

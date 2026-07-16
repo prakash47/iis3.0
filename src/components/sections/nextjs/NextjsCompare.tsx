@@ -42,7 +42,7 @@ export function NextjsCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -77,13 +77,13 @@ export function NextjsCompare() {
               A simple content site or blog with little interactivity? A tuned WordPress or Astro
               build can be lighter and easier for your team to edit. A tiny brochure site on a tight
               budget? Our{" "}
-              <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Starter tier
               </Link>{" "}
               may be the honest answer without the full Next.js apparatus. If Next.js isn&apos;t
               right for you, we&apos;ll say so and build the right thing instead - that&apos;s the
               point of hiring a{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 full-service, stack-agnostic team
               </Link>{" "}
               over a single-framework shop.

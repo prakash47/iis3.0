@@ -63,7 +63,7 @@ export function PythonCapabilities() {
               us, and any figure quoted before we&apos;ve seen it would be meaningless. If what you
               actually want is an AI product - a chatbot on your content, a RAG assistant, an AI
               feature in your app - that&apos;s a scoped service on our{" "}
-              <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 AI development
               </Link>{" "}
               page. This page covers Python and the engineering under it; that page is the AI product on top.

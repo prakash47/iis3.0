@@ -152,7 +152,7 @@ export function SwiftuiProof() {
               browser&apos;s DOM, not Swift drawing native views, and this page is a DOM interface too.
               So we will not hand you our own website as SwiftUI proof, and you will find no App Store
               screenshots here, because none of it is a native app.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>
               , labelled as web and never dressed up as an app. What does not bridge at all is the App

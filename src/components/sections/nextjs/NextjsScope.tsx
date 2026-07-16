@@ -46,15 +46,15 @@ export function NextjsScope() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             Next.js is one of the stacks behind our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web design and development services
             </Link>
             . Building an app or SaaS product? The systems side lives in{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software development
             </Link>
             . And since Next.js is a React framework, see our{" "}
-            <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               React development
             </Link>{" "}
             too.

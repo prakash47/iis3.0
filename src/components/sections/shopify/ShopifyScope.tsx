@@ -72,11 +72,11 @@ export function ShopifyScope() {
                     {" - "}
                     a blog or brand site with a shop attached, where you want full control and
                     ownership, is a job for{" "}
-                    <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a content-led store on WooCommerce
                     </Link>{" "}
                     running on{" "}
-                    <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       WordPress
                     </Link>
                     .
@@ -91,15 +91,15 @@ export function ShopifyScope() {
                     {" - "}
                     complex B2B pricing, a multi-vendor marketplace, deep ERP logic or checkout rules
                     that outgrow even Shopify Plus - that&apos;s{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a fully custom commerce build you own outright
                     </Link>
                     , often on{" "}
-                    <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Laravel
                     </Link>{" "}
                     or{" "}
-                    <Link href="/technologies/django" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/django" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Django
                     </Link>
                     .
@@ -114,11 +114,11 @@ export function ShopifyScope() {
                     {" - "}
                     a marketing site with a buy button or two doesn&apos;t justify paying for Shopify.
                     A leaner{" "}
-                    <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       custom Next.js build
                     </Link>{" "}
                     or a{" "}
-                    <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       standard website build
                     </Link>{" "}
                     will do the job for less.

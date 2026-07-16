@@ -58,12 +58,12 @@ export function DrupalPricing() {
               A content or marketing site on Drupal maps to the Starter, Launch or Growth tier by scope; a
               larger structured platform, a complex governance model, or a Drupal 7 migration is scoped as
               part of our{" "}
-              <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 web design and development service
               </Link>
               . One honest note: Drupal is self-hosted, so it needs ongoing security updates, dependency
               upkeep and backups. We keep a build current on a{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 care plan from {carePlanFrom}
               </Link>
               , or hand you a documented site any competent Drupal team can maintain. You pay for your own
@@ -79,11 +79,11 @@ export function DrupalPricing() {
           </Button>
           <p className="text-sm text-muted-foreground">
             See full package details on{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               pricing
             </Link>{" "}
             and our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web development service
             </Link>
             .

@@ -66,11 +66,11 @@ export function WordpressScope() {
                       Selling online - a store
                     </span>
                     {" - "}
-                    <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       WooCommerce, WordPress ecommerce
                     </Link>{" "}
                     is on its own page - or{" "}
-                    <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Shopify
                     </Link>{" "}
                     for a fully hosted store with nothing to maintain.
@@ -85,15 +85,15 @@ export function WordpressScope() {
                     {" - "}
                     WordPress is a CMS, not an application framework, so a bespoke product is a custom
                     build in{" "}
-                    <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Laravel
                     </Link>
                     ,{" "}
-                    <Link href="/technologies/django" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/django" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Django
                     </Link>{" "}
                     or{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       custom software
                     </Link>
                     .
@@ -107,7 +107,7 @@ export function WordpressScope() {
                     </span>
                     {" - "}
                     a custom{" "}
-                    <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Next.js build
                     </Link>{" "}
                     is faster, and headless WordPress gives you the WordPress admin your editors know

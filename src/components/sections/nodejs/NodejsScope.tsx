@@ -106,15 +106,15 @@ export function NodejsScope() {
                 Our own site is the worked example: Node compiles it, but it needs no live Node
                 server, so we didn&apos;t run one. If a static or hybrid build covers you, we build
                 that with{" "}
-                <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   Next.js
                 </Link>{" "}
                 instead. Need the front end for a Node API? That&apos;s{" "}
-                <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   React
                 </Link>
                 . And a product-scale system lives under{" "}
-                <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   custom software development
                 </Link>
                 .

@@ -47,15 +47,15 @@ export function AngularWhat() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             Angular is one of the stacks behind our{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               web design and development services
             </Link>
             . Building an enterprise system or SaaS platform?{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Custom software development
             </Link>{" "}
             covers the systems side. Want a more flexible, library-first approach instead? See our{" "}
-            <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               React development
             </Link>
             .

@@ -68,7 +68,7 @@ export function MobileProof() {
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               The backend, APIs, authentication and real-time features a serious app needs are the
               same ones we build for the web - and we&apos;ve shipped those in production.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our web and app work
               </Link>{" "}
               (web projects, honestly labelled - not dressed up as app screenshots).

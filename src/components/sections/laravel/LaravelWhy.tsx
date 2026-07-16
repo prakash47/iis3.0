@@ -74,18 +74,18 @@ export function LaravelWhy() {
               fast, batteries-included workflow. It is the wrong tool - and we&apos;ll say so - when
               the whole product is hard real-time at scale: for tens of thousands of persistent live
               connections, chat backbones or high-fanout streaming,{" "}
-              <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Node.js, the JavaScript event-loop runtime
               </Link>{" "}
               is the sharper tool (Laravel does real-time fine with Reverb, just not as a dedicated
               backbone at extreme scale). When the core of the work is data engineering, ML or
               scientific computing,{" "}
-              <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Python, the data and ML language
               </Link>{" "}
               leads. And if a JavaScript-everywhere team wants one language front to back, Node is the
               honest pick. Not sure which way to go?{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We&apos;ll pick the right stack
               </Link>{" "}
               for the job, not the one this page happens to be about.

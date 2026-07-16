@@ -76,7 +76,7 @@ export function WordpressProof() {
               a searchable, filterable catalog, enquiry and enrolment funnels, and an admin a
               non-technical team can actually run day to day - and the training platform was itself a
               slow WordPress site we rebuilt on Next.js.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>
               , described honestly, and never relabelled as WordPress or WooCommerce projects unless

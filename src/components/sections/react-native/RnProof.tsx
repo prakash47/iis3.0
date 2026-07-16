@@ -68,7 +68,7 @@ export function RnProof() {
                 one claim on a mobile page that is quietly false. Two separate things are true here,
                 and it matters that they stay separate. First, a fact about us: the interface
                 you&apos;re reading is a live React 19 build, and you can go and inspect it on{" "}
-                <Link href="/technologies/react" className="font-medium text-brand-500 hover:text-brand-600">
+                <Link href="/technologies/react" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                   React on the web, the DOM side of the same model
                 </Link>
                 . That proves one thing and only one thing - we ship real React on the web. It is not
@@ -148,7 +148,7 @@ export function RnProof() {
               payments, accounts and an admin a non-technical team runs day to day. The backend, APIs
               and authentication behind it are the exact engine a serious app calls, and unlike a
               picture of a phone, that is software running in production.{" "}
-              <Link href="/work" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/work" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 See our work
               </Link>{" "}
               - web projects, honestly labelled, never dressed up as app screenshots. The React Native

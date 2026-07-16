@@ -98,7 +98,7 @@ export function WooWhy() {
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               WooCommerce is the right tool for a lot of stores and the wrong one for some, and
               we&apos;d rather say so up front. For a serious, product-first store,{" "}
-              <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Shopify is usually the cleaner choice
               </Link>{" "}
               - checkout, payments, inventory and PCI compliance are handled for you, and you never
@@ -108,20 +108,20 @@ export function WooWhy() {
               security, that is a vote for a hosted store, not a self-hosted one. When your commerce
               model is genuinely bespoke - complex B2B pricing, a marketplace, deep ERP logic - that
               is{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 a ground-up custom commerce platform
               </Link>
               . And when you don&apos;t really need a store at all, a{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 lean custom Next.js build
               </Link>{" "}
               does the job for less. WooCommerce&apos;s lane is the content-led store you want to own
               and grow, on{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 the WordPress build underneath it
               </Link>{" "}
               - and because it&apos;s self-hosted, we pair it with{" "}
-              <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 monthly care plans
               </Link>{" "}
               from the day it launches. Recommending the right platform, even when it isn&apos;t

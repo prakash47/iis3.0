@@ -81,25 +81,25 @@ export function DjangoWhy() {
               It is the wrong tool - and we&apos;ll say so - when the whole product is an API-first,
               async service where raw throughput is the point: Django 6.0 has genuine async now, but
               for that shape{" "}
-              <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Python, FastAPI and the async API-first lane
               </Link>{" "}
               is the sharper default. When the product is hard real-time at scale - a chat backbone or
               high-fanout streaming - {""}
-              <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Node.js, for real-time and JavaScript-everywhere
               </Link>{" "}
               is sharper, though Django handles ordinary real-time fine with Channels. If you just need
               a content or brochure site a non-technical team edits, that&apos;s often{" "}
-              <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 WordPress, the off-the-shelf CMS for editors
               </Link>
               . And if what you actually want is a finished AI product, that&apos;s{" "}
-              <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 our AI development service
               </Link>
               . Not sure which way to go?{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We&apos;ll pick the right stack
               </Link>{" "}
               for the job, not the one this page happens to be about.

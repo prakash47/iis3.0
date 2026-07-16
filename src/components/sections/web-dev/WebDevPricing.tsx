@@ -84,7 +84,7 @@ export function WebDevPricing() {
         <Reveal className="mt-4">
           <p className="text-sm text-muted-foreground">
             Building an internal tool, SaaS platform or complex software product?{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See our custom software development
             </Link>
             .
@@ -105,7 +105,7 @@ export function WebDevPricing() {
           <p className="text-sm text-muted-foreground">
             Prices in USD. Ongoing care plans from{" "}
             {carePlanFrom}. See full package details and add-ons on our{" "}
-            <Link href="/pricing" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/pricing" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               transparent pricing page
             </Link>
             .
@@ -122,7 +122,7 @@ export function WebDevPricing() {
             </p>
             <Link
               href="/contact"
-              className="group mt-3 inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-500 transition-colors hover:text-brand-600 sm:mt-0"
+              className="group mt-3 inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-600 dark:text-brand-400 sm:mt-0"
             >
               Tell us your budget
               <IconArrow className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

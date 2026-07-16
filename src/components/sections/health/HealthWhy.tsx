@@ -115,7 +115,7 @@ export function HealthWhy() {
               when the experience is the product and the record system actively fights it - a
               condition-specific programme, a multi-provider network the EHR was never designed to
               span, an intake or triage flow that decides whether people show up at all. That is{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 a paid discovery before any build quote
               </Link>
               , and we will make that case with you in writing rather than assume it. Talking you out

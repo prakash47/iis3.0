@@ -192,15 +192,15 @@ export default function CareersPage() {
           <Reveal className="mt-6">
             <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
               This is the same team and the same standard described on our{" "}
-              <Link href="/about" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/about" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 about page
               </Link>
               . You can see the{" "}
-              <Link href="/services" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 full range of work we take on
               </Link>{" "}
               and the{" "}
-              <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 technologies we build with
               </Link>
               , each with an honest note on when not to reach for it.
@@ -233,7 +233,7 @@ export default function CareersPage() {
                   GitHub to{" "}
                   <a
                     href={applyHref}
-                    className="font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400"
+                    className="font-medium text-brand-700 hover:text-brand-500 dark:text-brand-400"
                   >
                     {siteConfig.contact.email}
                   </a>

@@ -46,7 +46,7 @@ export function AstroCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -76,7 +76,7 @@ export function AstroCompare() {
             interactivity; Eleventy and Hugo are strong when you want something more minimal or the
             fastest possible builds at large scale. One thing none of these three is: an application
             framework. A site that is really an app belongs on{" "}
-            <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Next.js, for a site that behaves like an application
             </Link>
             , and we will tell you when that is the honest answer.

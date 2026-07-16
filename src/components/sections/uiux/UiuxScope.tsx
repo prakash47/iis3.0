@@ -73,19 +73,19 @@ export function UiuxScope() {
         <Reveal className="mt-6">
           <p className="text-sm leading-relaxed text-muted-foreground">
             Want us to design <em>and</em> build it?{" "}
-            <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See web design &amp; development
             </Link>
             . Designing an app or a SaaS product?{" "}
-            <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See mobile app development
             </Link>{" "}
             and{" "}
-            <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               custom software
             </Link>
             . Working in Figma?{" "}
-            <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               See the tools we build with
             </Link>
             .

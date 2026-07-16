@@ -51,7 +51,7 @@ export function KotlinCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -81,7 +81,7 @@ export function KotlinCompare() {
             versions to hold up across - which is real work regardless of which UI approach drew the
             screen. Whether you should go native, or reach both stores from one cross-platform codebase,
             is answered on{" "}
-            <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               our mobile app development service, which weighs native against cross-platform for you
             </Link>
             .

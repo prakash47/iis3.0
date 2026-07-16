@@ -72,12 +72,12 @@ export function WooScope() {
                     </span>
                     {" - "}
                     then a self-hosted store is the wrong shape for you.{" "}
-                    <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       A fully hosted store on Shopify
                     </Link>{" "}
                     runs the infrastructure for you. If you do stay self-hosted, budget from day one
                     for{" "}
-                    <Link href="/services/website-maintenance-services" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/website-maintenance-services" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a care plan that keeps it patched
                     </Link>
                     .
@@ -92,11 +92,11 @@ export function WooScope() {
                     {" - "}
                     a marketing, brochure or editorial site with nothing to sell doesn&apos;t need a
                     commerce plugin at all. That&apos;s{" "}
-                    <Link href="/technologies/wordpress" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/wordpress" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a plain WordPress content site
                     </Link>
                     , or a leaner{" "}
-                    <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       custom Next.js build
                     </Link>{" "}
                     if speed is the point.
@@ -111,15 +111,15 @@ export function WooScope() {
                     {" - "}
                     complex B2B pricing hierarchies, a multi-vendor marketplace, deep ERP logic or
                     checkout rules no plugin should carry. That&apos;s{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a ground-up custom commerce platform
                     </Link>
                     , often on{" "}
-                    <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Laravel
                     </Link>{" "}
                     or{" "}
-                    <Link href="/technologies/django" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/django" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       Django
                     </Link>
                     .

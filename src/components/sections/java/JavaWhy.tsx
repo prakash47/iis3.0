@@ -85,25 +85,25 @@ export function JavaWhy() {
               Plenty of projects aren&apos;t that, and forcing them onto Java is cost you don&apos;t
               need. For a small CRUD app, MVP or content-and-admin platform you want live fast, a
               batteries-included framework ships sooner - that&apos;s{" "}
-              <Link href="/technologies/django" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/django" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Django
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/laravel" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/laravel" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Laravel
               </Link>
               . For a data, analytics or ML backend, the gravity is in{" "}
-              <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Python
               </Link>
               . For a real-time-first product - chat, presence, streaming -{" "}
-              <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 Node.js
               </Link>{" "}
               on the event loop fits more naturally (though when the concurrency is heavy and
               JVM-native, virtual threads make Java a strong answer too). Not sure, or the backend is
               the product?{" "}
-              <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 We&apos;ll pick the right stack
               </Link>{" "}
               and scope it properly.

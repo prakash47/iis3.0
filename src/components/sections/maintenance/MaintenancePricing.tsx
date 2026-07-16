@@ -98,7 +98,7 @@ export function MaintenancePricing() {
           <p className="text-sm leading-relaxed text-muted-foreground">
             Every plan is month-to-month with no lock-in, and you keep full ownership of your site
             and accounts. Not sure which plan fits, or need something bigger?{" "}
-            <Link href="/contact" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/contact" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Tell us about your site
             </Link>{" "}
             and we&apos;ll recommend the right level honestly.

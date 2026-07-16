@@ -104,7 +104,7 @@ export function FlutterWhy() {
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground text-justify">
               Flutter earns the job when the interface is the whole product. It is not our reflex, and
               we won&apos;t pretend it is. On our{" "}
-              <Link href="/technologies/react-native" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/react-native" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 React Native page we call React Native our default when a team already lives in React
               </Link>
               , and that still holds here: if your people write JavaScript and TypeScript, or you want
@@ -113,22 +113,22 @@ export function FlutterWhy() {
               probably does not know yet, and that cost is real. When the product truly demands deep
               performance, hardware access or platform-specific behaviour from day one, fully native
               earns its higher price, and we would build it in{" "}
-              <Link href="/technologies/swiftui" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/swiftui" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 going fully native on iOS with SwiftUI
               </Link>{" "}
               or{" "}
-              <Link href="/technologies/kotlin" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/kotlin" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 native Android in Kotlin
               </Link>
               . And there is one place we will actively steer you off Flutter, on a site whose whole
               brand is search visibility: an SEO-critical web presence should not be a Flutter web
               build, because it draws to a canvas rather than emitting semantic HTML. That belongs in{" "}
-              <Link href="/technologies/nextjs" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/technologies/nextjs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 a search-indexable web app in Next.js
               </Link>
               , and we will say so before you spend. Whether it should be an app at all is the bigger
               call, and we make it with you in writing during discovery on{" "}
-              <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+              <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                 our mobile app development service
               </Link>
               .

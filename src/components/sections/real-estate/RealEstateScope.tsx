@@ -73,11 +73,11 @@ export function RealEstateScope() {
                     {" - "}
                     a listing portal, a CRM or an integration layer is custom software, so it enters
                     through{" "}
-                    <Link href="/services/custom-software-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/custom-software-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       where a listings platform is scoped before it&apos;s priced
                     </Link>
                     . Which stack it lands on is a separate question, answered on{" "}
-                    <Link href="/technologies" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       how we decide what to build it with
                     </Link>
                     .
@@ -93,11 +93,11 @@ export function RealEstateScope() {
                     if the product collects rent, holds earnest money or moves closing funds, that
                     rides a licensed processor or escrow provider, not us. It is the same
                     regulated-rails posture as{" "}
-                    <Link href="/industries/fintech" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/industries/fintech" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       where rent and closing money actually move
                     </Link>
                     , and the marketing site in front of the portal is{" "}
-                    <Link href="/services/web-design-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/web-design-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       our web design and development service
                     </Link>
                     .
@@ -111,19 +111,19 @@ export function RealEstateScope() {
                     </span>
                     {" - "}
                     a shop that sells goods with a cart and checkout is{" "}
-                    <Link href="/technologies/shopify" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/shopify" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       a Shopify
                     </Link>{" "}
                     or{" "}
-                    <Link href="/technologies/woocommerce" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/technologies/woocommerce" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       WooCommerce
                     </Link>{" "}
                     build, not a listing portal; a native property experience is{" "}
-                    <Link href="/services/mobile-app-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/mobile-app-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       mobile app development, on honest terms
                     </Link>{" "}
                     - and we have shipped no mobile app for anyone yet. Assistive AI routes to{" "}
-                    <Link href="/services/ai-development" className="font-medium text-brand-500 hover:text-brand-600">
+                    <Link href="/services/ai-development" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
                       adding AI to a property product, carefully
                     </Link>
                     , never an automated screening or valuation model of record.

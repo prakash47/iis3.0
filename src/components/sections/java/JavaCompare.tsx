@@ -47,7 +47,7 @@ export function JavaCompare() {
                         scope="col"
                         className={
                           i === 1
-                            ? "bg-brand-500/10 p-4 font-bold text-brand-600 dark:text-brand-400"
+                            ? "bg-brand-500/10 p-4 font-bold text-brand-700 dark:text-brand-400"
                             : "p-4 font-semibold text-foreground"
                         }
                       >
@@ -77,11 +77,11 @@ export function JavaCompare() {
             ultra-lean, low-latency infrastructure services - we build in Java and Spring Boot on the
             JVM, and we&apos;ll tell you honestly if your team is better served elsewhere. Weighing the
             other backends we build? See{" "}
-            <Link href="/technologies/nodejs" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/nodejs" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Node.js for real-time and API-first work
             </Link>{" "}
             and{" "}
-            <Link href="/technologies/python" className="font-medium text-brand-500 hover:text-brand-600">
+            <Link href="/technologies/python" className="font-medium text-brand-700 hover:text-brand-600 dark:text-brand-400">
               Python for data, ML and automation
             </Link>
             .
