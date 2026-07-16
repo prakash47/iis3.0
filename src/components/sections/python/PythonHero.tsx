@@ -87,19 +87,19 @@ export function PythonHero({ crumbs }: { crumbs: { name: string; path: string }[
                     3.14
                   </span>
                 </p>
-                <dl className="relative z-[1] mt-5 space-y-4">
+                <ul className="relative z-[1] mt-5 space-y-4">
                   {at2026.map((g) => (
-                    <div key={g.k} className="flex items-start gap-3">
+                    <li key={g.k} className="flex items-start gap-3">
                       <span aria-hidden="true" className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border bg-surface text-brand-500">
                         {g.icon}
                       </span>
                       <div className="min-w-0">
-                        <dt className="text-xs text-muted-foreground">{g.k}</dt>
-                        <dd className="font-display text-sm font-semibold text-foreground">{g.v}</dd>
+                        <span className="block text-xs text-muted-foreground">{g.k}</span>
+                        <span className="block font-display text-sm font-semibold text-foreground">{g.v}</span>
                       </div>
-                    </div>
+                    </li>
                   ))}
-                </dl>
+                </ul>
                 <p className="relative z-[1] mt-5 border-t border-border pt-4 font-mono text-[11px] leading-relaxed text-muted-foreground">
                   The No. 1 language for AI and data - and we build it the 2026 way.
                 </p>

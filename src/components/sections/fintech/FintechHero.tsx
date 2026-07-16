@@ -104,19 +104,19 @@ export function FintechHero({ crumbs }: { crumbs: { name: string; path: string }
                     Not with us
                   </span>
                 </p>
-                <dl className="relative z-[1] mt-5 space-y-4">
+                <ul className="relative z-[1] mt-5 space-y-4">
                   {facts.map((f) => (
-                    <div key={f.k} className="flex items-start gap-3">
+                    <li key={f.k} className="flex items-start gap-3">
                       <span aria-hidden="true" className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border bg-surface text-brand-500">
                         {f.icon}
                       </span>
                       <div className="min-w-0">
-                        <dt className="text-xs text-muted-foreground">{f.k}</dt>
-                        <dd className="font-display text-sm font-semibold text-foreground">{f.v}</dd>
+                        <span className="block text-xs text-muted-foreground">{f.k}</span>
+                        <span className="block font-display text-sm font-semibold text-foreground">{f.v}</span>
                       </div>
-                    </div>
+                    </li>
                   ))}
-                </dl>
+                </ul>
                 <p className="relative z-[1] mt-5 border-t border-border pt-4 font-mono text-[11px] leading-relaxed text-muted-foreground">
                   Your ledger is a claim about their money until it reconciles.
                 </p>

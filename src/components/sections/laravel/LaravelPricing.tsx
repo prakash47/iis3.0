@@ -34,7 +34,7 @@ export function LaravelPricing() {
               className={`card relative flex flex-col p-5 ${tier.best ? "glow-border ring-1 ring-brand-400/40" : ""}`}
             >
               {tier.best && (
-                <span className="absolute -top-3 left-5 rounded-full bg-brand-500 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
+                <span className="absolute -top-3 left-5 rounded-full bg-brand-700 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
                   Recommended
                 </span>
               )}
