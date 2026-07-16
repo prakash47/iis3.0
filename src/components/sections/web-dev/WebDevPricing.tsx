@@ -51,7 +51,7 @@ export function WebDevPricing() {
                         <span className="flex items-center gap-2 font-display text-base font-semibold text-foreground">
                           {t.name}
                           {t.best && (
-                            <span className="rounded-full bg-brand-600 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
+                            <span className="rounded-full bg-brand-700 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
                               Recommended
                             </span>
                           )}

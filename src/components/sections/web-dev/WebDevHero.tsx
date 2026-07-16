@@ -80,19 +80,23 @@ export function WebDevHero({ crumbs }: { crumbs: { name: string; path: string }[
                 <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                   At a glance
                 </p>
-                <dl className="relative z-[1] mt-5 space-y-4">
+                {/* Plain list, not a <dl>: a dl whose rows carry an icon span + a
+                    nested div fails axe's definition-list structure rules (and the
+                    malformed tree also fails agentic/a11y-tree checks). A ul with
+                    label/value spans renders identically and is always valid. */}
+                <ul className="relative z-[1] mt-5 space-y-4">
                   {glance.map((g) => (
-                    <div key={g.k} className="flex items-start gap-3">
+                    <li key={g.k} className="flex items-start gap-3">
                       <span aria-hidden="true" className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border bg-surface text-brand-500">
                         {g.icon}
                       </span>
                       <div className="min-w-0">
-                        <dt className="text-xs text-muted-foreground">{g.k}</dt>
-                        <dd className="font-display text-sm font-semibold text-foreground">{g.v}</dd>
+                        <span className="block text-xs text-muted-foreground">{g.k}</span>
+                        <span className="block font-display text-sm font-semibold text-foreground">{g.v}</span>
                       </div>
-                    </div>
+                    </li>
                   ))}
-                </dl>
+                </ul>
               </div>
             </div>
           </div>
