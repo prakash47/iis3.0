@@ -7,17 +7,22 @@ import { seoConfig } from "@/config/seo";
 // Self-hosted variable fonts via next/font/local: no runtime Google dependency, and
 // next/font handles preload + a size-adjusted fallback automatically (zero CLS from the
 // font swap). This is the "next/font for self-hosted fonts" the Next.js spoke sells.
+// display "optional" (not "swap"): a swap repaints the hero text when the font lands,
+// which re-stamps the text LCP at font-arrival time (~3.5s on throttled mobile) and
+// costs a relayout. With "optional" the size-adjusted fallback simply keeps the first
+// paint on slow visits (identical metrics, zero CLS) and the brand fonts render from
+// cache on every later navigation - text LCP stays at first paint.
 const inter = localFont({
   src: "./fonts/inter-latin-wght-normal.woff2",
   variable: "--font-inter",
   weight: "100 900",
-  display: "swap",
+  display: "optional",
 });
 const sora = localFont({
   src: "./fonts/sora-latin-wght-normal.woff2",
   variable: "--font-sora",
   weight: "100 900",
-  display: "swap",
+  display: "optional",
 });
 
 const ogImages = [
