@@ -19,7 +19,8 @@ const coreWebVitals = [
   { metric: "CLS", name: "Cumulative Layout Shift", note: "Good < 0.1" },
 ];
 
-const pageSpeedUrl = `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(siteConfig.url)}`;
+// form_factor=desktop: open PSI on the Desktop tab (founder call, 2026-07-17).
+const pageSpeedUrl = `https://pagespeed.web.dev/analysis?url=${encodeURIComponent(siteConfig.url)}&form_factor=desktop`;
 
 /**
  * "Performance you can measure" proof band. Occupies the first-scroll slot where
