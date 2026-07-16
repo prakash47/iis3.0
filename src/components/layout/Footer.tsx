@@ -69,8 +69,8 @@ export function Footer() {
         {/* Brand + NAP */}
         <div className="sm:col-span-2 xl:col-span-1">
           <Link href="/" aria-label="Intention InfoService - home" className="flex items-center">
-            <Image src="/logo.png" alt="" width={569} height={220} sizes="128px" className="h-12 w-auto dark:hidden" />
-            <Image src="/logo-white.png" alt="" width={620} height={240} sizes="128px" className="hidden h-12 w-auto dark:block" />
+            <Image src="/logo-256.png" alt="" width={256} height={99} unoptimized className="h-12 w-auto dark:hidden" />
+            <Image src="/logo-white-256.png" alt="" width={256} height={99} unoptimized className="hidden h-12 w-auto dark:block" />
           </Link>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             {siteConfig.tagline}

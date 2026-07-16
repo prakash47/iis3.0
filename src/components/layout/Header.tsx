@@ -10,22 +10,25 @@ export function Header() {
     <header className="header-scroll glass sticky top-0 z-50 border-x-0 border-t-0">
       <Container className="flex h-16 items-center justify-between gap-6">
         <Link href="/" aria-label="Intention InfoService - home" className="flex items-center">
-          {/* Color logo in light mode, white logo in dark mode. CSS-swapped, both SSR'd (no flash). */}
+          {/* Color logo in light mode, white logo in dark mode. CSS-swapped, both SSR'd (no flash).
+              Dedicated 256x99 assets served unoptimized: the optimizer's variant rounding
+              (569x220 -> 256x100) skewed the intrinsic ratio past Lighthouse's 2% aspect-ratio
+              tolerance. One exact file = attr ratio == natural ratio == displayed ratio. */}
           <Image
-            src="/logo.png"
+            src="/logo-256.png"
             alt=""
-            width={569}
-            height={220}
-            sizes="120px"
+            width={256}
+            height={99}
+            unoptimized
             priority
             className="h-11 w-auto dark:hidden"
           />
           <Image
-            src="/logo-white.png"
+            src="/logo-white-256.png"
             alt=""
-            width={620}
-            height={240}
-            sizes="120px"
+            width={256}
+            height={99}
+            unoptimized
             loading="eager"
             className="hidden h-11 w-auto dark:block"
           />
