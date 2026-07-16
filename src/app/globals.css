@@ -335,9 +335,12 @@
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   animation-fill-mode: both;
 }
+/* Translate-only (no opacity fade): fading text through partial opacity made
+   Lighthouse's contrast audit flaky (a snapshot mid-fade reads a blended, failing
+   colour). A pure 16px rise keeps the entrance motion, keeps text at full
+   contrast from first paint, and lets these elements paint with the page. */
 @keyframes hero-in {
   from {
-    opacity: 0;
     transform: translateY(16px);
   }
 }
