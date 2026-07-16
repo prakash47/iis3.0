@@ -12,16 +12,20 @@ import { seoConfig } from "@/config/seo";
 // costs a relayout. With "optional" the size-adjusted fallback simply keeps the first
 // paint on slow visits (identical metrics, zero CLS) and the brand fonts render from
 // cache on every later navigation - text LCP stays at first paint.
+// Weight-instanced subsets (scripts/subset-fonts.mjs): the site uses only wght
+// 400-800 (zero thin/light/black usage), so the variable axis is restricted to
+// that range - Inter 47->28KB, Sora 33->22KB. Smaller payloads land sooner on
+// throttled mobile, which is where the H1's LCP was waiting on font arrival.
 const inter = localFont({
-  src: "./fonts/inter-latin-wght-normal.woff2",
+  src: "./fonts/inter-latin-wght-400-800.woff2",
   variable: "--font-inter",
-  weight: "100 900",
+  weight: "400 800",
   display: "optional",
 });
 const sora = localFont({
-  src: "./fonts/sora-latin-wght-normal.woff2",
+  src: "./fonts/sora-latin-wght-400-800.woff2",
   variable: "--font-sora",
-  weight: "100 900",
+  weight: "400 800",
   display: "optional",
 });
 
