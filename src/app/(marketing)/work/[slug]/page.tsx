@@ -82,7 +82,7 @@ export default async function CaseStudyPage({
             <div className="mt-8 flex flex-wrap gap-x-10 gap-y-6">
               {cs.metrics.map((m) => (
                 <div key={m.label}>
-                  <div className="font-display text-3xl font-extrabold text-brand-600">{m.value}</div>
+                  <div className="font-display text-3xl font-extrabold text-brand-700 dark:text-brand-400">{m.value}</div>
                   <div className="text-sm text-muted-foreground">{m.label}</div>
                 </div>
               ))}

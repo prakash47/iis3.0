@@ -3,8 +3,19 @@ import { IconArrow } from "@/components/icons";
 import { formatDate } from "@/lib/format";
 import type { ResourceListItem } from "@/sanity/types";
 
-/** A blog post / guide card for the listing pages + the resources hub. */
-export function ResourceCard({ item, base }: { item: ResourceListItem; base: string }) {
+/** A blog post / guide card for the listing pages + the resources hub.
+ *  headingLevel: the listing pages (/blog, /guides) have no h2 between the h1 and
+ *  the cards, so their cards ARE the h2s (a skipped level fails the heading-order
+ *  audit); the resources hub nests cards under a SectionHeading h2, so h3 is right. */
+export function ResourceCard({
+  item,
+  base,
+  headingLevel: Heading = "h3",
+}: {
+  item: ResourceListItem;
+  base: string;
+  headingLevel?: "h2" | "h3";
+}) {
   return (
     <Link href={`${base}/${item.slug}`} className="card group relative flex flex-col p-6 glow-border">
       <div className="relative z-[1] flex flex-1 flex-col">
@@ -13,9 +24,9 @@ export function ResourceCard({ item, base }: { item: ResourceListItem; base: str
             {item.category}
           </span>
         )}
-        <h3 className="mt-2 font-display text-lg font-semibold text-foreground group-hover:text-brand-500">
+        <Heading className="mt-2 font-display text-lg font-semibold text-foreground group-hover:text-brand-500">
           {item.title}
-        </h3>
+        </Heading>
         {item.excerpt && (
           <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{item.excerpt}</p>
         )}

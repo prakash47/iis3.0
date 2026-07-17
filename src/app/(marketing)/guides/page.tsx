@@ -61,7 +61,7 @@ export default async function GuidesPage() {
           {guides.length > 0 ? (
             <Reveal group className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {guides.map((guide) => (
-                <ResourceCard key={guide.slug} item={guide} base="/guides" />
+                <ResourceCard key={guide.slug} item={guide} base="/guides" headingLevel="h2" />
               ))}
             </Reveal>
           ) : (

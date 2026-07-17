@@ -276,7 +276,7 @@ export function ContactForm() {
           {emailHint && !errors.email && (
             <p className="mt-1.5 text-xs text-muted-foreground">
               Did you mean{" "}
-              <button type="button" onClick={() => { setField("email", emailHint); setEmailHint(""); }} className="font-semibold text-brand-600 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">{emailHint}</button>?
+              <button type="button" onClick={() => { setField("email", emailHint); setEmailHint(""); }} className="font-semibold text-brand-700 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">{emailHint}</button>?
             </p>
           )}
         </div>

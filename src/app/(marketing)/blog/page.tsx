@@ -60,7 +60,7 @@ export default async function BlogPage() {
           {posts.length > 0 ? (
             <Reveal group className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (
-                <ResourceCard key={post.slug} item={post} base="/blog" />
+                <ResourceCard key={post.slug} item={post} base="/blog" headingLevel="h2" />
               ))}
             </Reveal>
           ) : (

@@ -63,7 +63,7 @@ export default function WorkPage() {
                   <div className="mt-4 flex flex-wrap gap-4">
                     {cs.metrics.map((m) => (
                       <div key={m.label}>
-                        <div className="font-display text-lg font-bold text-brand-600">{m.value}</div>
+                        <div className="font-display text-lg font-bold text-brand-700 dark:text-brand-400">{m.value}</div>
                         <div className="text-xs text-muted-foreground">{m.label}</div>
                       </div>
                     ))}
