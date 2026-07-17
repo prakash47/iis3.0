@@ -348,6 +348,18 @@
   }
 }
 
+/* ── Cookie consent banner ────────────────────────────────────────────── */
+/* Translate-only entrance (no opacity fade - text at partial opacity fails
+   contrast audits sampled mid-animation). */
+.consent-in {
+  animation: consent-in 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes consent-in {
+  from {
+    transform: translateY(16px);
+  }
+}
+
 /* ── Contact CTA button ───────────────────────────────────────────────── */
 /* Animated conic-gradient border, matched to the live intentioninfoservice.com
    menu button: navy fill + rotating blue->red border, pauses on hover. Same in

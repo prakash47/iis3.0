@@ -60,8 +60,10 @@ export default function PrivacyPolicyPage() {
 
           <H2>Cookies and analytics</H2>
           <P>
-            We use essential cookies needed for the site to work, and Google Analytics cookies to
-            measure traffic. You can block or delete cookies in your browser settings; the site
+            We use essential cookies needed for the site to work. Google Analytics cookies are
+            set only if you accept them in the cookie banner - decline, and no analytics runs at
+            all. You can change your choice at any time via the Cookie preferences link in the
+            footer, and you can also block or delete cookies in your browser settings; the site
             will still work without them.
           </P>
 

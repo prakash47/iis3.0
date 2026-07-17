@@ -1,17 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { siteConfig, absoluteUrl, isIndexable } from "@/config/site";
 import { seoConfig } from "@/config/seo";
 
-// Google Analytics 4, env-driven like every other integration: set
-// NEXT_PUBLIC_GA_MEASUREMENT_ID (G-XXXXXXXXXX) on the PRODUCTION environment only.
-// Double-gated on isIndexable so local dev, *.vercel.app previews and the public
-// staging site never send traffic into the real property, even if the var leaks
-// into another environment. gtag loads after hydration (@next/third-parties) and
-// GA4's default enhanced measurement tracks client-side route changes.
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// Google Analytics 4 is NOT loaded here: it lives behind the cookie-consent
+// banner in (marketing)/layout.tsx (CookieConsent), which loads gtag only after
+// a visitor accepts analytics - GDPR-safe and zero third-party script for
+// everyone else. Set NEXT_PUBLIC_GA_MEASUREMENT_ID to enable the whole stack.
 
 // Self-hosted variable fonts via next/font/local: no runtime Google dependency, and
 // next/font handles preload + a size-adjusted fallback automatically (zero CLS from the
@@ -124,7 +120,6 @@ export default function RootLayout({
           link + sitewide Org/WebSite JSON-LD) lives in (marketing)/layout.tsx so
           the full-screen /studio route can render outside it. */}
       <body className="h-full">{children}</body>
-      {GA_ID && isIndexable && <GoogleAnalytics gaId={GA_ID} />}
     </html>
   );
 }

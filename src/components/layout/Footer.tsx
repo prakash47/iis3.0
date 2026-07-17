@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { CookiePrefsButton } from "@/components/layout/CookiePrefsButton";
 import { siteConfig } from "@/config/site";
 import { services, industries, hireTechnologies } from "@/content/catalog";
 import {
@@ -197,6 +198,8 @@ export function Footer() {
             <a href="/sitemap.xml" className="transition-colors hover:text-foreground">
               Sitemap
             </a>
+            {/* Only when GA is configured (build-inlined env) - reopens the consent banner. */}
+            {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <CookiePrefsButton />}
           </div>
         </Container>
       </div>

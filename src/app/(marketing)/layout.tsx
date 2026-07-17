@@ -1,8 +1,15 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCtaBar } from "@/components/layout/MobileCtaBar";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/seo/jsonLd";
+
+// GA4 measurement id (public, build-inlined). The consent banner renders wherever
+// this is set; gtag itself additionally requires consent + isIndexable, so only
+// consenting visitors on the real production site are ever measured. Lives in the
+// marketing group so /studio sessions are never tracked.
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 /**
  * Marketing chrome. Lifted verbatim from the old root layout body so every public
@@ -30,6 +37,7 @@ export default function MarketingLayout({
       </main>
       <Footer />
       <MobileCtaBar />
+      {GA_ID && <CookieConsent gaId={GA_ID} />}
     </div>
   );
 }
