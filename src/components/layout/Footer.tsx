@@ -192,9 +192,11 @@ export function Footer() {
             <Link href="/terms" className="transition-colors hover:text-foreground">
               Terms of Service
             </Link>
-            <Link href="/sitemap.xml" className="transition-colors hover:text-foreground">
+            {/* Plain <a>, not <Link>: sitemap.xml is an XML route, not an RSC page -
+                a client Link prefetches it as ?_rsc=... which 404s in the console. */}
+            <a href="/sitemap.xml" className="transition-colors hover:text-foreground">
               Sitemap
-            </Link>
+            </a>
           </div>
         </Container>
       </div>
