@@ -97,7 +97,7 @@ export function EntertainmentHero({ crumbs }: { crumbs: { name: string; path: st
               <div className="card glow-border relative w-full max-w-sm overflow-hidden p-6">
                 <p className="relative z-[1] flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                   What your platform carries
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-semibold normal-case tracking-normal text-emerald-600 dark:text-emerald-400">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-semibold normal-case tracking-normal text-emerald-700 dark:text-emerald-400">
                     <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                     Stays yours
                   </span>

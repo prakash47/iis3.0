@@ -87,7 +87,7 @@ export default function TermsPage() {
           <H2>Changes and contact</H2>
           <P>
             We may update these terms from time to time. For any questions, email{" "}
-            <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-700 hover:text-brand-500 dark:text-brand-400">
+            <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-700 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">
               {siteConfig.contact.email}
             </a>
             .

@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
           <P>
             You can ask us to access, correct or delete the personal information we hold about
             you. To make a request, email us at{" "}
-            <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-700 hover:text-brand-500 dark:text-brand-400">
+            <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-700 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">
               {siteConfig.contact.email}
             </a>
             .
@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
           <H2>Contact</H2>
           <P>
             Questions about this policy can be sent to{" "}
-            <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-700 hover:text-brand-500 dark:text-brand-400">
+            <a href={`mailto:${siteConfig.contact.email}`} className="text-brand-700 underline underline-offset-2 hover:text-brand-500 dark:text-brand-400">
               {siteConfig.contact.email}
             </a>
             .

@@ -76,7 +76,7 @@ export function ReactProof() {
             <div className="card glow-border relative overflow-hidden p-6 sm:p-8">
               <div className="relative z-[1] flex items-center justify-between gap-3 border-b border-border pb-4">
                 <span className="font-mono text-xs text-muted-foreground">one component · every state</span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
                   <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                   React 19
                 </span>

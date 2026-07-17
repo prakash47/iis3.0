@@ -216,7 +216,7 @@ function DoorCard({ tier }: { tier: PricingTier }) {
       </div>
       {tier.timeline && <p className="mt-1 text-xs text-muted-foreground">{tier.timeline}</p>}
       {credited && (
-        <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+        <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
           <IconCheck className="h-3.5 w-3.5 shrink-0" />
           Credited toward the work
         </p>

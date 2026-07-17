@@ -118,15 +118,32 @@ export function ContactForm() {
   const honeypot = useRef<HTMLInputElement>(null);
   const whatsappHref = `https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, "")}`;
 
+  // reCAPTCHA loads LAZILY on the first form interaction, never at page load: the
+  // third-party script was the contact page's entire TBT budget (~0.5s main thread)
+  // and its google.com cookies flagged the best-practices audit - all for a token
+  // that is only needed at submit time. Idempotent via the cached promise; a failed
+  // load resolves to "no token", which the API answers with its honest captcha error.
+  const recaptchaReady = useRef<Promise<void> | null>(null);
+  function loadRecaptcha(): Promise<void> {
+    if (!SITE_KEY) return Promise.resolve();
+    if (!recaptchaReady.current) {
+      recaptchaReady.current = new Promise<void>((resolve) => {
+        if (document.getElementById("recaptcha-v3")) { resolve(); return; }
+        const s = document.createElement("script");
+        s.id = "recaptcha-v3";
+        s.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+        s.async = true;
+        s.onload = () => resolve();
+        s.onerror = () => resolve();
+        document.head.appendChild(s);
+      });
+    }
+    return recaptchaReady.current;
+  }
+
   useEffect(() => {
-    if (!SITE_KEY || document.getElementById("recaptcha-v3")) return;
-    const s = document.createElement("script");
-    s.id = "recaptcha-v3";
-    s.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
-    s.async = true;
-    document.head.appendChild(s);
     return () => {
-      s.remove();
+      document.getElementById("recaptcha-v3")?.remove();
       document.querySelectorAll(".grecaptcha-badge").forEach((n) => n.parentElement?.remove());
     };
   }, []);
@@ -157,6 +174,7 @@ export function ContactForm() {
   }
 
   async function getToken(): Promise<string | null> {
+    await loadRecaptcha();
     if (!SITE_KEY || !window.grecaptcha) return null;
     await new Promise<void>((r) => window.grecaptcha!.ready(r));
     try { return await window.grecaptcha.execute(SITE_KEY, { action: RECAPTCHA_ACTION }); } catch { return null; }
@@ -195,7 +213,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="text-center">
-        <span aria-hidden="true" className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+        <span aria-hidden="true" className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">
           <IconCheck className="h-7 w-7" />
         </span>
         <h2 ref={successRef} tabIndex={-1} className="mt-5 font-display text-xl font-bold text-foreground focus:outline-none">
@@ -230,7 +248,7 @@ export function ContactForm() {
   );
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-4">
+    <form onSubmit={handleSubmit} onFocusCapture={() => { void loadRecaptcha(); }} noValidate className="space-y-4">
       <div>
         <h2 className="font-display text-lg font-bold text-foreground">Tell us about your project</h2>
         <p className="mt-1 text-sm text-muted-foreground">
