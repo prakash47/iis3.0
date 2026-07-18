@@ -102,7 +102,7 @@ export const siteConfig = {
     clutch: "https://clutch.co/profile/intention-infoservice",
     goodfirms: "",
     designrush: "",
-    crunchbase: "",
+    crunchbase: "https://www.crunchbase.com/organization/intention-infoservice",
     wikidata: "", // https://www.wikidata.org/wiki/Q... (add once created)
   },
 };
