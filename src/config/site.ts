@@ -99,7 +99,7 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/iinfoservice",
     youtube: "",
     github: "",
-    clutch: "", // https://clutch.co/profile/... (add once claimed)
+    clutch: "https://clutch.co/profile/intention-infoservice",
     goodfirms: "",
     designrush: "",
     crunchbase: "",
