@@ -28,6 +28,9 @@ const nextConfig: NextConfig = {
   // Apex->www canonicalization is handled at the hosting layer, not here.
   async redirects() {
     return [
+      // Old WordPress entry point - still crawled by Google (403/404 artifact),
+      // found in the 2026-07 reclamation audit. Consolidate to home.
+      { source: "/index.php", destination: "/", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/contact-us", destination: "/contact", permanent: true },
       { source: "/terms-of-service", destination: "/terms", permanent: true },
