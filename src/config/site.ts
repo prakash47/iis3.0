@@ -100,7 +100,9 @@ export const siteConfig = {
     youtube: "",
     github: "",
     clutch: "https://clutch.co/profile/intention-infoservice",
-    goodfirms: "",
+    manifest: "https://themanifest.com/company/intention-infoservice",
+    goodfirms: "https://www.goodfirms.co/company/intention-infoservice",
+    techbehemoths: "https://techbehemoths.com/company/intention-infoservice",
     designrush: "",
     crunchbase: "https://www.crunchbase.com/organization/intention-infoservice",
     wikidata: "", // https://www.wikidata.org/wiki/Q... (add once created)
